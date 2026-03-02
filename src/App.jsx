@@ -40,6 +40,7 @@ function App() {
         <Route path="/explore-7" element={<ExploreMore data={iv_glutathione_page} />} />
         <Route path="/explore-8" element={<ExploreMore data={coffee_enema_page} />} />
         <Route path="/explore-9" element={<ExploreMore data={medicinal_cannabis_page} />} />
+        
         <Route path="/heart-health" element={<HeartHealthSolutions />} />
         <Route path="/reverse-diabetes" element={<ReverseDiabetes />} />
         <Route path="/integrative-cancer" element={<IntegrativeCancer />} />
