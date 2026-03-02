@@ -53,7 +53,9 @@ export default function ExploreMore({ data }) {
                 </h1>
 
                 {item.type === "paragraph" && (
-                  <p className="text-neutral-900 font-medium">{item.content}</p>
+                  <div className="text-neutral-900 font-medium">
+                    {item.content}
+                  </div>
                 )}
 
                 {item.type === "list" && (

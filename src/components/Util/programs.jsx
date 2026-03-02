@@ -249,12 +249,12 @@ export const ozone_therapy_page = {
       type: "list",
       items: [
         "Pregnant or breastfeeding women (unless specifically cleared by a specialist).",
-"Individuals with untreated G6PD deficiency.",
-"Patients with severe, unstable cardiovascular disease.",
-"Those with acute abdominal emergencies or untreated severe infections.",
-"Individuals with uncontrolled hyperthyroidism.",
-"Patients on medications or with medical conditions where oxidative modulation may pose risks, unless carefully evaluated and supervised.",
-"A detailed medical screening is mandatory before initiating therapy."
+        "Individuals with untreated G6PD deficiency.",
+        "Patients with severe, unstable cardiovascular disease.",
+        "Those with acute abdominal emergencies or untreated severe infections.",
+        "Individuals with uncontrolled hyperthyroidism.",
+        "Patients on medications or with medical conditions where oxidative modulation may pose risks, unless carefully evaluated and supervised.",
+        "A detailed medical screening is mandatory before initiating therapy."
       ],
     },
     // {
@@ -836,6 +836,214 @@ export const coffee_enema_page = {
   ],
 };
 
+export const heart_health_solutions = {
+  banner: {
+    title: "Heart Health & Heart Block Solutions",
+    image: "https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?q=80&w=2070&auto=format&fit=crop",
+  },
+  sections: [
+    {
+      heading: "Advanced Heart Health Solutions",
+      type: "paragraph",
+      content: (
+        <p>
+          <strong>Chelation Therapy & EECP at Tigris Valley Wellness Centre</strong>
+          <br /><br />
+          At Tigris Valley, we provide comprehensive, non-surgical heart care solutions for patients who continue to experience symptoms despite medications, stents, or bypass surgery — as well as for those seeking preventive cardiovascular support.
+          <br /><br />
+          Our integrative Heart Health & Heart Block Solutions Program combines IV Chelation Therapy, Enhanced External Counterpulsation (EECP), Targeted Cardiac Nutritional Support, Metabolic optimization, and Lifestyle and risk-factor correction. All therapies are delivered under structured medical supervision with strict safety monitoring.
+        </p>
+      ),
+    },
+    {
+      heading: "Chelation Therapy for Heart Health",
+      type: "list",
+      intro: "Chelation therapy involves intravenous infusions of EDTA along with essential vitamins and supportive nutrients. EDTA binds unwanted metals and excess calcium deposits in the bloodstream, which are then safely eliminated through the kidneys.",
+      items: [
+        "May assist in reducing vascular calcification",
+        "Supports improved arterial flexibility",
+        "Enhances peripheral circulation",
+        "Reduces oxidative stress",
+        "May improve chest discomfort and breathlessness in selected patients",
+        "Considered as an adjunctive option in carefully evaluated heart block cases"
+      ],
+    },
+    {
+      heading: "Typical Treatment Course",
+      type: "list",
+      items: [
+        "20–30 infusions",
+        "Twice weekly sessions",
+        "Each session lasting 3–3.5 hours",
+        "Continuous monitoring throughout therapy"
+      ],
+    },
+    {
+      heading: "Chelation Therapy Package",
+      type: "paragraph",
+      content: (
+        <div className="bg-red-50 p-6 rounded-2xl border border-red-100 shadow-sm">
+          <h4 className="text-2xl font-bold text-red-900 mb-2">20 IV Chelation Infusions</h4>
+          <p className="text-3xl font-extrabold text-red-600">₹50,000</p>
+          <p className="text-sm text-gray-600 mt-2 italic">(Customised protocols may vary depending on patient condition.)</p>
+          <p className="text-xs text-gray-500 mt-4 border-t pt-4">Chelation therapy is offered as a supportive adjunct and not a replacement for emergency or life-saving cardiac procedures.</p>
+        </div>
+      )
+    },
+    {
+      heading: "Enhanced External Counterpulsation (EECP)",
+      type: "paragraph",
+      content: (
+        <>
+          <p className="font-bold text-xl text-red-800">A Non-Surgical “Natural Bypass” Therapy</p>
+          <p className="mt-4 leading-relaxed">
+            Many patients continue to suffer from chronic stable angina even after undergoing bypass surgery, angioplasty, or stenting. These individuals often remain restricted in their daily activities.
+            <br /><br />
+            EECP is a non-invasive outpatient therapy designed to stimulate the reopening and strengthening of small collateral blood vessels. Over time, these vessels may function like a “natural bypass,” improving blood supply to affected heart muscle.
+          </p>
+        </>
+      )
+    },
+    {
+      heading: "Who Is a Candidate for EECP?",
+      type: "list",
+      items: [
+        "Patients with chronic stable angina",
+        "Individuals not getting adequate relief from anti-anginal medications",
+        "Those not suitable for bypass surgery, angioplasty, or stenting",
+        "Individuals wishing to avoid high-risk or expensive surgical procedures",
+        "Those with a family history of heart disease seeking preventive care",
+        "Diabetic patients wanting to reduce cardiovascular complications",
+        "People with high blood pressure wishing to prevent disease progression"
+      ],
+      outro: "A complete cardiac evaluation is mandatory before starting therapy."
+    },
+    {
+      heading: "What Happens During EECP Treatment?",
+      type: "list",
+      items: [
+        "The patient lies comfortably on a treatment table",
+        "ECG electrodes monitor heart rhythm, heart rate, and blood pressure",
+        "Inflatable cuffs are wrapped around the calves, thighs, and buttocks",
+        "The cuffs inflate and deflate sequentially in sync with the heartbeat",
+        "Each session lasts approximately 60 minutes."
+      ]
+    },
+    {
+      heading: "How EECP Works",
+      type: "paragraph",
+      content: (
+        <div className="space-y-4">
+          <p className="leading-relaxed">
+            During the heart’s relaxation phase (diastole), the cuffs inflate sequentially to increase blood flow back to the heart. Just before the heart pumps again, the cuffs rapidly deflate, reducing resistance and workload.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+            <div className="p-4 bg-white rounded-xl shadow-sm border border-gray-100 italic flex items-center gap-3">
+              <span className="text-red-500 text-lg">❤️</span> Improve coronary perfusion
+            </div>
+            <div className="p-4 bg-white rounded-xl shadow-sm border border-gray-100 italic flex items-center gap-3">
+              <span className="text-red-500 text-lg">❤️</span> Enhance oxygen delivery
+            </div>
+            <div className="p-4 bg-white rounded-xl shadow-sm border border-gray-100 italic flex items-center gap-3">
+              <span className="text-red-500 text-lg">❤️</span> Reduce cardiac workload
+            </div>
+            <div className="p-4 bg-white rounded-xl shadow-sm border border-gray-100 italic flex items-center gap-3">
+              <span className="text-red-500 text-lg">❤️</span> Stimulate development of collateral circulation
+            </div>
+          </div>
+          <p className="mt-4 font-medium text-gray-700 italic">
+            Over time, this may reduce chest pain, breathlessness, and improve functional capacity.
+          </p>
+        </div>
+      )
+    },
+    {
+      heading: "Treatment Protocol",
+      type: "list",
+      items: [
+        "35 total hours of therapy",
+        "1 hour per day",
+        "Typically completed over 7 weeks"
+      ]
+    },
+    {
+      heading: "EECP Treatment Package",
+      type: "paragraph",
+      content: (
+        <div className="bg-red-50 p-6 rounded-2xl border border-red-100 shadow-sm">
+          <h4 className="text-2xl font-bold text-red-900 mb-2">35 EECP Sessions (60 minutes each)</h4>
+          <p className="text-3xl font-extrabold text-red-600">₹75,000</p>
+        </div>
+      )
+    },
+    {
+      heading: "Special Cardiac Nutritional Support",
+      type: "list",
+      intro: "For selected heart failure patients — especially those with limited or no further interventional options — we offer a specialized cardiac nutritional IV support program.",
+      items: [
+        "Targeted cardiac micronutrients",
+        "Mitochondrial support nutrients",
+        "Antioxidant therapy",
+        "Metabolic cofactors"
+      ],
+      outro: "In suitable patients: 15–20 sittings every three months may support cardiac metabolism, symptom management, and overall quality of life. (This program is offered strictly under physician supervision and does not replace guideline-directed heart failure therapy.)"
+    },
+    {
+      heading: "Combined Heart Support Program",
+      type: "mixed",
+      intro: "For appropriate candidates, we integrate EECP and IV Chelation for maximum resilience and recovery.",
+      features: [
+        {
+          title: "Combined Package Details",
+          description: "EECP (35 sessions) + IV Chelation (20 infusions)"
+        },
+        {
+          title: "Total Investment",
+          description: "₹1,10,000"
+        }
+      ],
+      items: [
+        "Improve coronary circulation",
+        "Reduce vascular stiffness",
+        "Lower oxidative stress",
+        "Enhance endothelial function",
+        "Support long-term cardiovascular resilience"
+      ],
+      outro: "(Subsidized treatment options are available for eligible patients.)"
+    },
+    {
+      heading: "Why Choose Tigris Valley?",
+      type: "mixed",
+      features: [
+        {
+          title: "Personalised Planning",
+          description: "Detailed medical history review, laboratory assessment, and cardiac evaluation."
+        },
+        {
+          title: "Integrative Medical Approach",
+          description: "Combining modern non-invasive cardiac therapies with metabolic and lifestyle optimization."
+        },
+        {
+          title: "Expert Supervision",
+          description: "All therapies under experienced physician oversight with continuous monitoring."
+        },
+        {
+          title: "Root-Cause Focus",
+          description: "Addressing inflammation, oxidative stress, vascular health, and metabolic imbalance."
+        },
+        {
+          title: "Ethical Practice",
+          description: "Therapies recommended only when clinically appropriate."
+        },
+        {
+          title: "Patient-Centred Care",
+          description: "Clear explanation, transparent pricing, and structured follow-ups."
+        }
+      ]
+    }
+  ]
+};
+
 export const medicinal_cannabis_page = {
   banner: {
     title: "Medicinal Cannabis Treatment ",
@@ -929,62 +1137,62 @@ export const medicinal_cannabis_page = {
 
 
 import {
-    BloodIcon,
-    Cardiogram02Icon,
-    CoffeeBeansIcon,
-    Disability01Icon,
-    Dna01Icon,
-    FirstAidKitIcon,
-    Leaf01Icon,
-    MedicalFileIcon,
-    Medicine01Icon,
-  } from "hugeicons-react";
+  BloodIcon,
+  Cardiogram02Icon,
+  CoffeeBeansIcon,
+  Disability01Icon,
+  Dna01Icon,
+  FirstAidKitIcon,
+  Leaf01Icon,
+  MedicalFileIcon,
+  Medicine01Icon,
+} from "hugeicons-react";
 
-export  const programsTitle = [
-    {
-      titel: "EDTA Chelation Therapy",
-      icon: FirstAidKitIcon,
-      link: '/explore-1',
-    },
-    {
-      titel: "Ozone Therapy",
-      icon: Medicine01Icon,
-      link: '/explore-2',
-    },
-    {
-      titel: "IV Vitamin C",
-      icon: Cardiogram02Icon,
-      link: '/explore-3',
-    },
-    {
-      titel: "IV Nutrition Drips",
-      icon: Dna01Icon,
-      link: '/explore-4',
-    },
-    {
-      titel: "EECP Treatment",
-      icon: MedicalFileIcon,
-      link: '/explore-5'
-    },
-    {
-      titel: "Far Infrared Sauna Treatment",
-      icon: Disability01Icon,
-      link: '/explore-6'
-    },
-    // {
-    //   titel: "IV Glutathione",
-    //   icon: BloodIcon,
-    //   link: '/explore-7',
-    // },
-    {
-      titel: "Colon Hydrotherapy",
-      icon: CoffeeBeansIcon,
-      link: '/explore-8',
-    },
-    {
-      titel: "Medicinal Cannabis Treatment",
-      icon: Leaf01Icon,
-      link: '/explore-9',
-    },
-    
-  ];
+export const programsTitle = [
+  {
+    titel: "EDTA Chelation Therapy",
+    icon: FirstAidKitIcon,
+    link: '/explore-1',
+  },
+  {
+    titel: "Ozone Therapy",
+    icon: Medicine01Icon,
+    link: '/explore-2',
+  },
+  {
+    titel: "IV Vitamin C",
+    icon: Cardiogram02Icon,
+    link: '/explore-3',
+  },
+  {
+    titel: "IV Nutrition Drips",
+    icon: Dna01Icon,
+    link: '/explore-4',
+  },
+  {
+    titel: "EECP Treatment",
+    icon: MedicalFileIcon,
+    link: '/explore-5'
+  },
+  {
+    titel: "Far Infrared Sauna Treatment",
+    icon: Disability01Icon,
+    link: '/explore-6'
+  },
+  // {
+  //   titel: "IV Glutathione",
+  //   icon: BloodIcon,
+  //   link: '/explore-7',
+  // },
+  {
+    titel: "Colon Hydrotherapy",
+    icon: CoffeeBeansIcon,
+    link: '/explore-8',
+  },
+  {
+    titel: "Medicinal Cannabis Treatment",
+    icon: Leaf01Icon,
+    link: '/explore-9',
+  },
+
+];
