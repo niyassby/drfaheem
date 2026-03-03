@@ -1,264 +1,677 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import Footer from "../components/Navbar/Footer";
+import React from "react";
 import Navbar from "../components/Navbar/Navbar";
-import { CheckCircle2, Activity, Zap, ArrowRight, ShieldCheck, Microscope, Apple, Droplets, Thermometer, UserCheck, Heart, Sparkles, Globe, Brain, ListChecks, Stethoscope, Briefcase, Pill, Waves, Flower } from 'lucide-react';
+import Footer from "../components/Navbar/Footer";
+import {
+  Microscope,
+  Apple,
+  Syringe,
+  Wind,
+  Activity,
+  CheckCircle2,
+  ShieldCheck,
+  Globe,
+  Sparkles,
+  Baby,
+  Target,
+  Brain,
+  Droplets,
+  Dumbbell,
+  Footprints,
+  Leaf,
+  CalendarCheck,
+  LineChart,
+  Scale,
+  Smile,
+  Zap,
+  Flower2,
+  Search,
+  AlertCircle,
+  RefreshCcw,
+  ShieldAlert,
+  MapPin,
+} from "lucide-react";
+import { GiLiver } from "react-icons/gi";
+import { motion } from "framer-motion";
+
 
 const PcodReversal = () => {
-    const phases = [
-        {
-            title: "Phase 1: Comprehensive Hormonal & Metabolic Mapping",
-            icon: <Microscope className="w-8 h-8 text-blue-600" />,
-            content: "We identify your personal PCOD type (insulin-driven, stress-driven, inflammatory, etc.) through detailed blood work including HOMA-IR, testosterone, DHEAS, and thyroid profile.",
-            bgColor: "bg-blue-50"
-        },
-        {
-            title: "Phase 2: Insulin Reset & Therapeutic Nutrition",
-            icon: <Apple className="w-8 h-8 text-green-600" />,
-            content: "Personalized nutrition strategy focusing on low-glycemic insulin stabilization, anti-inflammatory protocols, and controlled carbohydrate reset to restore ovulation.",
-            bgColor: "bg-green-50"
-        },
-        {
-            title: "Phase 3: Advanced IV Hormonal Support",
-            icon: <Droplets className="w-8 h-8 text-purple-600" />,
-            content: "Physician-supervised IV support (Mg, B-Complex, Vit C, ALA, NAC) for severe fatigue, hair fall, and nutrient depletion. Enhances metabolic signaling balance.",
-            bgColor: "bg-purple-50"
-        },
-        {
-            title: "Phase 4: Liver & Detox Optimization",
-            icon: <Thermometer className="w-8 h-8 text-orange-600" />,
-            content: "Supporting estrogen clearance and bile flow through structured detox protocols and microbiome restoration. Essential for hormone metabolism.",
-            bgColor: "bg-orange-50"
-        },
-        {
-            title: "Phase 5: Stress & Cortisol Reset",
-            icon: <Waves className="w-8 h-8 text-teal-600" />,
-            content: "Integrating breathwork, hormone-supportive yoga, and sleep optimization to balance cortisol levels—a key factor in cycle regularity.",
-            bgColor: "bg-teal-50"
-        },
-        {
-            title: "Phase 6: Body Composition & Metabolic Activation",
-            icon: <Activity className="w-8 h-8 text-red-600" />,
-            content: "Focus on resistance training and muscle activation as a powerful insulin-sensitizing strategy. Even minor weight optimization can restore natural cycles.",
-            bgColor: "bg-red-50"
-        }
-    ];
+  return (
+    <div className="bg-slate-50 font-sans text-gray-900 w-full overflow-x-hidden">
+      <Navbar />
 
-    const improvements = [
-        "More regular cycles",
-        "Reduced acne & hair fall",
-        "Improved insulin levels",
-        "Weight reduction",
-        "Better fertility outcomes",
-        "Improved mood stability",
-        "Increased energy",
-        "Reduced long-term metabolic risk"
-    ];
-
-    const risks = [
-        "Type 2 diabetes",
-        "Fatty liver",
-        "Cardiovascular disease",
-        "Metabolic syndrome",
-        "Endometrial complications"
-    ];
-
-    return (
-        <div className="bg-white font-sans text-gray-900 overflow-x-hidden">
-            <Navbar />
-
-            {/* Hero Section */}
-            <section className="relative h-[65vh] md:h-[75vh] flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 z-0">
-                    <img
-                        src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2040&auto=format&fit=crop"
-                        alt="Hormonal Health"
-                        className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-r from-pink-900/80 to-purple-900/60"></div>
-                </div>
-
-                <div className="container mx-auto px-6 relative z-10 text-center">
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                    >
-                        <span className="inline-block py-1 px-3 mb-6 text-sm font-semibold tracking-widest text-pink-200 uppercase bg-pink-900/30 rounded-full border border-pink-500/30">
-                            Hormone Restoration Program
-                        </span>
-                        <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
-                            The Advanced PCOD <br /> Reversal Program
-                        </h1>
-                        <p className="max-w-3xl mx-auto text-lg md:text-xl text-pink-50 mb-10 leading-relaxed font-medium italic">
-                            You Don’t Need to Suppress Hormones. <br />
-                            You Need to Restore Balance.
-                        </p>
-                    </motion.div>
-                </div>
-            </section>
-
-            {/* Core Message */}
-            <section className="py-20 bg-pink-50/50">
-                <div className="container mx-auto px-6">
-                    <div className="max-w-4xl mx-auto text-center">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900">Identifying Your PCOD Type</h2>
-                        <div className="h-1.5 w-24 bg-pink-600 mx-auto rounded-full mb-8"></div>
-                        <p className="text-xl text-gray-700 leading-relaxed mb-10">
-                            We identify whether your PCOD is <span className="font-bold text-pink-700">insulin-driven, stress-driven, inflammatory, thyroid-related, or gut-related.</span>
-                        </p>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm font-bold text-pink-900">
-                            {["Insulin-Driven", "Stress-Driven", "Inflammatory", "Gut-Related"].map((item, i) => (
-                                <div key={i} className="p-4 bg-white rounded-2xl border border-pink-100 shadow-sm uppercase tracking-wider">
-                                    {item}
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* The 6 Phases */}
-            <section className="py-24 bg-white">
-                <div className="container mx-auto px-6">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900">6-Phase Hormone Reset</h2>
-                        <p className="text-gray-500 text-lg max-w-2xl mx-auto">A root-cause functional approach to restoring metabolic and endocrine balance.</p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {phases.map((phase, idx) => (
-                            <motion.div
-                                key={idx}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: idx * 0.1 }}
-                                className={`${phase.bgColor} p-8 rounded-[2.5rem] border border-gray-200/50 shadow-sm hover:shadow-md transition-shadow duration-300 group`}
-                            >
-                                <div className="mb-6 p-4 bg-white rounded-2xl w-fit shadow-sm group-hover:scale-110 transition-transform duration-300">
-                                    {phase.icon}
-                                </div>
-                                <h3 className="text-xl font-bold mb-4 text-gray-900 leading-tight">{phase.title}</h3>
-                                <p className="text-gray-700 leading-relaxed text-sm md:text-base">{phase.content}</p>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Fertility Section */}
-            <section className="py-24 bg-purple-900 text-white relative overflow-hidden">
-                <Flower className="absolute -bottom-20 -left-20 w-80 h-80 text-white/5 rotate-12" />
-                <div className="container mx-auto px-6 relative z-10">
-                    <div className="flex flex-col lg:flex-row gap-16 items-center">
-                        <div className="lg:w-1/2">
-                            <h2 className="text-3xl md:text-5xl font-bold mb-10 leading-tight italic">
-                                Fertility-Focused <br /> PCOD Program
-                            </h2>
-                            <p className="text-xl text-purple-100 mb-10 leading-relaxed">
-                                For women trying to conceive, we aim to improve natural conception rates through targeted metabolic and hormonal preparation.
-                            </p>
-                            <div className="space-y-6">
-                                {[
-                                    "Ovulation tracking",
-                                    "Endometrial support",
-                                    "Micronutrient optimization",
-                                    "Anti-inflammatory fertility preparation",
-                                    "Partner metabolic screening"
-                                ].map((item, idx) => (
-                                    <div key={idx} className="flex gap-4 items-center">
-                                        <div className="bg-purple-500/20 p-2 rounded-lg">
-                                            <CheckCircle2 className="text-purple-300 w-5 h-5" />
-                                        </div>
-                                        <span className="font-medium text-lg text-purple-50">{item}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                        <div className="lg:w-1/2 bg-white/10 backdrop-blur-lg p-10 md:p-12 rounded-[4rem] border border-white/20">
-                            <h3 className="text-2xl font-bold mb-8">Long-Term Health Protection</h3>
-                            <p className="text-purple-200 mb-8 font-medium italic">We proactively address the higher risks associated with PCOD:</p>
-                            <div className="grid gap-4">
-                                {risks.map((risk, idx) => (
-                                    <div key={idx} className="flex items-center gap-3 bg-white/5 p-4 rounded-2xl border border-white/5">
-                                        <ShieldCheck className="text-red-400 w-5 h-5" />
-                                        <span className="font-bold text-white uppercase tracking-wider text-sm">{risk}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Expected Improvements */}
-            <section className="py-24 bg-white">
-                <div className="container mx-auto px-6">
-                    <div className="max-w-5xl mx-auto">
-                        <div className="text-center mb-16">
-                            <h2 className="text-3xl md:text-5xl font-bold mb-6">Expected Improvements</h2>
-                            <p className="text-gray-500 text-lg italic">Restoring balance leads to transformational shifts in vitality.</p>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-6">
-                            {improvements.map((item, idx) => (
-                                <div key={idx} className="flex items-center gap-4 py-4 border-b border-gray-100">
-                                    <div className="w-10 h-10 bg-green-50 rounded-full flex items-center justify-center">
-                                        <Sparkles className="text-green-600 w-5 h-5" />
-                                    </div>
-                                    <span className="font-bold text-gray-800 text-lg">{item}</span>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* International CTA */}
-            <section className="py-24 bg-gray-50 relative">
-                <div className="container mx-auto px-6 text-center">
-                    <div className="max-w-4xl mx-auto bg-gradient-to-br from-pink-600 to-purple-900 p-12 md:p-20 rounded-[4.5rem] text-white shadow-2xl relative overflow-hidden">
-                        <div className="absolute top-0 right-0 p-12 opacity-10">
-                            <Globe className="w-64 h-64" />
-                        </div>
-                        <h2 className="text-3xl md:text-5xl font-bold mb-10 relative z-10">Designed for International Patients</h2>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 relative z-10">
-                            {['2-4 Week Reset', 'Pre-arrival Consult', 'IV Support', 'Airport Support'].map((item, i) => (
-                                <div key={i} className="text-xs font-bold uppercase tracking-widest text-pink-200">{item}</div>
-                            ))}
-                        </div>
-                        <button className="bg-white text-purple-900 px-12 py-5 rounded-full font-bold text-xl hover:bg-pink-50 transition transform hover:scale-105 shadow-xl relative z-10">
-                            Request Program Details
-                        </button>
-                    </div>
-                </div>
-            </section>
-
-            {/* Why Tigris? */}
-            <section className="py-24 bg-white border-t border-gray-100">
-                <div className="container mx-auto px-6 text-center">
-                    <h2 className="text-4xl font-extrabold text-gray-900 mb-16 underline decoration-pink-500 decoration-4 underline-offset-8">Why Choose Tigris Valley?</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-                        {[
-                            "Root-cause functional hormone approach",
-                            "Metabolic + endocrine integration",
-                            "Physician-supervised IV therapies",
-                            "Fertility-conscious care",
-                            "Ethical & safety-focused protocols",
-                            "International patient coordination"
-                        ].map((item, idx) => (
-                            <div key={idx} className="flex items-center gap-4 bg-pink-50/30 p-6 rounded-2xl border border-pink-100/50">
-                                <CheckCircle2 className="text-pink-600 shrink-0" />
-                                <span className="font-bold text-gray-800 leading-tight">{item}</span>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            <Footer />
+      {/* --- Hero Section --- */}
+      <section className="relative h-[60vh] md:h-[70vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2040&auto=format&fit=crop"
+            alt="PCOD Reversal"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
         </div>
-    );
+
+        <div className="container mx-auto px-6 relative z-10 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <span className="inline-block py-1 px-3 mb-6 text-sm font-semibold tracking-widest text-red-400 uppercase bg-red-950/30 rounded-full border border-red-500/30">
+              Functional Hormone Restoration
+            </span>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              The Advanced PCOD <br className="hidden md:block" /> Reversal
+              Program
+            </h1>
+            <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-200 mb-10">
+              You Don’t Need to Suppress Hormones. You Need to Restore Balance.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+      {/* --- 6 Phases Grid --- */}
+      <section className="py-10 md:py-12 bg-rose-50/30 relative">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6">
+              Our Core Methodology
+            </h2>
+            <div className="w-24 h-1.5 bg-rose-500 mx-auto rounded-full"></div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
+            {/* Phase 1 */}
+            <div className="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-slate-100 h-full flex flex-col hover:border-blue-200 transition-colors">
+              <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6 flex items-center gap-4">
+                <div className="p-3 bg-blue-50 rounded-xl text-blue-600">
+                  <Microscope className="w-8 h-8" />
+                </div>
+                Phase 1: Comprehensive Hormonal & Metabolic Mapping
+              </h3>
+              <p className="text-lg text-slate-700 font-medium mb-6 italic">
+                Before starting treatment, we identify your personal PCOD type.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-8 flex-grow">
+                <div>
+                  <p className="font-bold text-slate-900 mb-4 border-b pb-2">
+                    Core Evaluation Includes:
+                  </p>
+                  <ul className="space-y-3">
+                    {[
+                      "Fasting insulin & HOMA-IR",
+                      "HbA1c",
+                      "Lipid profile",
+                      "LH, FSH",
+                      "Testosterone (Total & Free)",
+                      "DHEAS",
+                      "Estradiol",
+                      "Progesterone",
+                      "Prolactin",
+                      "Thyroid profile",
+                      "Vitamin D",
+                      "B12",
+                      "Ferritin",
+                      "CRP (inflammation marker)",
+                    ].map((item, i) => (
+                      <li
+                        key={i}
+                        className="flex items-start gap-3 text-sm text-slate-700 font-medium"
+                      >
+                        <Activity className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <p className="font-bold text-slate-900 mb-4 border-b pb-2">
+                    Optional:
+                  </p>
+                  <ul className="space-y-3">
+                    {[
+                      "Pelvic ultrasound",
+                      "Cortisol rhythm testing",
+                      "Gut microbiome assessment",
+                    ].map((item, i) => (
+                      <li
+                        key={i}
+                        className="flex items-start gap-3 text-sm text-slate-700 font-medium"
+                      >
+                        <Search className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-blue-50 p-5 rounded-xl border border-blue-100 mt-auto">
+                <p className="font-bold text-blue-900 flex items-start gap-3">
+                  <Target className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                  <span>
+                    We identify whether your PCOD is insulin-driven,
+                    stress-driven, inflammatory, thyroid-related, or
+                    gut-related.
+                  </span>
+                </p>
+              </div>
+            </div>
+
+            {/* Phase 2 */}
+            <div className="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-slate-100 h-full flex flex-col hover:border-green-200 transition-colors">
+              <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6 flex items-center gap-4">
+                <div className="p-3 bg-green-50 rounded-xl text-green-600">
+                  <Apple className="w-8 h-8" />
+                </div>
+                Phase 2: Insulin Reset & Therapeutic Nutrition
+              </h3>
+              <p className="text-lg text-slate-700 font-medium mb-6 italic">
+                Most PCOD cases are insulin-driven.
+              </p>
+
+              <p className="font-bold text-slate-900 mb-4">
+                We design a personalized nutrition strategy:
+              </p>
+              <ul className="space-y-3 mb-8 flex-grow">
+                {[
+                  "Low-glycemic insulin stabilizing plan",
+                  "Anti-inflammatory Mediterranean-style protocol",
+                  "Controlled carbohydrate reset",
+                  "Healthy fat optimization",
+                  "Protein adequacy",
+                  "Time-restricted eating (when appropriate)",
+                  "Post-meal glucose tracking",
+                ].map((item, i) => (
+                  <li
+                    key={i}
+                    className="flex items-center gap-3 bg-green-50/50 p-3 rounded-xl border border-green-100 text-slate-800 font-medium"
+                  >
+                    <Leaf className="w-5 h-5 text-green-600 shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+
+              <div className="bg-green-50 p-5 rounded-xl border border-green-200 mt-auto">
+                <p className="font-bold text-green-900 flex items-start gap-3">
+                  <Target className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
+                  <span>
+                    Goal: Improve insulin sensitivity → Reduce androgen excess →
+                    Restore ovulation.
+                  </span>
+                </p>
+              </div>
+            </div>
+
+            {/* Phase 3 */}
+            <div className="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-slate-100 h-full flex flex-col hover:border-purple-200 transition-colors lg:col-span-2">
+              <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6 flex items-center gap-4">
+                <div className="p-3 bg-purple-50 rounded-xl text-purple-600">
+                  <Syringe className="w-8 h-8" />
+                </div>
+                <span>
+                  Phase 3: Advanced IV Hormonal Support{" "}
+                  <span className="block sm:inline text-sm font-normal text-slate-500 bg-slate-100 px-3 py-1 mt-2 sm:mt-0 rounded-full uppercase tracking-wider w-fit">
+                    (Selected Patients)
+                  </span>
+                </span>
+              </h3>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 flex-grow">
+                <div className="bg-purple-50/50 p-6 rounded-2xl border border-purple-100">
+                  <p className="font-bold text-slate-900 mb-4 border-b border-purple-200 pb-2">
+                    For women with:
+                  </p>
+                  <ul className="space-y-3">
+                    {[
+                      "Severe fatigue",
+                      "Hair fall",
+                      "Insulin resistance",
+                      "Chronic inflammation",
+                      "Nutrient depletion",
+                    ].map((item, i) => (
+                      <li
+                        key={i}
+                        className="flex items-center gap-3 text-sm text-slate-700 font-medium"
+                      >
+                        <AlertCircle className="w-4 h-4 text-purple-400 shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                  <p className="font-bold text-slate-900 mb-4 border-b pb-2">
+                    IV Nutritional Therapy May Include:
+                  </p>
+                  <ul className="grid grid-cols-1 gap-3">
+                    {[
+                      "Magnesium",
+                      "B-Complex",
+                      "Vitamin C",
+                      "Alpha-lipoic acid",
+                      "N-Acetyl Cysteine (NAC)",
+                      "L-Carnitine (Levocarnitine)",
+                      "Trace minerals",
+                      "Amino acids",
+                    ].map((item, i) => (
+                      <li
+                        key={i}
+                        className="flex items-center gap-3 text-sm text-slate-700 font-medium"
+                      >
+                        <Droplets className="w-4 h-4 text-purple-500 shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="bg-purple-50/50 p-6 rounded-2xl border border-purple-100">
+                  <p className="font-bold text-slate-900 mb-4 border-b border-purple-200 pb-2">
+                    May Support:
+                  </p>
+                  <ul className="space-y-4">
+                    {[
+                      "Mitochondrial energy production",
+                      "Insulin sensitivity",
+                      "Liver detox pathways",
+                      "Reduced oxidative stress",
+                      "Hormonal signaling balance",
+                    ].map((item, i) => (
+                      <li
+                        key={i}
+                        className="flex items-start gap-3 text-sm text-purple-900 font-bold"
+                      >
+                        <Activity className="w-4 h-4 text-purple-600 shrink-0 mt-0.5" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-4 bg-slate-900 text-white p-5 rounded-xl mt-auto">
+                <p className="font-bold flex items-center gap-2">
+                  Protocol:{" "}
+                  <span className="font-normal text-purple-200">
+                    1–2 sessions weekly (customized)
+                  </span>
+                </p>
+                <p className="text-xs font-bold uppercase tracking-widest bg-white/10 px-4 py-2 rounded-lg text-center flex items-center gap-2">
+                  <ShieldCheck className="w-4 h-4" /> All therapies are
+                  physician supervised.
+                </p>
+              </div>
+            </div>
+
+            {/* Phase 4 */}
+            <div className="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-slate-100 h-full flex flex-col hover:border-emerald-200 transition-colors">
+              <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6 flex items-center gap-4">
+                <div className="p-3 bg-emerald-50 rounded-xl text-emerald-600">
+                  <Leaf className="w-8 h-8" />
+                </div>
+                Phase 4: Liver & Detox Optimization
+              </h3>
+              <p className="text-lg text-slate-700 font-medium mb-6 italic border-l-4 border-emerald-500 pl-4 bg-emerald-50 py-3 rounded-r-xl">
+                The liver is central to hormone metabolism.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-8 flex-grow">
+                <div>
+                  <p className="font-bold text-slate-900 mb-4">We support:</p>
+                  <ul className="space-y-4">
+                    {[
+                      "Estrogen clearance",
+                      "Bile flow",
+                      "Gut-liver axis balance",
+                      "Inflammatory load reduction",
+                    ].map((item, i) => (
+                      <li
+                        key={i}
+                        className="flex items-center gap-3 text-slate-700 font-medium"
+                      >
+                        <GiLiver className="w-5 h-5 text-emerald-600 shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <p className="font-bold text-slate-900 mb-4">May include:</p>
+                  <ul className="space-y-4">
+                    {[
+                      "Structured detox protocol",
+                      "Fiber therapy",
+                      "Microbiome restoration",
+                      "Anti-inflammatory phytonutrients",
+                    ].map((item, i) => (
+                      <li
+                        key={i}
+                        className="flex items-center gap-3 text-slate-700 font-medium"
+                      >
+                        <RefreshCcw className="w-4 h-4 text-emerald-500 shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Phase 5 */}
+            <div className="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-slate-100 h-full flex flex-col hover:border-teal-200 transition-colors">
+              <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6 flex items-center gap-4">
+                <div className="p-3 bg-teal-50 rounded-xl text-teal-600">
+                  <Brain className="w-8 h-8" />
+                </div>
+                Phase 5: Stress & Cortisol Reset
+              </h3>
+              <p className="text-lg text-red-600 font-bold mb-6 italic">
+                Chronic stress worsens PCOD.
+              </p>
+
+              <p className="font-bold text-slate-900 mb-4">We integrate:</p>
+              <ul className="space-y-3 mb-8 flex-grow">
+                {[
+                  "Sleep optimization",
+                  "Breathwork",
+                  "Hormone-supportive yoga",
+                  "Nervous system regulation",
+                  "Structured stress reduction protocols",
+                ].map((item, i) => (
+                  <li
+                    key={i}
+                    className="flex items-center gap-3 bg-teal-50/50 p-3 rounded-xl border border-teal-100 text-slate-800 font-medium"
+                  >
+                    <Wind className="w-5 h-5 text-teal-600 shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+
+              <div className="bg-teal-900 p-5 rounded-xl mt-auto text-center">
+                <p className="font-bold text-white text-lg tracking-wide">
+                  Balanced cortisol = Balanced cycles.
+                </p>
+              </div>
+            </div>
+
+            {/* Phase 6 */}
+            <div className="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-slate-100 h-full flex flex-col hover:border-rose-200 transition-colors lg:col-span-2">
+              <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6 flex items-center gap-4">
+                <div className="p-3 bg-rose-50 rounded-xl text-rose-600">
+                  <Dumbbell className="w-8 h-8" />
+                </div>
+                Phase 6: Body Composition & Metabolic Activation
+              </h3>
+              <p className="text-xl text-rose-700 font-bold mb-8 italic">
+                Even 5–10% weight optimization can restore ovulation.
+              </p>
+
+              <p className="font-bold text-slate-900 mb-4">Focus:</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8 flex-grow">
+                {[
+                  {
+                    text: "Resistance training guidance",
+                    icon: <Dumbbell className="w-6 h-6 text-rose-500" />,
+                  },
+                  {
+                    text: "Post-meal walking strategy",
+                    icon: <Footprints className="w-6 h-6 text-rose-500" />,
+                  },
+                  {
+                    text: "Fatty liver reversal",
+                    icon: <GiLiver className="w-6 h-6 text-rose-500" />,
+                  },
+                  {
+                    text: "Muscle activation protocols",
+                    icon: <Zap className="w-6 h-6 text-rose-500" />,
+                  },
+                ].map((item, i) => (
+                  <div
+                    key={i}
+                    className="flex flex-col items-center justify-center text-center gap-3 bg-rose-50 p-6 rounded-2xl border border-rose-100"
+                  >
+                    {item.icon}
+                    <span className="font-semibold text-slate-800">
+                      {item.text}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="bg-rose-100 p-5 rounded-xl border border-rose-200 mt-auto text-center">
+                <p className="font-bold text-rose-900 text-lg">
+                  Muscle is the most powerful insulin-sensitizing organ.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* --- Fertility & Long-Term Protection --- */}
+      <section className="py-10 md:py-12 bg-white border-t border-slate-200">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Fertility */}
+            <div className="bg-pink-50 p-8 md:p-12 rounded-[3rem] border border-pink-100 relative overflow-hidden flex flex-col h-full">
+              <Baby className="absolute -bottom-10 -right-10 w-64 h-64 text-pink-500 opacity-5 pointer-events-none" />
+              <h3 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 flex items-center gap-4 relative z-10">
+                <div className="p-3 bg-pink-200/50 rounded-2xl text-pink-600">
+                  <Baby className="w-8 h-8" />
+                </div>
+                Fertility-Focused PCOD Program
+              </h3>
+              <p className="text-lg font-bold text-pink-700 mb-6 relative z-10">
+                For women trying to conceive:
+              </p>
+              <p className="font-bold text-slate-900 mb-4 relative z-10">
+                We offer additional support:
+              </p>
+
+              <ul className="space-y-4 mb-10 flex-grow relative z-10">
+                {[
+                  "Ovulation tracking",
+                  "Endometrial support",
+                  "Micronutrient optimization",
+                  "Anti-inflammatory fertility preparation",
+                  "Partner metabolic screening (if needed)",
+                ].map((item, i) => (
+                  <li
+                    key={i}
+                    className="flex items-center gap-3 bg-white p-4 rounded-xl border border-pink-100 shadow-sm font-bold text-slate-800"
+                  >
+                    <Flower2 className="w-5 h-5 text-pink-500 shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+
+              <div className="bg-pink-600 text-white p-6 rounded-2xl text-center relative z-10 mt-auto">
+                <p className="font-bold text-lg">
+                  We aim to improve natural conception rates safely.
+                </p>
+              </div>
+            </div>
+
+            {/* Long-Term Protection */}
+            <div className="bg-slate-900 p-8 md:p-12 rounded-[3rem] text-white relative overflow-hidden flex flex-col h-full shadow-2xl">
+              <ShieldCheck className="absolute -top-10 -right-10 w-64 h-64 text-white opacity-5 pointer-events-none" />
+              <h3 className="text-3xl md:text-4xl font-extrabold mb-6 flex items-center gap-4 relative z-10">
+                <div className="p-3 bg-slate-800 rounded-2xl text-blue-400">
+                  <ShieldCheck className="w-8 h-8" />
+                </div>
+                Long-Term Health Protection
+              </h3>
+              <p className="text-lg font-medium text-slate-300 mb-8 relative z-10">
+                Women with PCOD have higher risk of:
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 flex-grow relative z-10">
+                {[
+                  "Type 2 diabetes",
+                  "Fatty liver",
+                  "Cardiovascular disease",
+                  "Metabolic syndrome",
+                  "Endometrial complications",
+                ].map((item, i) => (
+                  <div
+                    key={i}
+                    className="flex items-center gap-3 bg-slate-800/80 p-4 rounded-xl border border-slate-700"
+                  >
+                    <ShieldAlert className="w-5 h-5 text-red-500 shrink-0" />
+                    <span className="font-semibold text-slate-100">{item}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl text-center relative z-10 mt-auto">
+                <p className="font-bold text-xl text-white">
+                  We proactively prevent these risks.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* --- Expected Improvements (Redesigned New UI) --- */}
+      <section className="py-14 md:py-12 bg-gradient-to-b from-white to-rose-50/50 relative overflow-hidden border-y border-rose-200">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-rose-400/5 blur-[150px] pointer-events-none"></div>
+        <div className="container mx-auto px-6 max-w-7xl relative z-10">
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center justify-center gap-2 bg-rose-100 text-rose-900 px-4 py-1.5 rounded-full font-bold text-sm tracking-widest uppercase mb-6 border border-rose-200">
+              <Sparkles className="w-4 h-4" /> Transformation
+            </div>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-6 tracking-tight">
+              Expected Improvements
+            </h2>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto font-medium">
+              May Include:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {[
+              { text: "More regular cycles", icon: <CalendarCheck /> },
+              { text: "Reduced acne & hair fall", icon: <Sparkles /> },
+              { text: "Improved insulin levels", icon: <LineChart /> },
+              { text: "Weight reduction", icon: <Scale /> },
+              { text: "Better fertility outcomes", icon: <Flower2 /> },
+              { text: "Improved mood stability", icon: <Smile /> },
+              { text: "Increased energy", icon: <Zap /> },
+              {
+                text: "Reduced long-term metabolic risk",
+                icon: <ShieldCheck />,
+              },
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className="group bg-white rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:border-rose-300 hover:shadow-[0_20px_40px_rgb(244,63,94,0.15)] transition-all duration-500 flex flex-col items-center text-center relative overflow-hidden"
+              >
+                {/* Decorative background glow on hover */}
+                <div className="absolute inset-0 bg-gradient-to-b from-rose-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                <div className="relative z-10 w-16 h-16 bg-slate-50 border border-slate-100 text-rose-500 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-rose-500 group-hover:border-rose-500 group-hover:text-white transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3 shadow-sm">
+                  {React.cloneElement(item.icon, { className: "w-8 h-8" })}
+                </div>
+                <h4 className="font-bold text-slate-800 text-lg leading-snug relative z-10 group-hover:text-slate-950">
+                  {item.text}
+                </h4>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex justify-center">
+            <p className="inline-flex items-center gap-3 text-slate-600 bg-white py-4 px-8 rounded-full border border-slate-200 shadow-sm font-semibold">
+              <AlertCircle className="w-5 h-5 text-slate-400" />
+              Results vary based on baseline metabolic status and adherence.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* --- International Patients --- */}
+      <section className="py-20 md:py-32 bg-white">
+        <div className="container mx-auto px-6 max-w-6xl">
+          <div className="bg-gradient-to-br from-indigo-900 to-slate-900 p-10 md:p-16 rounded-[3rem] shadow-2xl relative overflow-hidden">
+            <Globe className="absolute top-0 right-0 w-96 h-96 text-white opacity-5 pointer-events-none translate-x-1/4 -translate-y-1/4" />
+
+            <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-8 relative z-10 flex items-center gap-4">
+              <div className="p-3 bg-white/10 rounded-2xl">
+                <Globe className="w-10 h-10 text-indigo-300" />
+              </div>
+              Designed for International Patients
+            </h2>
+            <p className="text-xl text-indigo-200 mb-8 font-medium relative z-10">
+              We offer:
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-12 relative z-10">
+              {[
+                "Pre-arrival online consultation",
+                "2–4 week structured hormone reset program",
+                "IV support modules",
+                "Nutrition intensives",
+                "Airport coordination assistance",
+                "Post-return tele-follow-up",
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="flex items-start gap-3 bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/10 hover:bg-white/20 transition-colors"
+                >
+                  <MapPin className="w-5 h-5 text-indigo-300 shrink-0 mt-0.5" />
+                  <span className="text-white font-medium">{item}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="inline-block bg-white text-indigo-900 py-4 px-8 rounded-full font-bold text-lg md:text-xl relative z-10 shadow-xl border-4 border-indigo-900/50">
+              Kerala offers a calm healing environment ideal for hormonal
+              restoration.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* --- Why Choose Tigris --- */}
+      <section className="py-20 md:py-28 bg-slate-50 border-t border-slate-200">
+        <div className="container mx-auto px-6 max-w-6xl text-center">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-16">
+            Why Choose Tigris Valley Wellness Centre?
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+            {[
+              "Root-cause functional hormone approach",
+              "Metabolic + endocrine integration",
+              "Physician-supervised IV therapies",
+              "Fertility-conscious care",
+              "Ethical & safety-focused protocols",
+              "International patient coordination",
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className="flex items-center gap-4 bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:border-rose-300 hover:shadow-md transition-all duration-300 group"
+              >
+                <div className="bg-rose-50 p-3 rounded-xl shrink-0 group-hover:bg-rose-500 transition-colors duration-300">
+                  <CheckCircle2 className="w-6 h-6 text-rose-500 group-hover:text-white transition-colors duration-300" />
+                </div>
+                <span className="font-bold text-slate-800 text-lg leading-tight">
+                  {item}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
 };
 
 export default PcodReversal;
