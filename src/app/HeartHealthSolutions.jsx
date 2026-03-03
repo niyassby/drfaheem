@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Footer from "../components/Navbar/Footer";
 import Navbar from "../components/Navbar/Navbar";
-import { CheckCircle2, Heart, Activity, ShieldCheck, Zap, ArrowRight, Info } from 'lucide-react';
+import { CheckCircle2, Heart, Activity, ShieldCheck, Zap, ArrowRight, Info, Dot } from 'lucide-react';
 import ChelationImg from "../assets/Images/Chelarion-Therapy.jpeg";
 import EECP1Img from "../assets/Images/EECP-1.jpeg";
 import EECP2Img from "../assets/Images/EECP-2.jpeg";
@@ -34,10 +34,12 @@ const HeartHealthSolutions = () => {
     ];
 
     const whyChoose = [
-        { title: "Personalised Planning", desc: "Detailed medical history review and cardiac evaluation." },
-        { title: "Integrative Approach", desc: "Combining modern therapies with metabolic optimization." },
-        { title: "Expert Supervision", desc: "All therapies delivered under structured medical supervision." },
-        { title: "Root-Cause Focus", desc: "Addressing inflammation, oxidative stress, and vascular health." }
+        { title: "Personalised Planning", desc: "Each patient undergoes detailed medical history review, laboratory assessment, and cardiac evaluation." },
+        { title: "Integrative Approach", desc: "We combine modern non-invasive cardiac therapies with metabolic and lifestyle optimization." },
+        { title: "Expert Supervision", desc: "All therapies are administered under experienced physician oversight with continuous monitoring" },
+        { title: "Root-Cause Focus", desc: "We address inflammation, oxidative stress, vascular health, and metabolic imbalance." },
+        { title: "Ethical & Evidence-Informed Practice", desc: "Therapies are recommended only when clinically appropriate." },
+        { title: "Patient-Centred Care", desc: "Clear explanation of options, transparent pricing, and structured follow-up." },
     ];
 
     return (
@@ -68,7 +70,7 @@ const HeartHealthSolutions = () => {
                             Advanced Heart Health & <br /> Heart Block Solutions
                         </h1>
                         <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-200 mb-10">
-                            Non-surgical, integrative solutions for persistent cardiac symptoms and preventive support at Tigris Valley.
+                            Advanced Heart Health Solutions Chelation Therapy & EECP at Tigris Valley Wellness Centre
                         </p>
                     </motion.div>
                 </div>
@@ -85,8 +87,8 @@ const HeartHealthSolutions = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {['Chelation Therapy', 'EECP', 'Cardiac Nutrition', 'Metabolic Optimization'].map((item, idx) => (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                        {['IV Chelation Therapy', 'Enhanced External Counterpulsation (EECP)', 'Targeted Cardiac Nutritional Support', 'Metabolic optimization', 'Lifestyle and risk-factor correction'].map((item, idx) => (
                             <motion.div
                                 key={idx}
                                 whileHover={{ y: -5 }}
@@ -96,6 +98,9 @@ const HeartHealthSolutions = () => {
                                 <span className="font-semibold text-gray-800">{item}</span>
                             </motion.div>
                         ))}
+                    </div>
+                    <div className='text-center mt-10'>
+                        <p className='text-lg text-gray-700 leading-relaxed italic'>All therapies are delivered under structured medical supervision with strict safety monitoring.</p>
                     </div>
                 </div>
             </section>
@@ -114,18 +119,21 @@ const HeartHealthSolutions = () => {
                             <div className="absolute top-0 right-0 p-8 opacity-10">
                                 <ShieldCheck className="w-24 h-24 text-red-600" />
                             </div>
-                            <h3 className="text-3xl font-bold mb-6 flex items-center gap-3">
-                                <Zap className="text-red-600" /> Chelation Therapy
+                            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+                                <Zap className="text-red-600" /> Chelation Therapy for Heart Health
                             </h3>
                             <p className="text-gray-600 mb-8 text-lg">
                                 Involves intravenous infusions of EDTA along with essential vitamins to bind unwanted metals and excess calcium deposits, which are safely eliminated through the kidneys.
                             </p>
+                            <h2 className='text-lg font-bold mb-6 '>How Chelation May Support the Heart</h2>
                             <div className="space-y-4 mb-10">
                                 {[
-                                    "Reducing vascular calcification",
-                                    "Improving arterial flexibility",
-                                    "Enhancing peripheral circulation",
-                                    "Reducing oxidative stress"
+                                    "May assist in reducing vascular calcification",
+                                    "Supports improved arterial flexibility",
+                                    "Enhances peripheral circulation",
+                                    "Reduces oxidative stress",
+                                    "May improve chest discomfort and breathlessness in selected patients",
+                                    "Considered as an adjunctive option in carefully evaluated heart block cases",
                                 ].map((bullet, idx) => (
                                     <div key={idx} className="flex gap-3 items-start">
                                         <ArrowRight className="w-5 h-5 mt-1 text-red-500 shrink-0" />
@@ -134,13 +142,26 @@ const HeartHealthSolutions = () => {
                                 ))}
                             </div>
                             <div className="bg-red-50 p-6 rounded-2xl border border-red-100">
-                                <span className="text-sm font-bold text-red-600 uppercase tracking-wider">The Package</span>
+                                <h1 className='font-medium mb-2 '>Typical Treatment Course</h1>
+                                <p className="text-sm text-gray-500 mt-4 leading-relaxed mb-5">
+                                    - 20–30 infusions
+                                    <br />
+                                    - Twice weekly sessions
+                                    <br />
+                                    - Each session lasting 3–3.5 hours
+                                    <br />
+                                    - Continuous monitoring throughout therapy
+                                </p>
+                                <span className="text-sm font-bold text-red-600 uppercase tracking-wider">Chelation Therapy Package</span>
                                 <div className="flex items-baseline gap-2 mt-2">
-                                    <h4 className="text-3xl font-bold text-red-950">₹50,000</h4>
-                                    <span className="text-gray-500 font-medium">/ 20 Infusions</span>
+                                    <h4 className="text-2xl font-bold text-red-950">₹50,000</h4>
+                                    <span className="text-gray-500 font-medium">/ 20 IV Infusions</span>
                                 </div>
-                                <p className="text-xs text-gray-500 mt-4 leading-relaxed">
-                                    Offered as a supportive adjunct and not a replacement for emergency or life-saving cardiac procedures.
+                                <p className="text-sm text-gray-500 mt-4 leading-relaxed">
+                                    (Customised protocols may vary depending on patient condition.)
+                                </p>
+                                <p className="text-sm text-gray-500 leading-relaxed">
+                                    Chelation therapy is offered as a supportive adjunct and not a replacement for emergency or life-saving cardiac procedures.
                                 </p>
                             </div>
 
@@ -163,18 +184,61 @@ const HeartHealthSolutions = () => {
                             <div className="absolute top-0 right-0 p-8 opacity-10">
                                 <Heart className="w-24 h-24 text-red-600" />
                             </div>
-                            <h3 className="text-3xl font-bold mb-6 flex items-center gap-3">
-                                <Activity className="text-red-600" /> EECP Therapy
+                            <h3 className="text-2xl font-bold flex items-center gap-3">
+                                <Activity className="text-red-600" /> Enhanced External Counterpulsation (EECP)
                             </h3>
-                            <p className="text-gray-600 mb-8 text-lg italic font-medium">
-                                A Non-Surgical “Natural Bypass” Therapy that stimulates the strengthening of small collateral blood vessels.
+                            <p className="text-gray-600 mb-4 text-lg italic font-medium">
+                                A Non-Surgical “Natural Bypass” Therapy
                             </p>
-                            <div className="space-y-4 mb-10">
+                            <p className="text-gray-600 mb-8 text-sm">
+                               Many patients continue to suffer from chronic stable angina even after undergoing bypass surgery, angioplasty, or stenting. These individuals often remain restricted in their daily activities. <br />
+<br />
+EECP is a non-invasive outpatient therapy designed to stimulate the reopening and strengthening of small collateral blood vessels. Over time, these vessels may function like a “natural bypass,” improving blood supply to affected heart muscle.
+                            </p>
+                            <div className='space-y-2'>
+                                <h1 className='font-medium mb-2 '>Who Is a Candidate for EECP?</h1>
+                                <p className='text-sm text-gray-600 '>You may be a candidate if you:</p>
                                 {[
-                                    "Increases coronary perfusion",
+                                    "Have chronic stable angina",
+"Do not get adequate relief from anti-anginal medications",
+"Are not suitable for bypass surgery, angioplasty, or stenting",
+"Wish to avoid high-risk or expensive surgical procedures",
+"Have a family history of heart disease and seek preventive care",
+"Are diabetic and want to reduce cardiovascular complications",
+"Have high blood pressure and wish to prevent disease progression",
+"A complete cardiac evaluation is mandatory before starting therapy."
+                                ].map((bullet, idx) => (
+                                    <div key={idx} className="flex gap-3 items-start">
+                                        <Dot  className=" text-red-500 shrink-0" />
+                                        <span className="text-gray-700 text-sm">{bullet}</span>
+                                    </div>
+                                ))}
+
+                            </div>
+                            <div className='mt-5'>
+                                <h1 className='font-medium mb-2 '>What Happens During EECP Treatment?</h1>
+                                {[
+                                    "The patient lies comfortably on a treatment table",
+"ECG electrodes monitor heart rhythm, heart rate, and blood pressure",
+"Inflatable cuffs are wrapped around the calves, thighs, and buttocks",
+"The cuffs inflate and deflate sequentially in sync with the heartbeat",
+"Each session lasts approximately 60 minutes."
+                                ].map((bullet, idx) => (
+                                    <div key={idx} className="flex gap-3 items-start">
+                                        <Dot  className=" text-red-500 shrink-0" />
+                                        <span className="text-gray-700 text-sm">{bullet}</span>
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="space-y-4 mb-10 mt-3">
+                                <h1 className='font-medium mb-2 '>How EECP Works</h1>
+                                <p className='text-sm text-gray-600'>During the heart’s relaxation phase (diastole), the cuffs inflate sequentially to increase blood flow back to the heart. Just before the heart pumps again, the cuffs rapidly deflate, reducing resistance and workload.</p>
+                                {[
+                                    "Improve coronary perfusion",
                                     "Enhances oxygen delivery",
                                     "Reduces cardiac workload",
-                                    "Stimulates collateral circulation"
+                                    "Stimulate development of collateral circulation",
+                                    "Over time, this may reduce chest pain, breathlessness, and improve functional capacity.",
                                 ].map((bullet, idx) => (
                                     <div key={idx} className="flex gap-3 items-start">
                                         <ArrowRight className="w-5 h-5 mt-1 text-red-500 shrink-0" />
@@ -183,10 +247,16 @@ const HeartHealthSolutions = () => {
                                 ))}
                             </div>
                             <div className="bg-red-50 p-6 rounded-2xl border border-red-100">
-                                <span className="text-sm font-bold text-red-600 uppercase tracking-wider">The Package</span>
+                                <h1 className='font-medium mb-2 '>Treatment Protocol</h1>
+                                <p className='text-sm text-gray-600'>- 35 total hours of therapy
+<br />
+- 1 hour per day
+<br />
+- Typically completed over 7 weeks</p>
+                                <span className="text-sm font-bold text-red-600 uppercase tracking-wider mt-3"> EECP Treatment Package</span>
                                 <div className="flex items-baseline gap-2 mt-2">
                                     <h4 className="text-3xl font-bold text-red-950">₹75,000</h4>
-                                    <span className="text-gray-500 font-medium">/ 35 Sessions</span>
+                                    <span className="text-gray-500 font-medium">/ 35 Sessions (60 minutes each)</span>
                                 </div>
                                 <p className="text-xs text-gray-500 mt-4 leading-relaxed">
                                     35 total hours of therapy typically completed over 7 weeks. Mandatory cardiac evaluation before starting.
@@ -237,6 +307,7 @@ const HeartHealthSolutions = () => {
                                     </li>
                                 ))}
                             </ul>
+                            <p className='text-xs text-red-300 mt-4'>(Subsidized treatment options are available for eligible patients.)</p>
                         </div>
 
                         <div className="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20">
@@ -246,14 +317,17 @@ const HeartHealthSolutions = () => {
                             </h4>
                             <p className="text-red-100 mb-6 italic">Targeted IV support for heart failure patients with limited options.</p>
                             <div className="grid grid-cols-2 gap-4 mb-6">
-                                {["Targeted micronutrients", "Mitochondrial support", "Antioxidant therapy", "Metabolic cofactors"].map((item, i) => (
+                                {["Targeted cardiac micronutrients", "Mitochondrial support nutrients", "Antioxidant therapy", "Metabolic cofactors"].map((item, i) => (
                                     <div key={i} className="bg-white/5 p-3 rounded-xl border border-white/10 text-xs text-center">
                                         {item}
                                     </div>
                                 ))}
                             </div>
                             <p className="text-xs text-red-300">
-                                15–20 sittings every three months to support cardiac metabolism and quality of life.
+                                <span className='font-bold'>In suitable patients :</span> 15–20 sittings every three months to support cardiac metabolism and quality of life.
+                            </p>
+                            <p className="text-xs text-red-300">
+                                This program is offered strictly under physician supervision and does not replace guideline-directed heart failure therapy.
                             </p>
                         </div>
                     </div>
@@ -263,13 +337,13 @@ const HeartHealthSolutions = () => {
             {/* Why Choose Section */}
             <section className="py-24 bg-gray-50">
                 <div className="container mx-auto px-6">
-                    <div className="flex flex-col lg:flex-row gap-16 items-center">
-                        <div className="lg:w-1/2">
+                    <div className="">
+                        <div className="">
                             <h2 className="text-4xl font-extrabold mb-8 text-red-950 leading-tight">Why Choose Tigris Valley for Heart Care?</h2>
                             <p className="text-lg text-gray-700 mb-10 leading-relaxed">
                                 Our Advanced Heart Health Program is designed to provide structured, safe, and integrative cardiac support aimed at improving function, circulation, and overall quality of life.
                             </p>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                                 {whyChoose.map((item, idx) => (
                                     <div key={idx} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                                         <h5 className="font-bold text-red-800 mb-2">{item.title}</h5>
@@ -278,14 +352,7 @@ const HeartHealthSolutions = () => {
                                 ))}
                             </div>
                         </div>
-                        <div className="lg:w-1/2 relative">
-                            <div className="absolute -inset-4 bg-red-600/10 rounded-[3rem] blur-xl"></div>
-                            <img
-                                src="https://images.unsplash.com/photo-1576091160550-2173bdb999ef?q=80&w=2070&auto=format&fit=crop"
-                                alt="Medical Professional"
-                                className="relative rounded-[3rem] shadow-2xl z-10 w-full"
-                            />
-                        </div>
+                        
                     </div>
                 </div>
             </section>
