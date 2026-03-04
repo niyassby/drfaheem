@@ -71,7 +71,7 @@ export const welnessSolutions = [
   },
   {
     titel: "Gut Detox & Microbiome Restoration",
-    link: "/explore-5",
+    link: "/gutRestoration",
   },
   {
     titel: "Hangover Recovery",
@@ -79,7 +79,7 @@ export const welnessSolutions = [
   },
   {
     titel: "Mind-Body Balance",
-    link: "/explore-7",
+    link: "/MindBodyBalance",
   },
 ];
 
