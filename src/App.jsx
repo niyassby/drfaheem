@@ -28,6 +28,9 @@ import AntiAging from './app/AntiAging'
 import HairRestoration from './app/HairRestoration'
 import ImmunoOptimization from './app/ImmunoOptimization'
 import HangoverRecovery from './app/HangoverRecovery'
+import SkinRevitalization from './app/SkinRevitalization'
+import GutRestoration from './app/GutRestoration'
+import MindBodyBalance from './app/MindBodyBalance'
 
 function App() {
   return (
@@ -36,15 +39,42 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/explore-1" element={<ExploreMore data={EDTA_Chelation_Therapy} />} />
-        <Route path="/explore-2" element={<ExploreMore data={ozone_therapy_page} />} />
-        <Route path="/explore-3" element={<ExploreMore data={iv_vitamin_c_page} />} />
-        <Route path="/explore-4" element={<ExploreMore data={iv_nutrition_drips_page} />} />
-        <Route path="/explore-5" element={<ExploreMore data={eecp_therapy_page} />} />
-        <Route path="/explore-6" element={<ExploreMore data={fir_sauna_page} />} />
-        <Route path="/explore-7" element={<ExploreMore data={iv_glutathione_page} />} />
-        <Route path="/explore-8" element={<ExploreMore data={coffee_enema_page} />} />
-        <Route path="/explore-9" element={<ExploreMore data={medicinal_cannabis_page} />} />
+        <Route
+          path="/explore-1"
+          element={<ExploreMore data={EDTA_Chelation_Therapy} />}
+        />
+        <Route
+          path="/explore-2"
+          element={<ExploreMore data={ozone_therapy_page} />}
+        />
+        <Route
+          path="/explore-3"
+          element={<ExploreMore data={iv_vitamin_c_page} />}
+        />
+        <Route
+          path="/explore-4"
+          element={<ExploreMore data={iv_nutrition_drips_page} />}
+        />
+        <Route
+          path="/explore-5"
+          element={<ExploreMore data={eecp_therapy_page} />}
+        />
+        <Route
+          path="/explore-6"
+          element={<ExploreMore data={fir_sauna_page} />}
+        />
+        <Route
+          path="/explore-7"
+          element={<ExploreMore data={iv_glutathione_page} />}
+        />
+        <Route
+          path="/explore-8"
+          element={<ExploreMore data={coffee_enema_page} />}
+        />
+        <Route
+          path="/explore-9"
+          element={<ExploreMore data={medicinal_cannabis_page} />}
+        />
 
         <Route path="/heart-health" element={<HeartHealthSolutions />} />
         <Route path="/reverse-diabetes" element={<ReverseDiabetes />} />
@@ -55,7 +85,10 @@ function App() {
         <Route path="/reverse-fatty-liver" element={<ReverseFattyLiver />} />
         <Route path="/auto-immune-care" element={<AutoImmuneCare />} />
         <Route path="/fertility-care" element={<FertilityCare />} />
-        <Route path="/joint-pain-management" element={<JointPainManagement />} />
+        <Route
+          path="/joint-pain-management"
+          element={<JointPainManagement />}
+        />
 
         <Route path="/anti-aging" element={<AntiAging />} />
         <Route path="/hair-restoration" element={<HairRestoration />} />
@@ -66,12 +99,15 @@ function App() {
 
 
 
+        <Route path="/skin-revitalization" element={<SkinRevitalization />} />
+        <Route path='/gutRestoration' element={<GutRestoration />} />
+        <Route path="/MindBodyBalance" element={<MindBodyBalance />} />
 
         <Route path="/about" element={<About />} />
         <Route path="/team" element={<Team />} />
       </Routes>
     </HashRouter>
-  )
+  );
 }
 
 export default App
