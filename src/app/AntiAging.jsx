@@ -39,7 +39,7 @@ const AntiAging = () => {
       <section className="relative h-[80vh] md:h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1519415510236-85558ac3536d?q=80&w=2070&auto=format&fit=crop"
+            src="https://dermavereaesthetics.com/wp-content/uploads/2024/08/fillers.jpg"
             alt="Advanced Longevity"
             className="w-full h-full object-cover"
           />
@@ -84,7 +84,7 @@ const AntiAging = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <motion.div {...fadeIn} className="relative rounded-[2.5rem] overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1579152276503-09419b456641?q=80&w=2070&auto=format&fit=crop"
+                src="https://praxilabs.com/en/blog/wp-content/uploads/2023/05/what-is-molecular-biology.jpg"
                 alt="Molecular Research"
                 className="w-full h-[400px] object-cover"
               />
@@ -164,7 +164,7 @@ const AntiAging = () => {
             <motion.div {...fadeIn} className="order-1 lg:order-2 relative">
               <div className="absolute -inset-4 bg-blue-500/20 rounded-[3rem] blur-2xl"></div>
               <img
-                src="https://images.unsplash.com/photo-1511174511562-5f7f185854c8?q=80&w=2070&auto=format&fit=crop"
+                src="https://img.freepik.com/free-photo/young-male-psysician-with-patient-measuring-blood-pressure_1303-17877.jpg"
                 alt="Precision Diagnostics"
                 className="relative z-10 w-full h-[500px] object-cover rounded-[2.5rem] shadow-xl"
               />
@@ -360,7 +360,7 @@ const AntiAging = () => {
             </div>
             <div className="md:w-1/2 relative min-h-[400px]">
               <img
-                src="https://images.unsplash.com/photo-1512290923902-8a9f81dc206e?q=80&w=2070&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1598555763574-dca77e10427e"
                 alt="Acupuncture"
                 className="absolute inset-0 w-full h-full object-cover"
               />

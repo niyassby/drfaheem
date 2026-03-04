@@ -63,11 +63,11 @@ export const welnessSolutions = [
   },
   {
     titel: "Hair Restoration",
-    link: "/explore-3",
+    link: "/hair-restoration",
   },
   {
     titel: "Immuno Optimization",
-    link: "/explore-4",
+    link: "/immuno-optimization",
   },
   {
     titel: "Gut Detox & Microbiome Restoration",
@@ -75,7 +75,7 @@ export const welnessSolutions = [
   },
   {
     titel: "Hangover Recovery",
-    link: "/explore-6",
+    link: "/hangover-recovery",
   },
   {
     titel: "Mind-Body Balance",

@@ -25,6 +25,9 @@ import JointPainManagement from './app/JointPainManagement'
 import { EDTA_Chelation_Therapy, coffee_enema_page, eecp_therapy_page, fir_sauna_page, iv_glutathione_page, iv_nutrition_drips_page, iv_vitamin_c_page, medicinal_cannabis_page, ozone_therapy_page } from './components/Util/programs'
 import ScrollToTop from './components/Util/ScrollToTop'
 import AntiAging from './app/AntiAging'
+import HairRestoration from './app/HairRestoration'
+import ImmunoOptimization from './app/ImmunoOptimization'
+import HangoverRecovery from './app/HangoverRecovery'
 
 function App() {
   return (
@@ -55,6 +58,9 @@ function App() {
         <Route path="/joint-pain-management" element={<JointPainManagement />} />
 
         <Route path="/anti-aging" element={<AntiAging />} />
+        <Route path="/hair-restoration" element={<HairRestoration />} />
+        <Route path="/immuno-optimization" element={<ImmunoOptimization />} />
+        <Route path="/hangover-recovery" element={<HangoverRecovery />} />
 
 
 
