@@ -24,6 +24,7 @@ import JointPainManagement from './app/JointPainManagement'
 
 import { EDTA_Chelation_Therapy, coffee_enema_page, eecp_therapy_page, fir_sauna_page, iv_glutathione_page, iv_nutrition_drips_page, iv_vitamin_c_page, medicinal_cannabis_page, ozone_therapy_page } from './components/Util/programs'
 import ScrollToTop from './components/Util/ScrollToTop'
+import AntiAging from './app/AntiAging'
 
 function App() {
   return (
@@ -53,6 +54,7 @@ function App() {
         <Route path="/fertility-care" element={<FertilityCare />} />
         <Route path="/joint-pain-management" element={<JointPainManagement />} />
 
+        <Route path="/anti-aging" element={<AntiAging />} />
 
 
 

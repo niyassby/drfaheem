@@ -55,11 +55,11 @@ export const spProgramsTitle = [
 export const welnessSolutions = [
   {
     titel: "Anti-aging",
-    link: "/explore-1",
+    link: "/anti-aging",
   },
   {
     titel: "Skin Revitalization",
-    link: "/explore-2",
+    link: "/skin-revitalization",
   },
   {
     titel: "Hair Restoration",
