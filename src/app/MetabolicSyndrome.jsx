@@ -344,6 +344,9 @@ import {
   AlertCircle,
   CheckCircle2,
   Dna,
+  Target,
+  Wind,
+  Dumbbell,
 } from "lucide-react";
 // Importing specific icons from react-icons to complement Lucide
 import { FaWeight, FaHeartbeat } from "react-icons/fa";
@@ -834,104 +837,305 @@ const MetabolicSyndrome = () => {
       </section>
 
       {/* Phases 5 & 6 */}
-      <section className="py-16 md:py-24 bg-slate-50 border-b border-slate-200">
+      <section className="py-14 md:py-14 bg-slate-50 border-b border-slate-200">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Phase 5 */}
-            <div className="bg-white p-8 md:p-10 rounded-[2rem] shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col h-full">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="p-4 bg-amber-50 rounded-2xl">
-                  <GiLiver className="w-8 h-8 text-amber-600" />
+            {/* Phase 5 (Upgraded to full-width horizontal layout to match Phase 6) */}
+            <div className="bg-white p-8 md:p-10 lg:p-12 rounded-[1.5rem] shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-slate-200 flex flex-col lg:flex-row gap-10 lg:gap-12 items-center h-full lg:col-span-2 group hover:border-amber-200 transition-colors duration-500">
+              {/* Left Side: Title & Context */}
+              <div className="lg:w-5/12 w-full flex flex-col">
+                <div className="flex items-center gap-5 mb-6">
+                  <div className="w-14 h-14 bg-amber-50 rounded-xl flex items-center justify-center border border-amber-100 group-hover:bg-amber-500 group-hover:text-white text-amber-600 transition-colors shadow-sm shrink-0">
+                    <GiLiver className="w-7 h-7" />
+                  </div>
+                  <h3 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight leading-tight">
+                    Phase 5: Detox & <br className="hidden lg:block" /> Liver
+                    Restoration
+                  </h3>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
-                  Phase 5: Detox & Liver Restoration
-                </h3>
-              </div>
-              <p className="font-bold text-gray-900 text-lg mb-6 p-4 bg-amber-50/50 rounded-xl border border-amber-100">
-                Metabolic syndrome is closely linked to fatty liver and toxin
-                burden.
-              </p>
 
-              <p className="font-bold text-gray-800 mb-4">We incorporate:</p>
-              <ul className="space-y-4 mb-8 flex-grow">
-                {[
-                  "Structured liver detox protocols",
-                  "Nutritional detoxification support",
-                  "Gut microbiome repair",
-                  "Fiber therapy",
-                  "Anti-inflammatory gut healing",
-                ].map((item, i) => (
-                  <li
-                    key={i}
-                    className="flex items-center gap-4 text-lg text-gray-800"
-                  >
-                    <div className="bg-amber-100/50 p-2 rounded-lg shrink-0">
-                      <RefreshCw className="w-5 h-5 text-amber-600" />
-                    </div>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Phase 6 */}
-            <div className="bg-white p-8 md:p-10 rounded-[2rem] shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col h-full">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="p-4 bg-red-50 rounded-2xl">
-                  <FaHeartbeat className="w-8 h-8 text-red-600" />
+                <div className="p-6 bg-amber-50/50 rounded-2xl border border-amber-100/50 shadow-inner relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-amber-200/20 blur-xl rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                  <p className="font-bold text-amber-900 text-lg relative z-10 leading-snug">
+                    Metabolic syndrome is closely linked to fatty liver and
+                    toxin burden.
+                  </p>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
-                  Phase 6: Cardiometabolic Protection
-                </h3>
               </div>
 
-              <p className="font-bold text-gray-800 mb-4">
-                For patients at risk of heart disease:
-              </p>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-                {[
-                  "Advanced lipid optimization",
-                  "Endothelial support",
-                  "Blood pressure stabilization",
-                  "Vascular inflammation reduction",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-2 text-gray-700">
-                    <ShieldCheck className="w-5 h-5 text-red-500 shrink-0" />{" "}
-                    {item}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 mt-auto">
-                <p className="font-bold text-gray-900 mb-2 border-b border-slate-200 pb-2">
-                  When indicated, we may include:
+              {/* Right Side: Protocols List */}
+              <div className="lg:w-7/12 w-full bg-slate-50/80 p-8 rounded-[1.5rem] border border-slate-100 h-full flex flex-col justify-center">
+                <p className="font-bold text-slate-900 mb-6 flex items-center gap-3 text-lg">
+                  <RefreshCw className="w-5 h-5 text-amber-500 shrink-0" /> We
+                  incorporate:
                 </p>
-                <p className="font-bold text-red-800 text-lg mt-3 mb-2">
-                  Enhanced External Counterpulsation (EECP)
-                </p>
-                <p className="text-gray-700 text-sm mb-4 italic">
-                  A non-invasive therapy that improves blood circulation and
-                  supports cardiovascular function.
-                </p>
-
-                <p className="font-bold text-gray-800 text-sm mb-2">
-                  Ideal for:
-                </p>
-                <ul className="space-y-1">
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
                   {[
-                    "Patients with early heart disease",
-                    "Diabetics with vascular risk",
-                    "Those with reduced exercise tolerance",
+                    "Structured liver detox protocols",
+                    "Nutritional detoxification support",
+                    "Gut microbiome repair",
+                    "Fiber therapy",
+                    "Anti-inflammatory gut healing",
                   ].map((item, i) => (
                     <li
                       key={i}
-                      className="flex items-center gap-2 text-gray-600 text-sm"
+                      className="flex items-start gap-3 font-semibold text-slate-700"
                     >
-                      <div className="w-1 h-1 bg-red-400 rounded-full shrink-0"></div>{" "}
-                      {item}
+                      <div className="w-6 h-6 rounded-full bg-white shadow-sm border border-amber-100 flex items-center justify-center shrink-0 mt-0.5">
+                        <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
+                      </div>
+                      <span className="leading-snug">{item}</span>
                     </li>
                   ))}
                 </ul>
+              </div>
+            </div>
+
+            {/* Phase 6 (Untouched) */}
+            <div className="bg-white p-8 md:p-12 rounded-[1.5rem] shadow-xl shadow-slate-200/50 border border-slate-200 flex flex-col h-full lg:col-span-2">
+              {/* --- Top Section: Cardiometabolic & EECP --- */}
+              <div className="flex flex-col lg:flex-row gap-10 items-start mb-12">
+                <div className="lg:w-1/2 w-full">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="p-4 bg-red-50 rounded-2xl border border-red-100 shadow-sm">
+                      <FaHeartbeat className="w-8 h-8 text-red-600" />
+                    </div>
+                    <h3 className="text-2xl md:text-4xl font-black text-slate-900 tracking-tight">
+                      Phase 6: Cardiometabolic Protection
+                    </h3>
+                  </div>
+
+                  <p className="font-bold text-slate-800 mb-6 text-lg">
+                    For patients at risk of heart disease:
+                  </p>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                    {[
+                      "Advanced lipid optimization",
+                      "Endothelial support",
+                      "Blood pressure stabilization",
+                      "Vascular inflammation reduction",
+                    ].map((item, i) => (
+                      <li
+                        key={i}
+                        className="flex items-start gap-3 text-slate-700 font-semibold"
+                      >
+                        <ShieldCheck className="w-6 h-6 text-red-500 shrink-0" />
+                        <span className="mt-0.5">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="lg:w-1/2 w-full bg-slate-50 p-8 rounded-[2rem] border border-slate-200 shadow-inner h-full">
+                  <p className="font-bold text-slate-900 mb-4 border-b border-slate-200 pb-3 uppercase tracking-wider text-xs">
+                    When indicated, we may include:
+                  </p>
+                  <p className="font-black text-red-700 text-xl mt-4 mb-2">
+                    Enhanced External Counterpulsation (EECP)
+                  </p>
+                  <p className="text-slate-600 mb-6 font-medium italic">
+                    A non-invasive therapy that improves blood circulation and
+                    supports cardiovascular function.
+                  </p>
+
+                  <p className="font-bold text-slate-800 text-sm mb-3">
+                    Ideal for:
+                  </p>
+                  <ul className="space-y-2.5">
+                    {[
+                      "Patients with early heart disease",
+                      "Diabetics with vascular risk",
+                      "Those with reduced exercise tolerance",
+                    ].map((item, i) => (
+                      <li
+                        key={i}
+                        className="flex items-center gap-3 text-slate-700 text-sm font-semibold"
+                      >
+                        <div className="w-2 h-2 bg-red-500 rounded-full shrink-0"></div>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div className="h-px w-full bg-gradient-to-r from-transparent via-slate-200 to-transparent mb-12"></div>
+
+              {/* --- Bottom Section: New Integrative Additions --- */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+                {/* 1. Ayurvedic Integration */}
+                <div className="bg-emerald-50/30 p-8 rounded-[2rem] border border-emerald-100 flex flex-col h-full hover:shadow-lg hover:border-emerald-300 transition-all duration-300 group">
+                  <div className="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                    <Leaf className="w-7 h-7" />
+                  </div>
+                  <h4 className="text-2xl font-black text-slate-900 mb-4">
+                    Ayurvedic Integration
+                  </h4>
+                  <p className="text-slate-700 font-medium mb-6">
+                    We integrate classical principles of Ayurveda to enhance
+                    metabolic balance:
+                  </p>
+                  <ul className="space-y-3 mb-8 flex-grow">
+                    {[
+                      "Dosha-based metabolic assessment",
+                      "Herbal metabolic support",
+                      "Liver-supportive botanicals",
+                      "Digestive fire (Agni) optimization",
+                      "Panchakarma-inspired detox strategies (when appropriate)",
+                    ].map((item, i) => (
+                      <li
+                        key={i}
+                        className="flex items-start gap-3 text-sm font-semibold text-slate-700"
+                      >
+                        <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="bg-emerald-600 text-white p-4 rounded-xl mt-auto shadow-md">
+                    <p className="font-bold text-sm flex items-start gap-2">
+                      <Target className="w-5 h-5 shrink-0 text-emerald-200" />
+                      <span>
+                        Goal: Restore systemic balance and improve metabolic
+                        resilience.
+                      </span>
+                    </p>
+                  </div>
+                </div>
+
+                {/* 2. Therapeutic Yoga & Stress Reset */}
+                <div className="bg-teal-50/30 p-8 rounded-[2rem] border border-teal-100 flex flex-col h-full hover:shadow-lg hover:border-teal-300 transition-all duration-300 group">
+                  <div className="w-14 h-14 bg-teal-100 text-teal-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+                    <Wind className="w-7 h-7" />
+                  </div>
+                  <h4 className="text-2xl font-black text-slate-900 mb-4">
+                    Therapeutic Yoga & Stress Reset
+                  </h4>
+                  <p className="text-slate-700 font-medium mb-6">
+                    Structured Yoga sessions tailored for metabolic syndrome:
+                  </p>
+                  <ul className="space-y-3 mb-8 flex-grow">
+                    {[
+                      "Insulin-sensitizing asanas",
+                      "Pranayama for autonomic balance",
+                      "Cortisol reduction breathing techniques",
+                      "Guided relaxation & mindfulness",
+                    ].map((item, i) => (
+                      <li
+                        key={i}
+                        className="flex items-start gap-3 text-sm font-semibold text-slate-700"
+                      >
+                        <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="bg-teal-50 border border-teal-200 p-5 rounded-xl mt-auto">
+                    <p className="font-bold text-teal-900 mb-3 text-sm uppercase tracking-wider">
+                      Benefits:
+                    </p>
+                    <ul className="space-y-2">
+                      {[
+                        "Improved glucose control",
+                        "Reduced stress-driven fat storage",
+                        "Better sleep quality",
+                      ].map((item, i) => (
+                        <li
+                          key={i}
+                          className="flex items-center gap-2 text-sm font-bold text-teal-800"
+                        >
+                          <div className="w-1.5 h-1.5 bg-teal-500 rounded-full shrink-0"></div>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                {/* 3. Supervised Physical Exercise Program */}
+                <div className="bg-blue-50/30 p-8 rounded-[2rem] border border-blue-100 flex flex-col h-full hover:shadow-lg hover:border-blue-300 transition-all duration-300 group">
+                  <div className="w-14 h-14 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                    <Dumbbell className="w-7 h-7" />
+                  </div>
+                  <h4 className="text-2xl font-black text-slate-900 mb-4">
+                    Supervised Physical Exercise Program
+                  </h4>
+                  <p className="text-slate-700 font-medium mb-6">
+                    A medically supervised, progressive exercise plan including:
+                  </p>
+
+                  <div className="space-y-6 mb-8 flex-grow">
+                    {/* Cardio Sub-list */}
+                    <div>
+                      <p className="font-bold text-slate-900 mb-3 flex items-center gap-2 text-sm border-b border-blue-200 pb-1">
+                        <Activity className="w-4 h-4 text-blue-500" />{" "}
+                        Cardiovascular Training
+                      </p>
+                      <ul className="space-y-2">
+                        {[
+                          "Brisk walking protocols",
+                          "Interval cardio (as appropriate)",
+                          "Cycling or treadmill programs",
+                          "Low-impact endurance training",
+                        ].map((item, i) => (
+                          <li
+                            key={i}
+                            className="flex items-start gap-2 text-xs font-semibold text-slate-600"
+                          >
+                            <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-1 shrink-0"></div>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Strength Sub-list */}
+                    <div>
+                      <p className="font-bold text-slate-900 mb-3 flex items-center gap-2 text-sm border-b border-blue-200 pb-1">
+                        <Zap className="w-4 h-4 text-blue-500" /> Strength &
+                        Resistance Training
+                      </p>
+                      <ul className="space-y-2">
+                        {[
+                          "Muscle activation therapy",
+                          "Core strengthening",
+                          "Functional resistance training",
+                          "Sarcopenia prevention protocols",
+                        ].map((item, i) => (
+                          <li
+                            key={i}
+                            className="flex items-start gap-2 text-xs font-semibold text-slate-600"
+                          >
+                            <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-1 shrink-0"></div>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="bg-slate-900 text-white p-5 rounded-xl mt-auto shadow-md">
+                    <p className="font-bold text-blue-300 mb-3 text-sm uppercase tracking-wider">
+                      Goal:
+                    </p>
+                    <ul className="space-y-2">
+                      {[
+                        "Improve insulin sensitivity",
+                        "Increase lean muscle mass",
+                        "Enhance mitochondrial density",
+                        "Sustain long-term fat loss",
+                      ].map((item, i) => (
+                        <li
+                          key={i}
+                          className="flex items-start gap-2 text-sm font-medium"
+                        >
+                          <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1004,7 +1208,7 @@ const MetabolicSyndrome = () => {
 
           {/* Featured Medication Reduction Card (Light Version) */}
           <div className="mt-12">
-            <div className="relative overflow-hidden bg-slate-900 p-8 md:p-14 rounded-[3rem] shadow-2xl shadow-slate-200 border border-slate-800">
+            <div className="relative overflow-hidden bg-slate-900 p-8 md:p-14 rounded-[1rem] shadow-2xl shadow-slate-200 border border-slate-800">
               {/* Background Graphic */}
               <div className="absolute right-0 top-0 opacity-10 pointer-events-none translate-x-1/4 -translate-y-1/4">
                 <HeartPulse className="w-96 h-96 text-white" />
