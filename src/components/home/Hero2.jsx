@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import { useGSAP } from "@gsap/react";
-import img from "../../assets/faheedDr-Bqo11-Yo.webp";
+import img from "../../assets/drFaheem.jpeg";
 import pattern from "../../assets/pattern.png"
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
@@ -86,7 +86,7 @@ const Hero2 = () => {
           </div>
         </div>
         <div  className="w-full h-full overflow-hidden col-span-1 relative order-1 md:order-2 z-20 ">
-          <img src={img} className="object-cover w-full h-full object-top mt-16" alt="" />
+          <img src={img} className="object-cover w-full h-full object-center mt-16" alt="" />
         </div>
       </section>
       
