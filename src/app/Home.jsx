@@ -11,8 +11,8 @@ function Home() {
   return (
     <div>
       <Hero2/>
-      <IconSection/>
-      <TeamSec teamPage />
+      {/* <IconSection/> */}
+      {/* <TeamSec teamPage /> */}
       <ContactForm/>
       <Footer/>
     </div>

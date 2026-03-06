@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import { useGSAP } from "@gsap/react";
-import img from "../../assets/drFaheem.jpeg";
+import img from "../../assets/faheemDr3.jpg"; 
 import pattern from "../../assets/pattern.png"
 
 gsap.registerPlugin(ScrollTrigger, SplitText);

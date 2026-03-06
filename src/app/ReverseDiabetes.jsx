@@ -429,7 +429,7 @@ const ReverseDiabetes = () => {
                 IV Chelation Therapy
               </h4>
               <span className="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs font-bold rounded-full mb-6 w-fit uppercase">
-                (Selected Patients)
+                (Selected Clients)
               </span>
 
               <div className="mb-6">
@@ -746,7 +746,7 @@ const ReverseDiabetes = () => {
               <h4 className="text-xl font-bold mb-4 text-gray-800">
                 Stem Cell Therapy{" "}
                 <span className="text-sm font-normal text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
-                  (Carefully Selected Patients)
+                  (Carefully Selected Clients)
                 </span>
               </h4>
 
@@ -765,7 +765,7 @@ const ReverseDiabetes = () => {
                   "Support immune modulation",
                   "Promote beta-cell preservation (in early cases)",
                   "Improve metabolic stability",
-                  "Reduce insulin requirement in selected patients",
+                  "Reduce insulin requirement in selected clients",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-gray-800">
                     <ActivitySquare className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
@@ -805,7 +805,7 @@ const ReverseDiabetes = () => {
 
             <h2 className="text-3xl md:text-5xl font-extrabold mb-6 flex items-center justify-center gap-3 relative z-10">
               <Globe className="w-7 h-7 md:w-9 md:h-9 flex-shrink-0 text-inherit" />
-              Designed for International Patients
+              Designed for Multi-National Clients
             </h2>
             <p className="text-xl md:text-2xl text-teal-100 font-light mb-12 relative z-10">
               We offer:

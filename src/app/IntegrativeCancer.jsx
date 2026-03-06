@@ -70,7 +70,7 @@ const IntegrativeCancer = () => {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
+            <section className="relative h-[75vh] md:h-[85vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img
                         src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2080&auto=format&fit=crop"
@@ -141,15 +141,16 @@ const IntegrativeCancer = () => {
                                 <h2 className="text-3xl md:text-5xl font-bold mb-8 text-indigo-950 leading-tight">
                                     🧬 A Whole-Person Cancer Support Model
                                 </h2>
-                                <p className="text-xl text-gray-700 leading-relaxed mb-6">
+                                <p className="text-xl text-gray-900 leading-relaxed mb-6">
                                     Our program <span className="font-bold text-indigo-700 italic underline">does not replace your oncologist</span>.
                                     It strengthens your body while you undergo — or after you complete — conventional treatment.
                                 </p>
-                                <p className="text-lg text-gray-600 font-medium">
-                                    We focus on:
-                                </p>
+
                             </div>
                             <div className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <p className="col-span-full text-lg text-gray-800 font-medium">
+                                    We focus on:
+                                </p>
                                 {focusAreas.map((focus, idx) => (
                                     <div key={idx} className="flex items-start gap-4 p-4 bg-indigo-50 rounded-2xl border border-indigo-100/50">
                                         <div className="p-2 bg-white rounded-xl shadow-sm">
@@ -226,8 +227,11 @@ const IntegrativeCancer = () => {
                         <h2 className="text-3xl md:text-5xl font-bold mb-8 text-indigo-950 leading-tight font-serif italic">
                             🥗 Step 2: Metabolic & Nutritional Oncology Support
                         </h2>
-                        <p className="text-xl text-gray-700 leading-relaxed mb-12">
+                        <p className="text-xl text-gray-700 leading-relaxed mb-2">
                             Cancer is influenced by <span className="text-indigo-600 underline decoration-indigo-200">inflammation, insulin signaling, and mitochondrial function</span>.
+                        </p>
+                        <p className="text-xl text-gray-900 leading-relaxed mb-12">
+                            Your personalized plan may include:
                         </p>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
@@ -279,7 +283,7 @@ const IntegrativeCancer = () => {
                                         <Sparkles className="w-6 h-6" /> IV High-Dose Vitamin C (Selected Patients)
                                     </h4>
                                     <div className="grid grid-cols-2 gap-2 text-sm text-gray-700 font-bold">
-                                        {["Oxidative balance", "Symptom relief", "Improved wellbeing"].map((item, i) => (
+                                        {["Oxidative balance", "Symptom relief", "Improved wellbeing", "Ozone Therapy (Carefully Selected Cases)"].map((item, i) => (
                                             <div key={i} className="flex items-center gap-2">
                                                 <div className="w-1.5 h-1.5 bg-indigo-400 rounded-full"></div>
                                                 {item}
@@ -501,7 +505,7 @@ const IntegrativeCancer = () => {
                         <div className="flex flex-col lg:flex-row gap-16 items-center mb-16">
                             <div className="lg:w-1/2">
                                 <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-8  font-serif uppercase  leading-tight">
-                                    🌍 Designed for International Patients
+                                    🌍 Personalized for Clients Across the Globe
                                 </h2>
                                 <p className="text-indigo-100 text-xl italic leading-tight font-medium tracking-tight">
                                     Kerala offers a calm, healing environment ideal for recovery and structured supportive care.

@@ -167,7 +167,7 @@ const StrokeRecovery = () => {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="relative h-[65vh] md:h-[75vh] flex items-center justify-center overflow-hidden">
+            <section className="relative h-[75vh] md:h-[85vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img
                         src="https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=2071&auto=format&fit=crop"
@@ -202,10 +202,9 @@ const StrokeRecovery = () => {
                 <div className="container mx-auto px-6">
                     <div className="max-w-5xl mx-auto">
                         <div className="text-center mb-16">
-                            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Comprehensive Recovery For:</h2>
-                            <p className="text-lg text-gray-600">We combine Functional Medicine + Neuro-Rehabilitation + Vascular Optimization.</p>
+                            <h2 className="text-3xl md:text-4xl font-bold  text-gray-900">Whether recovering from:</h2>
                         </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mb-8 gap-6">
                             {conditions.map((item, idx) => (
                                 <div key={idx} className="flex items-center gap-3 bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                                     <div className="w-2 h-2 bg-blue-600 rounded-full shrink-0"></div>
@@ -213,6 +212,7 @@ const StrokeRecovery = () => {
                                 </div>
                             ))}
                         </div>
+                            <p className="text-xl text-center text-gray-900">We combine Functional Medicine + Neuro-Rehabilitation + Vascular Optimization.</p>
                     </div>
                 </div>
             </section>
@@ -220,16 +220,16 @@ const StrokeRecovery = () => {
             {/* Philosophy Section */}
             <section className="py-24 bg-white relative overflow-hidden">
                 <div className="container mx-auto px-6 relative z-10">
-                    <div className="flex flex-col lg:flex-row gap-16 items-center">
-                        <div className="lg:w-1/2">
+                    <div className="">
+                        <div className="w-full flex flex-col items-center">
                             <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight italic text-blue-900">
-                                Our Integrative <br /> Philosophy
+                                Our Integrative Philosophy
                             </h2>
                             <p className="text-xl text-gray-700 mb-10 leading-relaxed">
                                 Stroke is a <span className="font-bold text-blue-700">vascular, inflammatory, metabolic, and neurological event.</span>
                             </p>
                             <p className="text-lg text-gray-600 mb-8 font-medium">Recovery depends on addressing multiple pillars:</p>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {[
                                     "Neuroplasticity",
                                     "Cerebral circulation",
@@ -246,7 +246,7 @@ const StrokeRecovery = () => {
                                 ))}
                             </div>
                         </div>
-                        <div className="lg:w-1/2">
+                        {/* <div className="lg:w-1/2">
                             <div className="bg-slate-900 p-10 md:p-12 rounded-[3.5rem] text-white shadow-2xl relative overflow-hidden">
                                 <Brain className="absolute -bottom-10 -right-10 w-64 h-64 text-white/5" />
                                 <h3 className="text-2xl font-bold mb-8">Prevention of Recurrent Stroke</h3>
@@ -259,7 +259,7 @@ const StrokeRecovery = () => {
                                     ))}
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>
@@ -269,7 +269,7 @@ const StrokeRecovery = () => {
                 <div className="container mx-auto px-6">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-5xl font-bold mb-6 text-blue-950">7-Phase Stroke Recovery Program</h2>
-                        <p className="text-gray-500 text-lg max-w-2xl mx-auto">A structured, multi-dimensional approach to neurological restoration.</p>
+                        <p className="text-gray-900 text-2xl max-w-2xl mx-auto">A structured, multi-dimensional approach to neurological restoration.</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -376,6 +376,20 @@ const StrokeRecovery = () => {
                                 ))}
                             </div>
                         </div>
+                        <div className="col-span-full">
+                            <div className="bg-slate-900 p-10 md:p-12 rounded-[3.5rem] text-white shadow-2xl relative overflow-hidden">
+                                <Brain className="absolute -bottom-10 -right-10 w-64 h-64 text-white/5" />
+                                <h3 className="text-2xl font-bold mb-8">Prevention of Recurrent Stroke</h3>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
+                                    {preventions.map((item, idx) => (
+                                        <div key={idx} className="flex gap-4 items-center p-4 bg-white/5 rounded-2xl border border-white/10">
+                                            {item.icon}
+                                            <span className="font-medium text-gray-200 text-sm">{item.title}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -410,7 +424,7 @@ const StrokeRecovery = () => {
                         <div className="absolute top-0 right-0 p-12 opacity-10">
                             <Globe className="w-64 h-64" />
                         </div>
-                        <h2 className="text-3xl md:text-5xl font-bold mb-6 relative z-10">Designed for International Patients</h2>
+                        <h2 className="text-3xl md:text-5xl font-bold mb-6 relative z-10">Personalized for Clients Across the Globe</h2>
                         <p className="text-blue-100 mb-10 relative z-10 max-w-2xl mx-auto italic">
                             Kerala offers a calm healing environment ideal for neurological recovery.
                         </p>

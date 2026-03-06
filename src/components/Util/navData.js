@@ -93,7 +93,7 @@ export const otherLinks = [
     link: "/gallery",
   },
   {
-    titel: "Team",
-    link: "/team",
+    titel: "Panel",
+    link: "/panel",
   }
 ];

@@ -291,7 +291,7 @@ const LiverRestoration = () => {
       <Navbar />
 
       {/* --- Hero Section --- */}
-      <section className="relative h-[60vh] md:h-[70vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[75vh] md:h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2080&auto=format&fit=crop"
@@ -697,7 +697,7 @@ const LiverRestoration = () => {
                 <span>
                   Step 3: Advanced IV Liver Support{" "}
                   <span className="block sm:inline text-sm font-normal text-slate-500 bg-slate-100 px-3 py-1 mt-2 sm:mt-0 rounded-full uppercase tracking-wider w-fit">
-                    (Selected Patients)
+                    (Selected Clients)
                   </span>
                 </span>
               </h3>
@@ -705,7 +705,7 @@ const LiverRestoration = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 flex-grow">
                 <div className="bg-purple-50/50 p-6 rounded-2xl border border-purple-100">
                   <p className="font-bold text-slate-900 mb-4 border-b border-purple-200 pb-2">
-                    For patients with:
+                    For clients with:
                   </p>
                   <ul className="space-y-3">
                     {[
@@ -981,7 +981,7 @@ const LiverRestoration = () => {
               <div className="p-3 bg-white/10 rounded-2xl">
                 <Globe className="w-10 h-10 text-emerald-300" />
               </div>
-              Designed for International Patients
+              Designed for clients across the globe
             </h2>
             <p className="text-xl text-emerald-200 mb-8 font-medium relative z-10">
               We offer:

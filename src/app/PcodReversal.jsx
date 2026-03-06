@@ -40,7 +40,7 @@ const PcodReversal = () => {
       <Navbar />
 
       {/* --- Hero Section --- */}
-      <section className="relative h-[60vh] md:h-[70vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[75vh] md:h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2040&auto=format&fit=crop"
@@ -213,7 +213,7 @@ const PcodReversal = () => {
                 <span>
                   Phase 3: Advanced IV Hormonal Support{" "}
                   <span className="block sm:inline text-sm font-normal text-slate-500 bg-slate-100 px-3 py-1 mt-2 sm:mt-0 rounded-full uppercase tracking-wider w-fit">
-                    (Selected Patients)
+                    (Selected Clients)
                   </span>
                 </span>
               </h3>
@@ -604,7 +604,7 @@ const PcodReversal = () => {
               <div className="p-3 bg-white/10 rounded-2xl">
                 <Globe className="w-10 h-10 text-indigo-300" />
               </div>
-              Designed for International Patients
+              Designed for Multinational Clients
             </h2>
             <p className="text-xl text-indigo-200 mb-8 font-medium relative z-10">
               We offer:

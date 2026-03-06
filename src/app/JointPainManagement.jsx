@@ -192,7 +192,7 @@ const JointPainManagement = () => {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="relative h-[70vh] md:h-[80vh] flex items-center justify-center overflow-hidden">
+            <section className="relative h-[75vh] md:h-[85vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img
                         src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop"
@@ -441,6 +441,31 @@ const JointPainManagement = () => {
                 </div>
             </section>
 
+            {/* Why Tigris? */}
+            <section className="py-24 bg-white border-t border-gray-100 text-center">
+                <div className="container mx-auto px-6">
+                    <h2 className="text-4xl font-extrabold text-blue-950 mb-16 underline decoration-blue-500 decoration-4 underline-offset-8">🏥 Why Tigris Valley Wellness Centre?</h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+                        {[
+                            "Root-cause functional medicine",
+                            "Structured physiotherapy integration",
+                            "Regenerative & IV therapy options",
+                            "AYUSH + modern medical blend",
+                            "Personalized programs",
+                            "Safety-first medical supervision"
+                        ].map((item, idx) => (
+                            <div key={idx} className="flex items-center gap-4 bg-blue-50/30 p-8 rounded-3xl border border-blue-100/50 hover:bg-blue-50 transition-all hover:shadow-md">
+                                <CheckCircle2 className="text-blue-600 shrink-0" />
+                                <span className="font-bold text-gray-800 leading-tight">✔ {item}</span>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="mt-20">
+                        <p className="text-2xl md:text-4xl font-black italic text-blue-950 tracking-tight">We do not just manage pain. We restore movement.</p>
+                    </div>
+                </div>
+            </section>
+
             {/* International Patient Program */}
             <section className="py-24 bg-slate-950 relative overflow-hidden">
                 <div className="absolute top-0 right-0 p-20 opacity-10">
@@ -449,7 +474,7 @@ const JointPainManagement = () => {
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="max-w-5xl mx-auto">
                         <div className="text-center mb-16">
-                            <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6">🌍 International Patient Program</h2>
+                            <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6">🌍 Multi-National Clients Program</h2>
                             <p className="text-blue-300 text-lg italic mb-12">Kerala provides a calm healing environment ideal for recovery.</p>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -492,30 +517,7 @@ const JointPainManagement = () => {
                 </div>
             </section>
 
-            {/* Why Tigris? */}
-            <section className="py-24 bg-white border-t border-gray-100 text-center">
-                <div className="container mx-auto px-6">
-                    <h2 className="text-4xl font-extrabold text-blue-950 mb-16 underline decoration-blue-500 decoration-4 underline-offset-8">🏥 Why Tigris Valley Wellness Centre?</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-                        {[
-                            "Root-cause functional medicine",
-                            "Structured physiotherapy integration",
-                            "Regenerative & IV therapy options",
-                            "AYUSH + modern medical blend",
-                            "Personalized programs",
-                            "Safety-first medical supervision"
-                        ].map((item, idx) => (
-                            <div key={idx} className="flex items-center gap-4 bg-blue-50/30 p-8 rounded-3xl border border-blue-100/50 hover:bg-blue-50 transition-all hover:shadow-md">
-                                <CheckCircle2 className="text-blue-600 shrink-0" />
-                                <span className="font-bold text-gray-800 leading-tight">✔ {item}</span>
-                            </div>
-                        ))}
-                    </div>
-                    <div className="mt-20">
-                        <p className="text-2xl md:text-4xl font-black italic text-blue-950 tracking-tight">We do not just manage pain. We restore movement.</p>
-                    </div>
-                </div>
-            </section>
+            
 
             <Footer />
         </div>

@@ -117,8 +117,8 @@ export default function NavLinks() {
                   link: "/gallery",
                 },
                 {
-                  titel: "Team",
-                  link: "/team",
+                  titel: "Panel",
+                  link: "/panel",
                 }].map((tab, index) => (
                   <Link to={tab.link} key={index} >
                     <div className={` `}>

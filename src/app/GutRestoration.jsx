@@ -32,7 +32,7 @@ const GutRestoration = () => {
       <Navbar />
 
       {/* --- Hero Section (Strictly Title & Subtitle with Bottom-to-Up Motion) --- */}
-      <section className="relative h-[70vh] md:h-[80vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[75vh] md:h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1505575967455-40e256f73376?q=80&w=2070&auto=format&fit=crop"

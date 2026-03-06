@@ -121,7 +121,7 @@ const FertilityRestoration = () => {
           </div>
 
           {/* 3-Column Equal Height Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
             {/* Card 1: Women */}
             <div className="bg-white p-8 md:p-10 rounded-[2rem] border border-slate-200  shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(244,63,94,0.08)]  transition-all duration-300 flex flex-col relative overflow-hidden group">
               <FaFemale
@@ -187,6 +187,7 @@ const FertilityRestoration = () => {
                   "Oxidative stress",
                   "Erectile dysfunction",
                   "Metabolic syndrome",
+                  "Seeking natural conception support"
                 ].map((item, i) => (
                   <li
                     key={i}
@@ -202,7 +203,7 @@ const FertilityRestoration = () => {
             </div>
 
             {/* Card 3: Couples */}
-            <div className="bg-white p-8 md:p-10 rounded-[2rem] border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(168,85,247,0.08)]  transition-all duration-300 flex flex-col relative overflow-hidden group md:col-span-2 lg:col-span-1">
+            {/* <div className="bg-white p-8 md:p-10 rounded-[2rem] border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(168,85,247,0.08)]  transition-all duration-300 flex flex-col relative overflow-hidden group md:col-span-2 lg:col-span-1">
               <FaVenusMars className="absolute -bottom-10 -right-10 w-44 h-44 text-purple-100 group-hover:text-purple-200 pointer-events-none group-hover:scale-103 transition-transform duration-500" />
 
               <div className="flex items-center gap-5 mb-8 border-b border-slate-100 pb-6 relative z-10">
@@ -238,7 +239,7 @@ const FertilityRestoration = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -677,8 +678,7 @@ const FertilityRestoration = () => {
       </section>
 
       {/* --- IVF Protocol Section --- */}
-      <section className="py-14 md:py-12 bg-indigo-950 text-white relative overflow-hidden border-y border-indigo-900">
-        {/* Advanced Tech Grid Pattern */}
+      {/* <section className="py-14 md:py-12 bg-indigo-950 text-white relative overflow-hidden border-y border-indigo-900">
         <div
           className="absolute inset-0 opacity-[0.05]"
           style={{
@@ -750,7 +750,7 @@ const FertilityRestoration = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* --- Duration & Focus Areas --- */}
       <section className="py-14 md:py-15 bg-white relative overflow-hidden border-t border-slate-100">
@@ -776,7 +776,7 @@ const FertilityRestoration = () => {
               <div className="hidden md:block h-px bg-slate-200 flex-grow max-w-md ml-8"></div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
               {/* Track 1: Natural */}
               <div className="group relative bg-white p-10 rounded-[1.5rem] border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col items-center justify-center text-center overflow-hidden">
                 {/* <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-rose-300 to-rose-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out"></div> */}
@@ -796,7 +796,7 @@ const FertilityRestoration = () => {
               </div>
 
               {/* Track 2: IVF */}
-              <div className="group relative bg-white p-10 rounded-[1.5rem] border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col items-center justify-center text-center overflow-hidden">
+              {/* <div className="group relative bg-white p-10 rounded-[1.5rem] border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col items-center justify-center text-center overflow-hidden">
                 <p className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 mb-6 group-hover:text-purple-600 transition-colors">
                   IVF Preparation Track
                 </p>
@@ -810,7 +810,7 @@ const FertilityRestoration = () => {
                 <p className="font-semibold text-slate-600">
                   Pre-Cycle Optimization
                 </p>
-              </div>
+              </div> */}
 
               {/* Track 3: Intensive (Highlighted Dark Card) */}
               <div className="group relative bg-slate-950 p-10 rounded-[1.5rem] border border-slate-800 shadow-[0_10px_40px_rgb(0,0,0,0.2)] hover:shadow-2xl hover:shadow-blue-900/20 hover:-translate-y-2 transition-all duration-500 flex flex-col items-center justify-center text-center overflow-hidden">
@@ -943,7 +943,7 @@ const FertilityRestoration = () => {
                   <Globe className="w-8 h-8 text-slate-300" />
                 </div>
                 <h2 className="text-3xl md:text-4xl font-black mb-4">
-                  Designed for International Patients
+                  Personalized for Clients Across the Globe
                 </h2>
                 <p className="text-lg text-slate-400 font-medium">We offer:</p>
               </div>
@@ -953,7 +953,7 @@ const FertilityRestoration = () => {
                   "Pre-arrival virtual consultation",
                   "Couple-based assessment",
                   "2–4 week intensive program",
-                  "IVF coordination support",
+                  // "IVF coordination support",
                   "Airport assistance coordination",
                   "Structured follow-up with home physician",
                 ].map((item, i) => (
@@ -994,7 +994,7 @@ const FertilityRestoration = () => {
                   "Functional + Integrative fertility approach",
                   "IV mitochondrial support protocols",
                   "Hormone-focused metabolic care",
-                  "IVF preparation specialization",
+                  // "IVF preparation specialization",
                   "Ethical & individualized care",
                   "Physician-supervised programs",
                 ].map((item, i) => (

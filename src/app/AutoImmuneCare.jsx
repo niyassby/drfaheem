@@ -126,7 +126,7 @@ const AutoImmuneCare = () => {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="relative h-[70vh] md:h-[80vh] flex items-center justify-center overflow-hidden">
+            <section className="relative h-[75vh] md:h-[85vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img
                         src="https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=2080&auto=format&fit=crop"
@@ -162,7 +162,7 @@ const AutoImmuneCare = () => {
                     <div className="max-w-6xl mx-auto">
                         <div className="text-center mb-16">
                             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">If you are living with:</h2>
-                            <p className="max-w-3xl mx-auto text-lg text-gray-600 mb-12 font-medium">
+                            <p className="max-w-3xl mx-auto text-xl text-gray-900 mb-12 font-medium">
                                 You may have tried medications, biologics, and lifestyle changes — yet flares persist.
                             </p>
                         </div>
@@ -397,7 +397,7 @@ const AutoImmuneCare = () => {
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="max-w-5xl mx-auto">
                         <div className="text-center mb-16">
-                            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">🌍 Designed for International Patients</h2>
+                            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">🌍 Designed for a Worldwide Community</h2>
                             <p className="text-blue-200 text-lg italic">Kerala offers a calm, private healing environment ideal for immune recovery.</p>
                         </div>
 

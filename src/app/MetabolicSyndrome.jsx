@@ -1255,7 +1255,7 @@ const MetabolicSyndrome = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-extrabold text-blue-950 mb-6 flex items-center justify-center gap-3">
               <Globe className="w-10 h-10 text-blue-600" />
-              Why International Patients Choose Us
+              Why Worldwide Clients Choose Us
             </h2>
             <p className="text-xl text-gray-600 italic">
               At Tigris Valley Wellness Centre we provide:

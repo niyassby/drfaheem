@@ -104,7 +104,7 @@ function App() {
         <Route path="/MindBodyBalance" element={<MindBodyBalance />} />
 
         <Route path="/about" element={<About />} />
-        <Route path="/team" element={<Team />} />
+        <Route path="/panel" element={<Team />} />
       </Routes>
     </HashRouter>
   );

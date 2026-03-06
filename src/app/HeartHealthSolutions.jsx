@@ -47,7 +47,7 @@ const HeartHealthSolutions = () => {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="relative h-[60vh] md:h-[70vh] flex items-center justify-center overflow-hidden">
+            <section className="relative h-[75vh] md:h-[85vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img
                         src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?q=80&w=2070&auto=format&fit=crop"
@@ -82,17 +82,17 @@ const HeartHealthSolutions = () => {
                     <div className="max-w-4xl mx-auto text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-bold mb-6 text-red-900">Our Integrative Approach</h2>
                         <div className="h-1.5 w-24 bg-red-600 mx-auto rounded-full mb-8"></div>
-                        <p className="text-lg text-gray-700 leading-relaxed italic">
+                        <p className="text-xl text-gray-900 leading-relaxed italic">
                             At Tigris Valley, we provide comprehensive, non-surgical heart care solutions for patients who continue to experience symptoms despite medications, stents, or bypass surgery — as well as for those seeking preventive cardiovascular support.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
                         {['IV Chelation Therapy', 'Enhanced External Counterpulsation (EECP)', 'Targeted Cardiac Nutritional Support', 'Metabolic optimization', 'Lifestyle and risk-factor correction'].map((item, idx) => (
                             <motion.div
                                 key={idx}
                                 whileHover={{ y: -5 }}
-                                className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-4"
+                                className=" flex items-center gap-4"
                             >
                                 <CheckCircle2 className="text-red-600 shrink-0" />
                                 <span className="font-semibold text-gray-800">{item}</span>
@@ -100,7 +100,7 @@ const HeartHealthSolutions = () => {
                         ))}
                     </div>
                     <div className='text-center mt-10'>
-                        <p className='text-lg text-gray-700 leading-relaxed italic'>All therapies are delivered under structured medical supervision with strict safety monitoring.</p>
+                        <p className='text-lg text-gray-900 leading-relaxed italic'>All therapies are delivered under structured medical supervision with strict safety monitoring.</p>
                     </div>
                 </div>
             </section>
@@ -316,13 +316,13 @@ EECP is a non-invasive outpatient therapy designed to stimulate the reopening an
                                 Cardiac Nutrition
                             </h4>
                             <p className="text-red-100 mb-6 italic">Targeted IV support for heart failure patients with limited options.</p>
-                            <div className="grid grid-cols-2 gap-4 mb-6">
+                            <ul className="space-y-3 mb-6">
                                 {["Targeted cardiac micronutrients", "Mitochondrial support nutrients", "Antioxidant therapy", "Metabolic cofactors"].map((item, i) => (
-                                    <div key={i} className="bg-white/5 p-3 rounded-xl border border-white/10 text-xs text-center">
-                                        {item}
-                                    </div>
+                                    <li key={i} className="flex items-center gap-3 text-sm font-medium">
+                                        <CheckCircle2 className="text-red-500 w-4 h-4" /> {item}
+                                    </li>
                                 ))}
-                            </div>
+                            </ul>
                             <p className="text-xs text-red-300">
                                 <span className='font-bold'>In suitable patients :</span> 15–20 sittings every three months to support cardiac metabolism and quality of life.
                             </p>
@@ -340,14 +340,14 @@ EECP is a non-invasive outpatient therapy designed to stimulate the reopening an
                     <div className="">
                         <div className="">
                             <h2 className="text-4xl font-extrabold mb-8 text-red-950 leading-tight">Why Choose Tigris Valley for Heart Care?</h2>
-                            <p className="text-lg text-gray-700 mb-10 leading-relaxed">
+                            <p className="text-xl max-w-4xl text-gray-900 mb-10 leading-relaxed">
                                 Our Advanced Heart Health Program is designed to provide structured, safe, and integrative cardiac support aimed at improving function, circulation, and overall quality of life.
                             </p>
                             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                                 {whyChoose.map((item, idx) => (
                                     <div key={idx} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                                         <h5 className="font-bold text-red-800 mb-2">{item.title}</h5>
-                                        <p className="text-sm text-gray-600">{item.desc}</p>
+                                        <p className="text-base text-gray-700">{item.desc}</p>
                                     </div>
                                 ))}
                             </div>
@@ -357,7 +357,7 @@ EECP is a non-invasive outpatient therapy designed to stimulate the reopening an
                 </div>
             </section>
             {/* Video Gallery Section */}
-            <section className="py-24 bg-red-50/30">
+            <section className="py-16 bg-red-50/30">
                 <div className="container mx-auto px-6">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-5xl font-bold mb-6 text-red-950">Educational & Success Videos</h2>
@@ -390,7 +390,7 @@ EECP is a non-invasive outpatient therapy designed to stimulate the reopening an
             </section>
 
             {/* Our Commitment Section */}
-            <section className="py-24 bg-gradient-to-b from-white to-gray-50">
+            <section className="py-16 bg-gradient-to-b from-white to-gray-50">
                 <div className="container mx-auto px-6">
                     <div className="max-w-5xl mx-auto bg-white rounded-[3rem] shadow-2xl shadow-red-500/10 border border-red-50 p-8 md:p-16 relative overflow-hidden">
                         <div className="absolute top-0 left-0 w-2 h-full bg-red-600"></div>
