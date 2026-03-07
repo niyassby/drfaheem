@@ -66,8 +66,8 @@ export const welnessSolutions = [
     link: "/hair-restoration",
   },
   {
-    titel: "Immuno Optimization",
-    link: "/immuno-optimization",
+    titel: "Immune Optimization",
+    link: "/immune-optimization",
   },
   {
     titel: "Gut Detox & Microbiome Restoration",

@@ -92,7 +92,7 @@ function App() {
 
         <Route path="/anti-aging" element={<AntiAging />} />
         <Route path="/hair-restoration" element={<HairRestoration />} />
-        <Route path="/immuno-optimization" element={<ImmunoOptimization />} />
+        <Route path="/immune-optimization" element={<ImmunoOptimization />} />
         <Route path="/hangover-recovery" element={<HangoverRecovery />} />
 
 
