@@ -71,23 +71,32 @@ const data = {
 
 function About() {
   return (
-    <div>
-      {/* <AboutHeader /> */}
+    <div className="bg-white">
       <WhoIAm data={data} />
+
       <Section2 />
-      {/* <MyJourney/> */}
-      <div>
-        <div className="max-w-[85rem] my-20 mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-10">
-          {content.map((item, index) => {
-            return <StorySec key={index} index={index} item={item} />;
-          })}
+
+      <section className="py-20 lg:py-32 bg-gray-50/30">
+        <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-16 text-center">
+            <h2 className="text-3xl lg:text-4xl font-bold text-primary-900 main-font mb-4">
+              My Professional Journey
+            </h2>
+            <div className="w-20 h-1 bg-primary-500 mx-auto rounded-full" />
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
+            {content.map((item, index) => {
+              return <StorySec key={index} index={index} item={item} />;
+            })}
+          </div>
         </div>
-      </div>
-      <StorySec />
-      {/* <Vision/> */}
+      </section>
+
       <Footer />
     </div>
   );
 }
 
 export default About;
+

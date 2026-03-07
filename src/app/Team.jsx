@@ -40,7 +40,7 @@ function AboutHeader() {
       <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-backg round "></div>
         <div className='max-w-[85rem] min-h-[300px] relative md:min-h-[400px] mx-auto flex flex-col items-center justify-center py-3 px-4'>
         <h2 className="text-3xl font-bold text-center text-gray-900 sm:text-4xl ">
-          Meet our team
+          Meet Our Experts Panel
           </h2>
           {/* <p className="mt-4 text-lg text-center text-gray-500">We are committed to providing the best quality products and services to our customers.</p> */}
           <p className="mb-7 max-w-3xl text-sm text-center text-gray-500 ">

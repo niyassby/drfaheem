@@ -80,17 +80,16 @@ function TeamSec({ teamPage = false }) {
   return (
     <div id="Team" className="py-20">
       <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-        <div className="w-full flex flex-col items-center justify-center gap-3">
+        {/* <div className="w-full flex flex-col items-center justify-center gap-3">
           <h2 className="text-3xl font-bold text-center text-gray-900 sm:text-4xl qsection">
             Meet Our Experts Panel
           </h2>
-          {/* <p className="mt-4 text-lg text-center text-gray-500">We are committed to providing the best quality products and services to our customers.</p> */}
           <p className="mb-7 max-w-3xl text-sm text-center text-gray-500 qsection">
             {" "}
             A committed team led by Dr. Faheem Najeeb, working together to blend modern medicine and integrative care for healing and wellness.
 
           </p>
-        </div>
+        </div> */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 justify-items-center items-center gap-y-8 gap-4 qsection mt-5">
           {team.map((team, index) => {
             return (
