@@ -11,16 +11,16 @@ export const tabs = [
 
 export const spProgramsTitle = [
   {
+    titel: "Advanced Integrative Cancer & Palliative Care",
+    link: "/integrative-cancer",
+  },
+  {
     titel: "Heart health & heart block solutions",
     link: "/heart-health",
   },
   {
     titel: "Reverse Type 2 Diabetes Naturally",
     link: "/reverse-diabetes",
-  },
-  {
-    titel: "Advanced Integrative Cancer & Palliative Care",
-    link: "/integrative-cancer",
   },
   {
     titel: "Metabolic Syndrome and Obesity Care",

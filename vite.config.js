@@ -10,9 +10,10 @@ export default defineConfig({
     port: 3000,
     host: true,
   },
+  assetsInclude: ["**/*.MP4", "**/*.mp4"],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-})
+});

@@ -1,3 +1,5 @@
+import video1 from "../../assets/video/video1.MP4"
+
 export const EDTA_Chelation_Therapy = {
   banner: {
     title: "EDTA Chelation Therapy",
@@ -751,6 +753,7 @@ export const coffee_enema_page = {
     image:
       "https://simplenursing.com/wp-content/uploads/2024/06/Enema-Tools-with-coffee-beans-and-coffee-in-a-glass-cup-768x510.webp",
   },
+  videoSrc: video1,
   sections: [
     {
       heading: "Introduction",

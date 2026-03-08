@@ -9,6 +9,7 @@ import team3 from '../../assets/team3.jpg'
 import team4 from '../../assets/okm.png'
 import team5 from '../../assets/drSuraj.jpg'
 import team6 from '../../assets/Gafoor.jpg'
+import team7 from "../../assets/lenny2.jpg";
 import { AboutTeam } from "./AboutTeam";
 import DrHaseenaBio from "./DrHaseena";
 import ProfilePage from "./ProfilePageZulekha";
@@ -16,57 +17,58 @@ import { JoinTeam } from "./JoinTeam";
 import Annaverwall from "./Annaverwaal";
 import DrOKMAbdurahman from "./DrOKMAbdurahman";
 import DrSoorajSankar from "./DrSoorajSankar";
+import DrLenny from "./DrLenny";
 
 const team = [
   {
-    name: 'Dr.Lenny',
-    designation: '',
-    image: "https://www.iibsonline.com/public/testimonial/testimonial_image_full/183.png",
-    description: ""
+    name: "DR Lenny Da Costa",
+    designation: "",
+    image: team7,
+    description: <DrLenny />,
   },
   {
-    name: 'Dr.Sooraj Sankar',
-    designation: '',
+    name: "Dr. Sooraj Sankar",
+    designation: "",
     image: team5,
-    description: <DrSoorajSankar />
+    description: <DrSoorajSankar />,
   },
   {
-    name: 'Dr.OKM Abdurahman',
-    designation: 'Lifestyle Physician & Unani Consultant',
+    name: "Dr. OKM Abdurahman",
+    designation: "Lifestyle Physician & Unani Consultant",
     image: team4,
-    description: <DrOKMAbdurahman />
+    description: <DrOKMAbdurahman />,
   },
   {
-    name: 'Dr.Gafoor',
-    designation: '',
+    name: "Dr. Abdul Gafoor",
+    designation: "",
     image: team6,
-    description: ""
+    description: "",
   },
   {
-    name: 'Dr.Haseena Chokkiyil',
-    designation: 'Designation',
+    name: "Dr. Haseena Chokkiyil",
+    designation: "Designation",
     image: team1,
-    description: <DrHaseenaBio />
+    description: <DrHaseenaBio />,
   },
   {
-    name: 'Dr.Azibunnisha',
-    designation: '',
-    image: "https://st4.depositphotos.com/9998432/22670/v/450/depositphotos_226700620-stock-illustration-person-gray-photo-placeholder-woman.jpg",
-    description: ""
+    name: "Dr. Azibunnisha",
+    designation: "",
+    image:
+      "https://st4.depositphotos.com/9998432/22670/v/450/depositphotos_226700620-stock-illustration-person-gray-photo-placeholder-woman.jpg",
+    description: "",
   },
   {
-    name: 'Anna Verwaal',
-    designation: 'Designation',
+    name: "Anna Verwaal",
+    designation: "Designation",
     image: team2,
-    description: <Annaverwall />
+    description: <Annaverwall />,
   },
   {
-    name: 'Zulekha Shakoor Rajani    ',
-    designation: 'Counselling & Spiritual Psychologist',
+    name: "Zulekha Shakoor Rajani    ",
+    designation: "Counselling & Spiritual Psychologist",
     image: team3,
-    description: <ProfilePage />
+    description: <ProfilePage />,
   },
-
 ];
 
 function TeamSec({ teamPage = false }) {
