@@ -23,16 +23,12 @@ export const spProgramsTitle = [
     link: "/reverse-diabetes",
   },
   {
-    titel: "Metabolic Syndrome and Obesity Care",
-    link: "/metabolic-syndrome",
-  },
-  {
     titel: "Stroke recovery & Neuro Rehabilitation",
     link: "/stroke-recovery",
   },
   {
-    titel: "PCOD & Hormone Health",
-    link: "/pcod",
+    titel: "Metabolic Syndrome and Obesity Care",
+    link: "/metabolic-syndrome",
   },
   {
     titel: "From Fatty Liver to Functional Liver",
@@ -43,12 +39,21 @@ export const spProgramsTitle = [
     link: "/auto-immune-care",
   },
   {
+    titel: "Joint & Pain Management",
+    link: "/joint-pain-management",
+  },
+  {
+    titel: "PCOD & Hormone Health",
+    link: "/pcod",
+  },
+
+  {
     titel: "Integrative Fertility Care",
     link: "/fertility-care",
   },
   {
-    titel: "Joint & Pain Management",
-    link: "/joint-pain-management",
+    titel: "Elder care & assisted living",
+    link: "/ElderCarePage",
   },
 ];
 

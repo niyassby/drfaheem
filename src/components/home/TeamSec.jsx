@@ -18,6 +18,7 @@ import Annaverwall from "./Annaverwaal";
 import DrOKMAbdurahman from "./DrOKMAbdurahman";
 import DrSoorajSankar from "./DrSoorajSankar";
 import DrLenny from "./DrLenny";
+import DrAbdulgafoor from "./DRAbdulgafoor";
 
 const team = [
   {
@@ -42,7 +43,7 @@ const team = [
     name: "Dr. Abdul Gafoor",
     designation: "",
     image: team6,
-    description: "",
+    description: <DrAbdulgafoor/>,
   },
   {
     name: "Dr. Haseena Chokkiyil",
@@ -80,8 +81,8 @@ function TeamSec({ teamPage = false }) {
   //   }
   // });
   return (
-    <div id="Team" className="py-20">
-      <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+    <div id="Team" className="">
+      <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-0 -mt-24 mx-auto">
         {/* <div className="w-full flex flex-col items-center justify-center gap-3">
           <h2 className="text-3xl font-bold text-center text-gray-900 sm:text-4xl qsection">
             Meet Our Experts Panel

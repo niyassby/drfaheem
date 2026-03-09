@@ -1162,11 +1162,11 @@ export const programsTitle = [
     icon: Medicine01Icon,
     link: '/explore-2',
   },
-  {
-    titel: "IV Vitamin C",
-    icon: Cardiogram02Icon,
-    link: '/explore-3',
-  },
+  // {
+  //   titel: "IV Vitamin C",
+  //   icon: Cardiogram02Icon,
+  //   link: '/explore-3',
+  // },
   {
     titel: "IV Nutrition Drips",
     icon: Dna01Icon,

@@ -28,9 +28,11 @@ import {
   Check,
   Clock,
   MapPin,
+  Phone,
 } from "lucide-react";
 import { FaFemale, FaMale, FaVenusMars } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { GiLiver } from "react-icons/gi";
 const FertilityRestoration = () => {
   return (
     <div className="bg-slate-50 font-sans text-gray-900 w-full overflow-x-hidden selection:bg-rose-200 selection:text-rose-900">
@@ -187,7 +189,7 @@ const FertilityRestoration = () => {
                   "Oxidative stress",
                   "Erectile dysfunction",
                   "Metabolic syndrome",
-                  "Seeking natural conception support"
+                  "Seeking natural conception support",
                 ].map((item, i) => (
                   <li
                     key={i}
@@ -1069,7 +1071,65 @@ const FertilityRestoration = () => {
           </div>
         </div>
       </section>
+      <section className="py-16 md:py-20 bg-emerald-50/50 border-t border-emerald-100">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <div className="relative rounded-[1.5rem] overflow-hidden bg-gradient-to-br from-emerald-900 to-teal-950 p-10 md:p-14 shadow-2xl">
+            <div className="absolute inset-0 opacity-5 pointer-events-none">
+              <HeartPulse className="absolute top-4 right-8 w-48 h-48 text-emerald-300" />
+            </div>
 
+            <div className="relative z-10 flex flex-col lg:flex-row gap-10 items-start lg:items-center">
+              <div className="flex-1">
+                <div className="inline-flex items-center gap-2 bg-emerald-800/60 border border-emerald-700/50 text-emerald-200 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6">
+                  <Phone className="w-3.5 h-3.5" /> Begin Your Fertility
+                  Consultation
+                </div>
+
+                <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4 leading-tight">
+                  If you or your partner are seeking:
+                </h2>
+
+                <ul className="space-y-3 mb-8">
+                  {[
+                    "Hormonal balance and reproductive health optimization",
+                    "Improved egg and sperm quality through metabolic support",
+                    "Functional medicine support for natural conception",
+                    "Personalised fertility preparation for IVF or assisted reproduction",
+                  ].map((item, i) => (
+                    <li
+                      key={i}
+                      className="flex items-center gap-3 text-white/90 font-medium"
+                    >
+                      <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+
+                <p className="text-emerald-200 font-medium text-sm">
+                  Our medical team evaluates metabolic health, hormonal balance,
+                  inflammation markers, and reproductive function to design a
+                  personalized fertility restoration plan.
+                </p>
+              </div>
+
+              <div className="w-full lg:w-auto flex flex-col gap-4">
+                <button
+                  onClick={() => {}}
+                  className="inline-flex items-center justify-center gap-3 bg-white text-emerald-900 px-8 py-4 rounded-xl font-bold text-base shadow-lg hover:bg-emerald-50 transition-all duration-200 hover:-translate-y-0.5 w-full lg:w-auto whitespace-nowrap"
+                >
+                  <Phone className="w-5 h-5" />
+                  Request a Fertility Case Review
+                </button>
+
+                <p className="text-emerald-300 text-xs font-medium text-center">
+                  Physician-supervised · Natural conception & IVF support
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <Footer />
     </div>
   );

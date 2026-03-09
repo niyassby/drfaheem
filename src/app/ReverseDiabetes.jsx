@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Navbar/Footer";
@@ -21,10 +21,14 @@ import {
   HeartPulse,
   Clock,
   Dna,
+  Phone,
 } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader } from '@/components/ui/dialog';
+import { ContactInput } from '../components/home/ContactInput';
 import { LuActivity, LuBrainCircuit } from "react-icons/lu";
 import { TbHeartPlus } from "react-icons/tb";
 const ReverseDiabetes = () => {
+  const [ctaOpen, setCtaOpen] = useState(false);
   return (
     <div className="bg-slate-50 font-sans text-gray-900 w-full overflow-x-hidden">
       <Navbar />
@@ -880,6 +884,63 @@ const ReverseDiabetes = () => {
           </div>
         </div>
       </section>
+
+      {/* ── Consultation CTA ── */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <div className="relative rounded-[1.5rem] overflow-hidden bg-gradient-to-br from-teal-900 via-emerald-900 to-slate-900 p-10 md:p-14 shadow-2xl">
+            <div className="absolute inset-0 opacity-5 pointer-events-none">
+              <Dna className="absolute top-6 right-10 w-48 h-48 text-emerald-300" />
+            </div>
+            <div className="relative z-10 flex flex-col lg:flex-row gap-10 items-start lg:items-center">
+              <div className="flex-1">
+                <div className="inline-flex items-center gap-2 bg-teal-800/60 border border-teal-700/50 text-teal-200 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6">
+                  <Phone className="w-3.5 h-3.5" /> Begin Your Consultation
+                </div>
+                <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4 leading-tight">
+                  If you or your loved one is seeking:
+                </h2>
+                <ul className="space-y-3 mb-8">
+                  {[
+                    "Natural Type 2 diabetes reversal support",
+                    "HbA1c and insulin resistance improvement",
+                    "Advanced vascular & cardiac protection",
+                    "Structured metabolic restoration program",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3 text-white/90 font-medium">
+                      <CheckCircle2 className="w-5 h-5 text-teal-400 shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-teal-200 font-medium text-sm">
+                  Our team will guide you through a structured eligibility and consultation process.
+                </p>
+              </div>
+              <div className="w-full lg:w-auto flex flex-col gap-4">
+                <button
+                  onClick={() => setCtaOpen(true)}
+                  className="inline-flex items-center justify-center gap-3 bg-white text-teal-900 px-8 py-4 rounded-xl font-bold text-base shadow-lg hover:bg-teal-50 transition-all duration-200 hover:-translate-y-0.5 w-full lg:w-auto whitespace-nowrap"
+                >
+                  <Phone className="w-5 h-5" />
+                  Request a Case Review
+                </button>
+                <p className="text-teal-300 text-xs font-medium text-center">
+                  Physician-supervised · Personalised protocols
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Dialog open={ctaOpen} onOpenChange={setCtaOpen}>
+        <DialogContent className="max-w-2xl p-0 overflow-hidden rounded-2xl">
+          <DialogHeader className="p-0">
+            <ContactInput />
+          </DialogHeader>
+        </DialogContent>
+      </Dialog>
 
       <Footer />
     </div>

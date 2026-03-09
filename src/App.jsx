@@ -31,6 +31,14 @@ import HangoverRecovery from './app/HangoverRecovery'
 import SkinRevitalization from './app/SkinRevitalization'
 import GutRestoration from './app/GutRestoration'
 import MindBodyBalance from './app/MindBodyBalance'
+import ChelationTherapyPage from './components/treatments/EdtaChelonTherapy'
+import ElderCarePage from './app/AdvancedGeriatric'
+import OzoneTherapy from './app/OzoneTherapy'
+import EecpTherapy from './app/EecpTherapy'
+import FirSaunaTherapy from './app/FirSaunaTherapy'
+import MedicinalCannabis from './app/MedicinalCannabis'
+import CoffeeEnema from './app/CoffeeEnema'
+import IVNutritionDrips from './app/IVNutritionDrips'
 
 function App() {
   return (
@@ -39,29 +47,23 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route
-          path="/explore-1"
-          element={<ExploreMore data={EDTA_Chelation_Therapy} />}
-        />
-        <Route
-          path="/explore-2"
-          element={<ExploreMore data={ozone_therapy_page} />}
-        />
+        <Route path="/explore-1" element={<ChelationTherapyPage />} />
+        <Route path="/explore-2" element={<OzoneTherapy />} />
         <Route
           path="/explore-3"
           element={<ExploreMore data={iv_vitamin_c_page} />}
         />
         <Route
           path="/explore-4"
-          element={<ExploreMore data={iv_nutrition_drips_page} />}
+          element={<IVNutritionDrips />}
         />
         <Route
           path="/explore-5"
-          element={<ExploreMore data={eecp_therapy_page} />}
+          element={<EecpTherapy />}
         />
         <Route
           path="/explore-6"
-          element={<ExploreMore data={fir_sauna_page} />}
+          element={<FirSaunaTherapy />}
         />
         <Route
           path="/explore-7"
@@ -69,11 +71,11 @@ function App() {
         />
         <Route
           path="/explore-8"
-          element={<ExploreMore data={coffee_enema_page} />}
+          element={<CoffeeEnema />}
         />
         <Route
           path="/explore-9"
-          element={<ExploreMore data={medicinal_cannabis_page} />}
+          element={<MedicinalCannabis />}
         />
 
         <Route path="/heart-health" element={<HeartHealthSolutions />} />
@@ -94,14 +96,10 @@ function App() {
         <Route path="/hair-restoration" element={<HairRestoration />} />
         <Route path="/immune-optimization" element={<ImmunoOptimization />} />
         <Route path="/hangover-recovery" element={<HangoverRecovery />} />
-
-
-
-
-
         <Route path="/skin-revitalization" element={<SkinRevitalization />} />
-        <Route path='/gutRestoration' element={<GutRestoration />} />
+        <Route path="/gutRestoration" element={<GutRestoration />} />
         <Route path="/MindBodyBalance" element={<MindBodyBalance />} />
+        <Route path="/ElderCarePage" element={<ElderCarePage />} />
 
         <Route path="/about" element={<About />} />
         <Route path="/panel" element={<Team />} />
