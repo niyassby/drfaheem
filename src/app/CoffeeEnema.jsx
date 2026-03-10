@@ -1,97 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Navbar/Footer';
+import { ContactInput } from '../components/home/ContactInput';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+} from '@/components/ui/dialog';
 import {
   Coffee, ShieldCheck, Zap, Leaf, Brain, Droplets,
   CheckCircle2, AlertTriangle, ClipboardCheck, Wind,
-  Stethoscope, Heart, Activity, Play
+  Stethoscope, Heart, Activity, Play, Check, ArrowRight
 } from 'lucide-react';
 import video1 from '../assets/video/video1.MP4';
 
 const CoffeeEnema = () => {
-  const benefitsList = [
-    {
-      title: "Deep Liver Detoxification",
-      desc: "Promotes the release of stored toxins, heavy metals, and environmental chemicals.",
-      icon: <Droplets className="text-amber-600 w-8 h-8" />,
-      color: "border-amber-100 bg-amber-50",
-    },
-    {
-      title: "Boosts Antioxidant Defense",
-      desc: "Increases glutathione activity, protecting cells from oxidative stress.",
-      icon: <ShieldCheck className="text-emerald-500 w-8 h-8" />,
-      color: "border-emerald-100 bg-emerald-50",
-    },
-    {
-      title: "Improves Digestion & Bowel Health",
-      desc: "Enhances bile secretion and supports regular bowel movements.",
-      icon: <Activity className="text-indigo-500 w-8 h-8" />,
-      color: "border-indigo-100 bg-indigo-50",
-    },
-    {
-      title: "Energizing Effect",
-      desc: "Many patients report feeling lighter, clearer, and more energetic post-session.",
-      icon: <Zap className="text-yellow-500 w-8 h-8" />,
-      color: "border-yellow-100 bg-yellow-50",
-    },
-    {
-      title: "Cancer Supportive Therapy",
-      desc: "Often used in integrated cancer treatment to reduce toxic load and improve quality of life.",
-      icon: <Heart className="text-rose-500 w-8 h-8" />,
-      color: "border-rose-100 bg-rose-50",
-    },
-    {
-      title: "Mental Clarity & Stress Relief",
-      desc: "Detoxification can reduce brain fog, support emotional balance, and enhance overall vitality.",
-      icon: <Brain className="text-teal-500 w-8 h-8" />,
-      color: "border-teal-100 bg-teal-50",
-    },
-  ];
-
-  const whoCanTake = [
-    "Patients undergoing structured detox or integrative wellness programs.",
-    "Individuals exposed to environmental pollutants, pesticides, or heavy metals.",
-    "Those experiencing chronic fatigue, low energy, or toxin-related symptoms.",
-    "Cancer patients seeking supportive therapies to complement conventional treatment.",
-    "People committed to functional medicine therapies in Kerala as a path to long-term wellness.",
-  ];
-
-  const whoCantTake = [
-    "Pregnant or breastfeeding women.",
-    "Individuals with active hemorrhoids, rectal bleeding, or anal fissures.",
-    "Patients with inflammatory bowel disease (Crohn's, ulcerative colitis) during flare-ups.",
-    "People with severe dehydration or electrolyte imbalance.",
-    "Those with unstable cardiovascular conditions unless cleared by a physician.",
-  ];
-
-  const whyTigrisFeatures = [
-    {
-      title: "Personalized Care",
-      desc: "Each treatment is tailored to your health history, needs, and goals.",
-      icon: <ClipboardCheck />,
-    },
-    {
-      title: "Integrative Approach",
-      desc: "Therapies like IV drips, ozone, chelation, FIR sauna, and nutritional medicine are combined for complete wellness.",
-      icon: <Leaf />,
-    },
-    {
-      title: "Expert Supervision",
-      desc: "A team of qualified doctors and therapists ensures therapies are both safe and effective.",
-      icon: <Stethoscope />,
-    },
-    {
-      title: "Focus on Root Cause",
-      desc: "Instead of short-term fixes, Tigris Valley addresses underlying imbalances, supporting long-term healing.",
-      icon: <Heart />,
-    },
-    {
-      title: "Healing Environment",
-      desc: "The clinic offers a serene and professional setting that supports relaxation and recovery.",
-      icon: <Wind />,
-    },
-  ];
+  const [modalOpen, setModalOpen] = useState(false);
+  const openModal = () => setModalOpen(true);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -110,9 +36,71 @@ const CoffeeEnema = () => {
     },
   };
 
+  const colonBenefits = [
+    "Support for digestive detoxification",
+    "Relief from chronic constipation",
+    "Reduction of bloating and abdominal discomfort",
+    "Improved bowel motility",
+    "Support for microbiome balance",
+    "Enhanced nutrient absorption",
+    "Reduction of overall toxic burden",
+    "Improved mental clarity and reduction in stress associated with digestive imbalance"
+  ];
+
+  const coffeeBenefits = [
+    "Liver detoxification pathways",
+    "Gut cleansing and digestive support",
+    "Reduction of toxic load",
+    "Fatigue related to toxin accumulation",
+    "Supportive care within integrative cancer programs",
+    "Improved mental clarity and overall wellbeing"
+  ];
+
+  const whoMayBenefit = [
+    "Chronic constipation or sluggish bowel function",
+    "Persistent bloating or digestive discomfort",
+    "Gut dysbiosis or microbiome imbalance",
+    "Fatigue associated with toxin burden",
+    "Individuals undergoing functional detoxification programs",
+    "Patients seeking integrative supportive care during cancer treatment",
+    "Individuals experiencing brain fog, mental fatigue, or stress linked to digestive imbalance"
+  ];
+
+  const whatToExpect = [
+    "A pre-treatment consultation and evaluation",
+    "Gentle administration of purified water or prepared solution through specialized equipment",
+    "Controlled cleansing cycles to support elimination",
+    "Post-therapy guidance including hydration, nutrition, and microbiome support"
+  ];
+
+  const programsIntegrated = [
+    "Precision nutritional therapy",
+    "Microbiome restoration programs",
+    "Functional detoxification protocols",
+    "Lifestyle and metabolic optimization strategies",
+    "Mind–body medicine approaches"
+  ];
+
+  const safetyPoints = [
+    "Conducted by trained professionals",
+    "Performed in a sterile and controlled environment",
+    "Recommended only after medical assessment",
+    "Integrated into structured Functional Medicine protocols"
+  ];
+
   return (
     <div className="bg-slate-50 font-sans text-slate-900 overflow-x-hidden">
       <Navbar />
+
+      {/* Existing Appointment Dialog */}
+      <Dialog open={modalOpen} onOpenChange={setModalOpen}>
+        <DialogContent className="max-w-2xl p-0 overflow-hidden rounded-2xl border-0 shadow-2xl">
+          <DialogHeader className="p-0">
+            <ContactInput />
+          </DialogHeader>
+        </DialogContent>
+      </Dialog>
+
 
       {/* ── Hero ── */}
       <section className="relative pt-24 pb-20 lg:pt-32 lg:pb-32 overflow-hidden bg-slate-50">
@@ -120,33 +108,37 @@ const CoffeeEnema = () => {
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
-
+            
             {/* Left */}
             <motion.div variants={containerVariants} initial="hidden" animate="visible" className="lg:w-1/2 text-left">
               <motion.div variants={itemVariants}>
                 <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-100/90 border border-amber-200/60 text-amber-800 text-xs font-bold uppercase tracking-widest mb-8 shadow-sm">
-                  <Coffee className="w-4 h-4" /> Deep Liver Detox
+                  <Leaf className="w-4 h-4" /> Gut Restoration
                 </span>
               </motion.div>
 
-              <motion.h1 variants={itemVariants} className="text-5xl lg:text-6xl xl:text-7xl font-extrabold text-slate-900 mb-6 leading-[1.15] tracking-tight">
-                Coffee <br className="hidden lg:block" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-yellow-600">
-                  Enema Therapy
-                </span>
+              <motion.h1 variants={itemVariants} className="text-4xl lg:text-5xl xl:text-6xl font-extrabold text-slate-900 mb-6 leading-[1.15] tracking-tight">
+                Restoring <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-yellow-600">Gut Health,</span><br className="hidden lg:block" />
+                Supporting Detoxification,<br className="hidden lg:block" />
+                and Enhancing Mental Clarity
               </motion.h1>
 
-              <motion.p variants={itemVariants} className="text-lg lg:text-xl text-slate-600 font-medium leading-relaxed mb-10 max-w-xl">
-                Coffee Enema is a time-tested detoxification therapy that has been used for decades in natural and functional medicine protocols.
+              <motion.p variants={itemVariants} className="text-lg lg:text-xl text-slate-600 font-medium leading-relaxed mb-6 max-w-xl">
+                At <em>Tigris Valley</em>, advanced colon cleansing therapies—including <strong>Colon Hydrotherapy</strong> and <strong>Coffee Enema Therapy</strong>—are integrated into personalized <strong>Functional and Integrative Medicine programs</strong>. These therapies are designed to support digestive balance, stimulate natural detoxification pathways, enhance mental clarity, reduce stress, and serve as supportive care within comprehensive wellness and integrative cancer support programs.
               </motion.p>
+              
+              <motion.p variants={itemVariants} className="text-md lg:text-lg text-slate-600 leading-relaxed mb-8 max-w-xl">
+                The digestive system plays a central role in detoxification, immune regulation, and metabolic health. Modern lifestyles, environmental toxins, medications, and dietary factors can place significant strain on the body’s natural elimination pathways. When these systems become overloaded, individuals may experience symptoms such as digestive discomfort, fatigue, brain fog, inflammation, and reduced vitality.
+              </motion.p>
+              
+              <motion.div variants={itemVariants} className="bg-amber-50 border-l-4 border-amber-600 p-4 mb-10 max-w-xl rounded-r-lg">
+                <p className="text-amber-900 font-medium">Through carefully guided therapies and personalized medical supervision, our programs aim to restore balance to the digestive system while supporting the body’s natural healing capacity.</p>
+              </motion.div>
 
               <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-start sm:items-center gap-8">
-                <button className="bg-amber-700 text-white px-8 py-4 rounded-full font-bold shadow-[0_8px_30px_rgb(180,83,9,0.3)] hover:shadow-[0_8px_30px_rgb(180,83,9,0.5)] hover:bg-amber-800 transition-all duration-300 transform hover:-translate-y-1">
-                  Book a Consultation
+                <button onClick={() => openModal()} className="bg-amber-700 text-white px-8 py-4 rounded-full font-bold shadow-[0_8px_30px_rgb(180,83,9,0.3)] hover:shadow-[0_8px_30px_rgb(180,83,9,0.5)] hover:bg-amber-800 transition-all duration-300 transform hover:-translate-y-1">
+                  Begin Your Gut Restoration Journey
                 </button>
-                <div className="text-sm font-bold text-slate-500 leading-tight">
-                  Trusted by<br />patients worldwide
-                </div>
               </motion.div>
             </motion.div>
 
@@ -161,8 +153,8 @@ const CoffeeEnema = () => {
                 <div className="absolute inset-0 bg-amber-900/10 mix-blend-multiply z-10 group-hover:bg-transparent transition-colors duration-500" />
                 <img
                   src="https://simplenursing.com/wp-content/uploads/2024/06/Enema-Tools-with-coffee-beans-and-coffee-in-a-glass-cup-768x510.webp"
-                  className="w-full h-[450px] lg:h-[600px] object-cover transform transition-transform duration-700 ease-out group-hover:scale-105"
-                  alt="Coffee Enema Therapy"
+                  className="w-full h-[450px] lg:h-[650px] object-cover transform transition-transform duration-700 ease-out group-hover:scale-105"
+                  alt="Gut Health and Detoxification"
                 />
               </div>
 
@@ -172,11 +164,11 @@ const CoffeeEnema = () => {
                 className="absolute -bottom-6 -left-4 md:-bottom-8 md:-left-8 bg-white p-5 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.08)] border border-slate-100 flex items-center gap-4 z-20"
               >
                 <div className="w-12 h-12 bg-amber-50 rounded-full flex items-center justify-center text-amber-700 shrink-0 shadow-inner">
-                  <Coffee className="w-6 h-6" />
+                  <Stethoscope className="w-6 h-6" />
                 </div>
                 <div>
                   <p className="text-sm font-bold text-slate-900 leading-tight">Medically Supervised</p>
-                  <p className="text-xs text-slate-500 font-medium mt-0.5">Safe & Hygienic</p>
+                  <p className="text-xs text-slate-500 font-medium mt-0.5">Integrative Support</p>
                 </div>
               </motion.div>
             </motion.div>
@@ -184,370 +176,290 @@ const CoffeeEnema = () => {
         </div>
       </section>
 
-      {/* ── Introduction ── */}
-      <section className="pb-20 mt-0 bg-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-slate-50 border-l border-slate-100 hidden lg:block pointer-events-none"></div>
+      {/* ── Colon Hydrotherapy & Coffee Enema ── */}
+      <section className="py-20 bg-white relative overflow-hidden">
+        <div className="container mx-auto px-6 relative z-10">
+          
+          {/* Colon Hydrotherapy */}
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 mb-24">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="lg:w-1/2"
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <div className="h-0.5 w-12 bg-blue-500 rounded-full"></div>
+                <h2 className="text-sm font-bold text-blue-600 tracking-widest uppercase">Therapy 01</h2>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">Colon Hydrotherapy</h2>
+              <p className="text-lg text-slate-600 leading-relaxed mb-6">
+                Colon hydrotherapy is a <em>gentle cleansing of the large intestine using purified, temperature-controlled water delivered through specialized medical equipment</em>. This therapy helps remove accumulated waste from the colon and supports healthy bowel function.
+              </p>
+              <p className="text-lg text-slate-600 leading-relaxed mb-8">
+                At <em>Tigris Valley</em>, colon hydrotherapy is performed in a <strong>safe, hygienic, and medically supervised environment</strong>, ensuring patient comfort, privacy, and the highest standards of care.
+              </p>
+              
+              <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100">
+                <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                  <Activity className="text-blue-500" /> Potential Benefits
+                </h3>
+                <ul className="grid sm:grid-cols-2 gap-4">
+                  {colonBenefits.map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
+                      <span className="text-sm font-medium text-slate-700">
+                        {idx === 7 ? <em>{item}</em> : item}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="lg:w-1/2 relative"
+            >
+               <div className="relative rounded-[2rem] overflow-hidden shadow-2xl">
+                 <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2120&auto=format&fit=crop" alt="Therapy Room" className="w-full h-[500px] object-cover" />
+                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+               </div>
+            </motion.div>
+          </div>
 
-        <div className="container mx-auto -mt-5 px-6 relative z-10">
-          <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center relative">
+          {/* Coffee Enema Therapy */}
+          <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-16">
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="lg:w-1/2"
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <div className="h-0.5 w-12 bg-amber-700 rounded-full"></div>
+                <h2 className="text-sm font-bold text-amber-700 tracking-widest uppercase">Therapy 02</h2>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">Coffee Enema Therapy</h2>
+              <p className="text-lg text-slate-600 leading-relaxed mb-6">
+                Coffee enema therapy is an integrative detoxification technique used in certain functional medicine protocols. The therapy involves the administration of a specially prepared organic coffee solution into the colon for a short duration.
+              </p>
+              <p className="text-lg text-slate-600 leading-relaxed mb-6">
+                Compounds present in coffee are believed to <em>stimulate bile flow and support the liver’s detoxification pathways</em>, potentially enhancing the elimination of metabolic waste and toxins.
+              </p>
+              
+              <div className="bg-amber-50 rounded-2xl p-8 border border-amber-100 mb-6">
+                <h3 className="text-lg font-bold text-amber-900 mb-4">When medically appropriate, incorporated into programs designed to support:</h3>
+                <ul className="space-y-3">
+                  {coffeeBenefits.map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <Coffee className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
+                      <span className="text-sm font-medium text-amber-900">
+                        {idx >= 4 ? <em>{item}</em> : item}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <p className="text-slate-600 font-medium">
+                At Tigris Valley, this therapy is provided <em>only after careful medical evaluation and under professional supervision</em>, ensuring safety and suitability for each individual.
+              </p>
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.4 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
-              className="lg:w-3/5 lg:pr-16 mb-12 lg:mb-0 relative z-20"
+              className="lg:w-1/2 w-full"
             >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="h-0.5 w-12 bg-amber-700 rounded-full"></div>
-                <h2 className="text-sm font-bold text-amber-700 tracking-widest uppercase">Introduction</h2>
+              <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white">
+                <video
+                  className="w-full aspect-video object-cover"
+                  controls
+                  preload="metadata"
+                  poster="https://simplenursing.com/wp-content/uploads/2024/06/Enema-Tools-with-coffee-beans-and-coffee-in-a-glass-cup-768x510.webp"
+                >
+                  <source src={video1} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
-
-              <h3 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-8 leading-tight">
-                Time-Tested Detox Therapy
-              </h3>
-
-              <p className="text-xl text-slate-700 leading-relaxed font-medium mb-8">
-                It is especially popular in holistic health programs and alternative cancer care frameworks like the Gerson Therapy.
-              </p>
-
-              <div className="bg-amber-50/50 border border-amber-100 p-6 rounded-2xl">
-                <p className="text-slate-600 leading-relaxed">
-                  The principle is simple but powerful: introducing a carefully prepared organic coffee solution into the rectum allows its active compounds—<strong>caffeine, theobromine, and palmitic acids</strong>—to be absorbed by the portal vein system. This stimulates the liver and gallbladder, prompting them to release stored toxins and enhance bile flow. At Tigris Valley, Coffee Enema is provided as part of structured detox programs for patients struggling with toxin overload, fatigue, sluggish digestion, or chronic illness. Offered under strict medical supervision, the therapy is safe, hygienic, and complemented by other integrative treatments such as IV Vitamin C, ozone therapy, chelation therapy, and far infrared sauna sessions. This holistic approach has made Tigris Valley a preferred destination for natural detox therapies in Kerala.
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30, y: 20 }}
-              whileInView={{ opacity: 1, x: 0, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="lg:w-2/5 relative z-30 lg:-ml-10 mt-8 lg:mt-24"
-            >
-              <div className="bg-amber-900 p-10 md:p-12 rounded-[2.5rem] shadow-2xl border border-amber-800 relative overflow-hidden group">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/20 rounded-full blur-2xl pointer-events-none"></div>
-
-                <div className="w-16 h-16 bg-amber-800 rounded-2xl flex items-center justify-center mb-8 shadow-inner border border-amber-700/50 relative z-10">
-                  <Coffee className="w-8 h-8 text-amber-300" />
-                </div>
-
-                <h4 className="text-2xl font-bold text-white mb-6 relative z-10">The Tigris Valley Approach</h4>
-
-                <p className="text-amber-100/90 leading-relaxed font-medium relative z-10">
-                  At Tigris Valley Wellness Centre, Coffee Enema is delivered under strict medical supervision in a sterile, monitored environment with medical guidance.
-                </p>
-
-                <div className="mt-8 pt-8 border-t border-amber-800/50 relative z-10">
-                  <p className="text-sm text-amber-200 leading-relaxed">
-                    Integrated with IV Vitamin C, ozone therapy, chelation, and FIR sauna for complete, holistic detoxification.
-                  </p>
-                </div>
+              <div className="flex flex-wrap justify-center gap-4 mt-6">
+                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 text-slate-700 text-xs font-bold uppercase tracking-widest">
+                  <Play className="w-3 h-3" /> Watch Overview
+                </span>
               </div>
             </motion.div>
           </div>
+
         </div>
       </section>
 
-      {/* ── Treatment Information ── */}
-      <section className="py-14 bg-slate-950 relative overflow-hidden">
+      {/* ── Who May Benefit & What to Expect ── */}
+      <section className="py-20 bg-slate-900 text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-full h-full opacity-10 pointer-events-none flex justify-center items-center">
           <div className="w-[800px] h-[800px] rounded-full border border-amber-500/50 absolute"></div>
-          <div className="w-[1000px] h-[1000px] rounded-full border border-amber-400/30 absolute"></div>
           <div className="w-[1200px] h-[1200px] rounded-full border border-amber-300/20 absolute"></div>
         </div>
 
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
-              A Comprehensive <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-400">
-                Treatment Approach
-              </span>
-            </h2>
-          </div>
-
-          <div className="max-w-5xl mx-auto">
+        <div className="container mx-auto px-6 relative z-10 max-w-6xl">
+          <div className="grid md:grid-cols-2 gap-16">
+            
+            {/* Who may benefit */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
               viewport={{ once: true }}
-              className="bg-slate-900/90 p-10 md:p-14 rounded-[2.5rem] border border-white/10 relative overflow-hidden hover:bg-slate-800 transition-all duration-300 shadow-2xl"
             >
-              <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 rounded-full blur-2xl pointer-events-none"></div>
-              <div className="flex flex-col gap-6 relative z-10">
-                <p className="text-lg md:text-xl text-slate-200 leading-relaxed font-medium">
-                  The procedure begins with the preparation of organic, medical-grade coffee, brewed to an exact strength and cooled to body temperature. During the session, the patient lies comfortably while the solution is slowly infused into the rectum.
-                </p>
-                <p className="text-amber-100/90 leading-relaxed">
-                  The coffee remains inside for around 12–15 minutes, allowing enough time for its compounds to be absorbed into the bloodstream via the portal vein circulation. Once absorbed, these compounds trigger the liver's detox pathways, especially the production of <strong className="text-amber-300">glutathione S-transferase</strong>, a powerful antioxidant enzyme responsible for neutralizing free radicals and flushing toxins.
-                </p>
-                <div className="bg-amber-900/30 border border-amber-500/20 p-6 rounded-2xl mt-2">
-                  <p className="text-slate-300 leading-relaxed">
-                    The increased bile flow helps cleanse the intestines while simultaneously improving liver function. Unlike home-based coffee enemas, which can carry risks of contamination, Tigris Valley provides this therapy in a sterile, monitored environment with medical guidance. Each session is tailored to the patient's health condition, frequency adjusted based on the level of detox required, and always integrated into a wider functional medicine plan.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Featured Video ── */}
-      <section className="py-20 bg-white border-t border-slate-100 overflow-hidden">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-100/90 border border-amber-200 text-amber-800 text-sm font-bold uppercase tracking-widest mb-4">
-              <Play className="w-4 h-4" /> Watch & Learn
-            </span>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">
-              See How Coffee Enema Works at{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-yellow-600">
-                Tigris Valley
-              </span>
-            </h2>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.97 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white"
-          >
-            {/* Decorative gradient frame */}
-            <div className="absolute inset-0 pointer-events-none z-10 rounded-[2.5rem] ring-1 ring-amber-200/60"></div>
-            <video
-              className="w-full aspect-video object-cover rounded-[2.5rem]"
-              controls
-              preload="metadata"
-            >
-              <source src={video1} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </motion.div>
-
-          {/* Caption strip */}
-          <div className="flex flex-wrap justify-center gap-6 mt-8">
-            {["Medical-Grade Coffee", "Sterile Environment", "Expert Supervision", "Integrated Protocols"].map((tag) => (
-              <span key={tag} className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-sm font-bold shadow-sm">
-                <Coffee className="w-4 h-4" />
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Benefits ── */}
-      <section className="py-20 bg-slate-50 border-t border-slate-100 overflow-hidden">
-        <div className="container mx-auto px-6 max-w-7xl">
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            viewport={{ once: true }}
-            className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14"
-          >
-            <div>
-              <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight">
-                Benefits of{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-yellow-600">
-                  Coffee Enema
-                </span>
+              <h2 className="text-3xl md:text-4xl font-extrabold mb-8 flex items-center gap-4">
+                <Brain className="text-amber-500 w-10 h-10" /> Who May Benefit
               </h2>
-            </div>
-            <p className="text-lg text-slate-500 font-medium leading-relaxed md:max-w-sm md:text-right">
-              Stimulating the liver's natural detox pathways through time-tested therapy.
-            </p>
-          </motion.div>
-
-          <div className="grid lg:grid-cols-5 gap-8 items-start">
-
-            {/* Left: Image Panel */}
-            <motion.div
-              initial={{ opacity: 0, x: -25 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="lg:col-span-2 relative rounded-[2.5rem] overflow-hidden group min-h-[520px] shadow-xl border-4 border-white"
-            >
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-amber-900/20 to-transparent z-10"></div>
-              <img
-                src="https://simplenursing.com/wp-content/uploads/2024/06/Enema-Tools-with-coffee-beans-and-coffee-in-a-glass-cup-768x510.webp"
-                alt="Coffee Enema Therapy"
-                className="absolute inset-0 w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute bottom-0 left-0 right-0 p-8 z-20">
-                <div className="w-12 h-12 rounded-2xl bg-white/20 border border-white/30 flex items-center justify-center text-white mb-4">
-                  <Coffee className="w-6 h-6" />
-                </div>
-                <h3 className="text-2xl font-extrabold text-white mb-2">Liver & Gut Detox</h3>
-                <p className="text-amber-200 text-sm font-medium">Organic Coffee — Medical-Grade Protocol</p>
+              <p className="text-slate-300 mb-8 text-lg">These therapies may be beneficial for individuals experiencing:</p>
+              <ul className="space-y-4">
+                {whoMayBenefit.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-4 bg-slate-800/50 p-4 rounded-xl border border-slate-700 hover:border-amber-500/50 transition-colors">
+                    <CheckCircle2 className="w-6 h-6 text-amber-500 shrink-0" />
+                    <span className="text-slate-200 font-medium">
+                      {(idx === 4) ? <>Individuals undergoing <em>functional detoxification programs</em></> : 
+                       (idx === 5) ? <>Patients seeking <em>integrative supportive care during cancer treatment</em></> :
+                       (idx === 6) ? <>Individuals experiencing <em>brain fog, mental fatigue, or stress linked to digestive imbalance</em></> : item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-8 p-4 bg-amber-900/40 rounded-xl border border-amber-500/30">
+                <p className="text-amber-100 text-sm font-medium">All therapies are <em>recommended only after clinical evaluation</em> to ensure they are appropriate for the patient’s condition.</p>
               </div>
             </motion.div>
 
-            {/* Right: Benefit Tiles */}
-            <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-5">
-              {benefitsList.map((benefit, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 15 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.35, delay: i * 0.05 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  className={`group flex items-start gap-5 p-5 rounded-2xl border bg-white hover:bg-slate-50 hover:shadow-lg transition-all duration-300 ${benefit.color}`}
-                >
-                  <div className="w-12 h-12 shrink-0 rounded-xl bg-white shadow-sm flex items-center justify-center">
-                    {React.cloneElement(benefit.icon, { className: "w-6 h-6" })}
-                  </div>
-                  <div>
-                    <h3 className="text-base font-bold text-slate-900 mb-1.5 group-hover:text-amber-700 transition-colors">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-slate-500 text-sm font-medium leading-relaxed">
-                      {benefit.desc}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Considerations ── */}
-      <section className="py-14 bg-white border-t border-slate-200 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-amber-50/50 to-transparent pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 w-1/3 h-[500px] bg-gradient-to-tr from-emerald-50/50 to-transparent pointer-events-none"></div>
-
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <span className="inline-block py-1.5 px-4 rounded-full bg-slate-200 text-slate-700 text-sm font-bold tracking-widest uppercase mb-6">
-              Patient Guidelines
-            </span>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
-              Considerations for Therapy
-            </h2>
-            <p className="text-xl text-slate-600 font-medium leading-relaxed max-w-2xl mx-auto">
-              A detailed medical evaluation is mandatory before initiating therapy to ensure optimal safety and efficacy.
-            </p>
-          </div>
-
-          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10">
+            {/* What to expect */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-white rounded-[2.5rem] shadow-xl border border-emerald-100 overflow-hidden relative group"
             >
-              <div className="p-10 md:p-14 relative">
-                <div className="absolute -right-10 -top-10 text-emerald-100 opacity-50 group-hover:scale-110 transition-transform duration-700 pointer-events-none">
-                  <CheckCircle2 className="w-64 h-64" />
-                </div>
-                <div className="flex flex-col sm:flex-row sm:items-center gap-6 mb-10 border-b border-emerald-100/50 pb-8 relative z-10">
-                  <div className="w-16 h-16 rounded-2xl bg-emerald-50 flex items-center justify-center border border-emerald-100 shrink-0 shadow-sm group-hover:bg-emerald-500 group-hover:text-white transition-colors duration-500 text-emerald-600">
-                    <CheckCircle2 className="w-8 h-8" />
+              <h2 className="text-3xl md:text-4xl font-extrabold mb-8 flex items-center gap-4">
+                <ClipboardCheck className="text-emerald-500 w-10 h-10" /> What to Expect
+              </h2>
+              <p className="text-slate-300 mb-8 text-lg">
+                Colon cleansing therapies at Tigris Valley are conducted in a <em>private, comfortable, and medically supervised setting</em>. The procedure typically involves:
+              </p>
+              <div className="space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-700 before:to-transparent">
+                {whatToExpect.map((item, idx) => (
+                  <div key={idx} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group md:mx-auto">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-900 bg-emerald-500 text-white font-bold shrink-0 absolute left-0 md:left-1/2 md:-translate-x-1/2 md:-ml-0">
+                      {idx + 1}
+                    </div>
+                    <div className="w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] p-5 rounded-2xl bg-slate-800 border border-slate-700 ml-12 md:ml-0 md:odd:mr-auto md:even:ml-auto">
+                      <p className="text-slate-200 font-medium font-sm">{item}</p>
+                    </div>
                   </div>
-                  <h3 className="text-3xl font-extrabold text-slate-900">Who Can Take This</h3>
-                </div>
-                <ul className="space-y-6 relative z-10">
-                  {whoCanTake.map((item, i) => (
-                    <li key={i} className="flex gap-5 group/item">
-                      <div className="w-3 h-3 rounded-full bg-emerald-200 group-hover/item:bg-emerald-500 transition-colors mt-2.5 shrink-0 shadow-sm" />
-                      <p className="text-slate-700 font-medium leading-relaxed">{item}</p>
-                    </li>
-                  ))}
-                </ul>
+                ))}
               </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-[2.5rem] shadow-xl border border-rose-100 overflow-hidden relative group"
-            >
-              <div className="p-10 md:p-14 relative">
-                <div className="absolute -right-10 -top-10 text-rose-100 opacity-50 group-hover:scale-110 transition-transform duration-700 pointer-events-none">
-                  <AlertTriangle className="w-64 h-64" />
-                </div>
-                <div className="flex flex-col sm:flex-row sm:items-center gap-6 mb-10 border-b border-rose-100/50 pb-8 relative z-10">
-                  <div className="w-16 h-16 rounded-2xl bg-rose-50 flex items-center justify-center border border-rose-100 shrink-0 shadow-sm group-hover:bg-rose-500 group-hover:text-white transition-colors duration-500 text-rose-600">
-                    <AlertTriangle className="w-8 h-8" />
-                  </div>
-                  <h3 className="text-3xl font-extrabold text-slate-900">Who Can't Take This</h3>
-                </div>
-                <ul className="space-y-6 relative z-10">
-                  {whoCantTake.map((item, i) => (
-                    <li key={i} className="flex gap-5 group/item">
-                      <div className="w-3 h-3 rounded-full bg-rose-200 group-hover/item:bg-rose-500 transition-colors mt-2.5 shrink-0 shadow-sm" />
-                      <p className="text-slate-700 font-medium leading-relaxed">{item}</p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Why Tigris Valley ── */}
-      <section className="py-24 bg-slate-50 relative overflow-hidden">
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
-              Why Tigris Valley
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-amber-600 to-yellow-500 mx-auto rounded-full mb-8"></div>
-            <p className="text-xl text-slate-600 font-medium leading-relaxed max-w-3xl mx-auto">
-              Tigris Valley is more than a treatment center—it is a holistic healing destination. Every therapy is delivered with medical supervision, patient safety, and evidence-based protocols. What sets Tigris Valley apart:
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {whyTigrisFeatures.map((feature, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: idx * 0.05 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-lg transition-shadow duration-300"
-              >
-                <div className="w-14 h-14 bg-amber-100 text-amber-700 rounded-2xl flex items-center justify-center mb-6">
-                  {React.cloneElement(feature.icon, { className: "w-7 h-7" })}
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{feature.title}</h3>
-                <p className="text-slate-600 leading-relaxed font-medium">{feature.desc}</p>
-              </motion.div>
-            ))}
-
-            {/* 6th slot: Philosophy quote */}
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.25 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 border border-slate-700 shadow-lg flex flex-col justify-center"
-            >
-              <div className="w-10 h-10 rounded-xl bg-amber-500/20 flex items-center justify-center mb-6 shrink-0">
-                <Coffee className="w-5 h-5 text-amber-400" />
-              </div>
-              <p className="text-base text-slate-300 font-medium leading-relaxed">
-                This patient-centric philosophy ensures that whether it's detox, chronic illness management, or wellness enhancement, Tigris Valley provides care that restores vitality and strengthens resilience naturally.
+              <p className="mt-8 text-slate-400 italic text-center text-sm">
+                Most sessions are designed to be comfortable, discreet, and professionally guided throughout the entire process.
               </p>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Safety and Medical Supervision ── */}
+      <section className="py-20 bg-slate-50 border-t border-slate-200">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <div className="bg-white rounded-[3rem] p-10 lg:p-14 shadow-xl border border-slate-100 flex flex-col md:flex-row gap-12 items-center">
+            <div className="md:w-1/3">
+              <div className="w-24 h-24 bg-rose-50 rounded-full flex items-center justify-center mb-6 text-rose-600 mx-auto md:mx-0">
+                <ShieldCheck className="w-12 h-12" />
+              </div>
+              <h2 className="text-3xl font-extrabold text-slate-900 mb-4 text-center md:text-left">Safety and Medical Supervision</h2>
+              <p className="text-slate-600 text-center md:text-left">
+                Patient safety is our highest priority.
+              </p>
+            </div>
+            <div className="md:w-2/3">
+              <p className="text-lg text-slate-700 mb-8 leading-relaxed font-medium">
+                At <em>Tigris Valley</em>, colon hydrotherapy and coffee enema therapy are performed using <strong>modern closed-system equipment that meets strict hygiene standards</strong>.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4 mb-8">
+                {safetyPoints.map((point, i) => (
+                   <div key={i} className="flex gap-3">
+                     <Check className="text-emerald-500 w-5 h-5 shrink-0" />
+                     <span className="text-slate-700 font-medium text-sm">{point}</span>
+                   </div>
+                ))}
+              </div>
+              <div className="bg-rose-50 border border-rose-100 p-5 rounded-xl">
+                <p className="text-rose-800 text-sm font-medium">
+                  Certain conditions may require <em>special precautions or may not be suitable for colon cleansing therapies, which is why <strong>medical evaluation is always required before treatment</strong></em>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Integrated Protocols & Natural Healing ── */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col lg:flex-row gap-16 max-w-6xl mx-auto">
+            
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="lg:w-1/2"
+            >
+              <h2 className="text-3xl font-extrabold text-slate-900 mb-6">Integrated Into Personalized Functional Medicine Programs</h2>
+              <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                These therapies are not offered as routine wellness procedures but are integrated into <em>comprehensive Functional and Integrative Medicine treatment plans</em> when clinically appropriate.
+              </p>
+              <h3 className="font-bold text-slate-900 mb-4 uppercase tracking-wider text-sm">They may be combined with:</h3>
+              <ul className="space-y-4">
+                {programsIntegrated.map((prog, i) => (
+                  <li key={i} className="flex items-center gap-4 bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">
+                      <Wind className="w-4 h-4" />
+                    </div>
+                    <span className="font-medium text-slate-800">{prog}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="lg:w-1/2"
+            >
+              <div className="bg-amber-900 text-white p-10 md:p-14 rounded-[3rem] h-full flex flex-col justify-center relative overflow-hidden">
+                <div className="absolute top-[-50px] right-[-50px] w-64 h-64 bg-amber-700 rounded-full blur-3xl opacity-50"></div>
+                <div className="relative z-10">
+                  <Heart className="w-12 h-12 text-amber-400 mb-8" />
+                  <h2 className="text-3xl font-extrabold mb-6 text-white">Supporting the Body’s Natural Healing Systems</h2>
+                  <p className="text-amber-100/90 text-lg mb-6 leading-relaxed">
+                    At <em>Tigris Valley</em>, our goal is to restore the body's internal balance through <strong>advanced Functional and Integrative Medicine</strong>.
+                  </p>
+                  <p className="text-amber-100/90 text-lg mb-12 leading-relaxed">
+                    By improving digestive health and supporting detoxification pathways, our programs aim to <em>enhance energy, improve mental clarity, reduce toxic burden, and promote long-term health and resilience</em>.
+                  </p>
+                  <button onClick={() => openModal()} className="bg-white text-amber-900 px-8 py-4 rounded-full font-bold shadow-lg hover:bg-amber-50 transition-colors w-full sm:w-auto">
+                    Begin Your Gut Restoration Journey
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+            
           </div>
         </div>
       </section>

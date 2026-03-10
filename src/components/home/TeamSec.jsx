@@ -10,6 +10,11 @@ import team4 from '../../assets/okm.png'
 import team5 from '../../assets/drSuraj.jpg'
 import team6 from '../../assets/Gafoor.jpg'
 import team7 from "../../assets/lenny2.jpg";
+import team8 from "../../assets/drazib.jpeg";
+import team9 from "../../assets/sara.jpg";
+import team10 from "../../assets/team10.png"
+import team11 from "../../assets/shahul.jpg"
+import team12 from "../../assets/team13.png"
 import { AboutTeam } from "./AboutTeam";
 import DrHaseenaBio from "./DrHaseena";
 import ProfilePage from "./ProfilePageZulekha";
@@ -19,6 +24,11 @@ import DrOKMAbdurahman from "./DrOKMAbdurahman";
 import DrSoorajSankar from "./DrSoorajSankar";
 import DrLenny from "./DrLenny";
 import DrAbdulgafoor from "./DRAbdulgafoor";
+import DrAzibunnisha from "@/app/DrAzibunnisha";
+import DrJibinAnnChacko from "@/app/DrJibinAnnChacko";
+import DrFahadBasheer from "@/app/DrFahadBasheer";
+import DrSaraShareef from "@/app/DrSaraShareef";
+import DrAPShahulHameed from "@/app/DrAPShahulHameed";
 
 const team = [
   {
@@ -43,7 +53,7 @@ const team = [
     name: "Dr. Abdul Gafoor",
     designation: "",
     image: team6,
-    description: <DrAbdulgafoor/>,
+    description: <DrAbdulgafoor />,
   },
   {
     name: "Dr. Haseena Chokkiyil",
@@ -54,9 +64,8 @@ const team = [
   {
     name: "Dr. Azibunnisha",
     designation: "",
-    image:
-      "https://st4.depositphotos.com/9998432/22670/v/450/depositphotos_226700620-stock-illustration-person-gray-photo-placeholder-woman.jpg",
-    description: "",
+    image: team8,
+    description: <DrAzibunnisha />,
   },
   {
     name: "Anna Verwaal",
@@ -69,6 +78,30 @@ const team = [
     designation: "Counselling & Spiritual Psychologist",
     image: team3,
     description: <ProfilePage />,
+  },
+  {
+    name: "Dr. Jibin Ann Chacko",
+    designation: "BNYS, MSc (DFSM), CNCC, PGDC",
+    image: team12,
+    description: <DrJibinAnnChacko />,
+  },
+  {
+    name: "Dr. Fahad Basheer",
+    designation: "Chronomedicine consultant and Circadian sleep coach",
+    image: team10,
+    description: <DrFahadBasheer />,
+  },
+  {
+    name: "Dr. Sara Shareef",
+    designation: "BUMS",
+    image: team9,
+    description: <DrSaraShareef />,
+  },
+  {
+    name: "Dr. A.P. Shahul Hameed",
+    designation: "BUMS",
+    image: team11,
+    description: <DrAPShahulHameed />,
   },
 ];
 
