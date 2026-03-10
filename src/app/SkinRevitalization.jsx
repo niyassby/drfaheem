@@ -81,7 +81,7 @@ const SkinRevitalization = () => {
                 <HeartPulse className="w-8 h-8 text-rose-500" />
               </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 leading-[1.2] tracking-tight">
-                At Tigris Valley Wellness Centre, skin is not treated as a
+                At Tigris Valley, skin is not treated as a
                 cosmetic surface —{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-amber-500">
                   it is understood as a biological mirror
@@ -624,9 +624,8 @@ const SkinRevitalization = () => {
                 ].map((item, i) => (
                   <div
                     key={i}
-                    className={`bg-slate-900/80  p-6 rounded-2xl border border-slate-800 shadow-sm flex items-start gap-4 hover:shadow-lg hover:border-emerald-500/50 hover:bg-slate-800 transition-all duration-300 ${
-                      item.fullWidth ? "sm:col-span-2" : ""
-                    }`}
+                    className={`bg-slate-900/80  p-6 rounded-2xl border border-slate-800 shadow-sm flex items-start gap-4 hover:shadow-lg hover:border-emerald-500/50 hover:bg-slate-800 transition-all duration-300 ${item.fullWidth ? "sm:col-span-2" : ""
+                      }`}
                   >
                     <Sparkles className="w-6 h-6 text-emerald-400 shrink-0 mt-0.5" />
                     <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
@@ -773,7 +772,7 @@ const SkinRevitalization = () => {
           <div className="h-px w-24 bg-emerald-200 mb-8"></div>
 
           <p className="text-xl md:text-2xl font-medium text-slate-700 leading-relaxed max-w-3xl mx-auto italic">
-            At Tigris Valley Wellness Centre, we do not chase symptoms —{" "}
+            At Tigris Valley, we do not chase symptoms —{" "}
             <br className="hidden md:block" />
             we rebuild the internal terrain that allows your skin to thrive
             naturally.

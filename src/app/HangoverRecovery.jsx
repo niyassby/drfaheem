@@ -74,7 +74,7 @@ const HangoverRecovery = () => {
                             IV Nutritional Therapy Protocol for Hangover Recovery
                         </h1>
                         <p className="max-w-4xl mx-auto text-lg md:text-2xl text-blue-100 mb-10 leading-relaxed font-light">
-                            At Tigris Valley Wellness Centre, hangover recovery is approached physiologically — correcting dehydration, acetaldehyde toxicity, electrolyte imbalance, oxidative stress, and neuroinflammation.
+                            At Tigris Valley, hangover recovery is approached physiologically — correcting dehydration, acetaldehyde toxicity, electrolyte imbalance, oxidative stress, and neuroinflammation.
                         </p>
                         <div className="p-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 inline-block">
                             <p className="text-white font-bold italic tracking-wide">

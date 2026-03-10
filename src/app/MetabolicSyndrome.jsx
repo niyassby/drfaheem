@@ -317,7 +317,7 @@
 
 // export default MetabolicSyndrome;
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Navbar/Footer";
@@ -347,12 +347,16 @@ import {
   Target,
   Wind,
   Dumbbell,
+  Phone,
 } from "lucide-react";
 // Importing specific icons from react-icons to complement Lucide
 import { FaWeight, FaHeartbeat } from "react-icons/fa";
 import { GiLiver } from "react-icons/gi";
+import { Dialog, DialogContent, DialogHeader } from '@/components/ui/dialog';
+import { ContactInput } from '../components/home/ContactInput';
 
 const MetabolicSyndrome = () => {
+  const [ctaOpen, setCtaOpen] = useState(false);
   return (
     <div className="bg-slate-50 font-sans text-gray-900 w-full overflow-x-hidden">
       <Navbar />
@@ -451,9 +455,8 @@ const MetabolicSyndrome = () => {
                   <div
                     key={i}
                     className={`w-10 h-10 rounded-full border-4 border-slate-800 flex items-center justify-center text-white
-          ${
-            i === 1 ? "bg-teal-500" : i === 2 ? "bg-emerald-500" : "bg-cyan-500"
-          }`}
+          ${i === 1 ? "bg-teal-500" : i === 2 ? "bg-emerald-500" : "bg-cyan-500"
+                      }`}
                   >
                     {i === 1 && <CheckCircle2 className="w-5 h-5 text-white" />}
                   </div>
@@ -1258,7 +1261,7 @@ const MetabolicSyndrome = () => {
               Why Worldwide Clients Choose Us
             </h2>
             <p className="text-xl text-gray-600 italic">
-              At Tigris Valley Wellness Centre we provide:
+              At Tigris Valley we provide:
             </p>
           </div>
 
@@ -1352,65 +1355,67 @@ const MetabolicSyndrome = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-white relative">
-        <div className="container mx-auto px-6 text-center">
-          <div className="max-w-5xl mx-auto bg-gradient-to-br from-indigo-900 to-blue-950 p-10 md:p-20 rounded-[4rem] text-white shadow-2xl relative overflow-hidden">
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-10 relative z-10">
-              Book Your International Consultation
-            </h2>
-
-            <p className="text-xl md:text-2xl text-blue-200 mb-8 font-light relative z-10">
-              If you are ready to:
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-12 relative z-10">
-              {[
-                "Reverse metabolic dysfunction",
-                "Prevent diabetes complications",
-                "Reduce medication dependency",
-                "Achieve sustainable weight loss",
-              ].map((item, i) => (
-                <span
-                  key={i}
-                  className="bg-white/10 border border-white/20 py-2 px-6 rounded-full font-medium"
-                >
-                  {item}
-                </span>
-              ))}
+      {/* Content-Specific CTA Section */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <div className="relative rounded-[1.5rem] overflow-hidden bg-gradient-to-br from-teal-900 to-emerald-950 p-10 md:p-14 shadow-2xl">
+            <div className="absolute inset-0 opacity-10 pointer-events-none">
+              <Activity className="absolute top-6 right-10 w-40 h-40 text-teal-300" />
+              <ShieldCheck className="absolute bottom-4 left-8 w-28 h-28 text-teal-300" />
             </div>
-
-            <p className="text-2xl font-bold mb-12 text-white relative z-10">
-              Our team is ready to guide you.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 relative z-10">
-              {[
-                {
-                  text: "Schedule a Virtual Assessment",
-                  icon: <Calendar className="w-8 h-8" />,
-                },
-                {
-                  text: "Receive a Personalized Metabolic Roadmap",
-                  icon: <Activity className="w-8 h-8" />,
-                },
-                {
-                  text: "Begin Your Recovery Journey",
-                  icon: <ArrowRight className="w-8 h-8" />,
-                },
-              ].map((item, i) => (
-                <div key={i} className="flex flex-col items-center gap-4">
-                  <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center text-blue-300">
-                    {item.icon}
-                  </div>
-                  <p className="font-semibold text-lg px-4">{item.text}</p>
+            <div className="relative z-10 flex flex-col lg:flex-row gap-10 items-start lg:items-center">
+              {/* Left */}
+              <div className="flex-1">
+                <div className="inline-flex items-center gap-2 bg-teal-800/60 border border-teal-700/50 text-teal-200 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6">
+                  <Phone className="w-3.5 h-3.5" /> Begin Your Consultation
                 </div>
-              ))}
+                <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4 leading-tight">
+                  If you or your loved one is seeking:
+                </h2>
+                <ul className="space-y-3 mb-8">
+                  {[
+                    "Reversal of metabolic dysfunction",
+                    "Sustainable fat loss and weight management",
+                    "Insulin resistance correction",
+                    "Medication reduction through lifestyle",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3 text-white/90 font-medium">
+                      <CheckCircle2 className="w-5 h-5 text-teal-400 shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-teal-200 font-medium text-sm">
+                  Our team will guide you through a structured eligibility and consultation process.
+                </p>
+              </div>
+              {/* Right */}
+              <div className="w-full lg:w-auto flex flex-col gap-4">
+                <button
+                  onClick={() => setCtaOpen(true)}
+                  className="inline-flex items-center justify-center gap-3 bg-white text-teal-900 px-8 py-4 rounded-xl font-bold text-base shadow-lg hover:bg-teal-50 transition-all duration-200 hover:-translate-y-0.5 w-full lg:w-auto whitespace-nowrap"
+                >
+                  <Phone className="w-5 h-5" />
+                  Request a Case Review
+                </button>
+                <p className="text-teal-300 text-xs font-medium text-center">
+                  Physician-supervised · Personalised protocols
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <Footer />
+
+      <Dialog open={ctaOpen} onOpenChange={setCtaOpen}>
+        <DialogContent className="max-w-2xl p-0 overflow-hidden rounded-2xl">
+          <DialogHeader className="p-0">
+            <ContactInput />
+          </DialogHeader>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };

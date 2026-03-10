@@ -77,28 +77,28 @@ const OzoneTherapy = () => {
     "Patients on medications or with medical conditions where oxidative modulation may pose risks, unless carefully evaluated and supervised.",
   ];
 
- const containerVariants = {
-   hidden: { opacity: 0 },
-   visible: {
-     opacity: 1,
-     transition: {
-       staggerChildren: 0.1,
-       delayChildren: 0.05,
-     },
-   },
- };
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.05,
+      },
+    },
+  };
 
- const itemVariants = {
-   hidden: { opacity: 0, y: 20 },
-   visible: {
-     opacity: 1,
-     y: 0,
-     transition: {
-       duration: 0.3,
-       ease: [0.13, 1, 0.12, 2], // Fast start, smooth finish
-     },
-   },
- };
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.3,
+        ease: [0.13, 1, 0.12, 2], // Fast start, smooth finish
+      },
+    },
+  };
 
   const floatVariants = {
     animate: {
@@ -278,7 +278,7 @@ const OzoneTherapy = () => {
                 </h4>
 
                 <p className="text-indigo-100/90 leading-relaxed font-medium relative z-10">
-                  At Tigris Valley Wellness Centre, ozone therapy is delivered
+                  At Tigris Valley, ozone therapy is delivered
                   under strict medical supervision with standardized safety
                   protocols.
                 </p>

@@ -15,6 +15,7 @@ import team9 from "../../assets/sara.jpg";
 import team10 from "../../assets/team10.png"
 import team11 from "../../assets/shahul.jpg"
 import team12 from "../../assets/team13.png"
+import team13 from "../../assets/shareef.png"
 import { AboutTeam } from "./AboutTeam";
 import DrHaseenaBio from "./DrHaseena";
 import ProfilePage from "./ProfilePageZulekha";
@@ -29,6 +30,7 @@ import DrJibinAnnChacko from "@/app/DrJibinAnnChacko";
 import DrFahadBasheer from "@/app/DrFahadBasheer";
 import DrSaraShareef from "@/app/DrSaraShareef";
 import DrAPShahulHameed from "@/app/DrAPShahulHameed";
+import DrMuhammedShareef from "@/app/DrMuhammedShareef";
 
 const team = [
   {
@@ -102,6 +104,12 @@ const team = [
     designation: "BUMS",
     image: team11,
     description: <DrAPShahulHameed />,
+  },
+  {
+    name: "Dr. Muhammed Shareef",
+    designation: "Founder & Managing Director",
+    image: team13,
+    description: <DrMuhammedShareef />,
   },
 ];
 

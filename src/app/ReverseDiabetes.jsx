@@ -52,7 +52,7 @@ const ReverseDiabetes = () => {
             className="w-full max-w-5xl"
           >
             <span className="inline-block py-1.5 px-4 mb-6 text-xs sm:text-sm font-bold tracking-widest text-emerald-200 uppercase bg-emerald-900/40 backdrop-blur-md rounded-full border border-emerald-500/30">
-              For Patients at Tigris Valley Wellness Centre
+              For Patients at Tigris Valley
             </span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
               Reverse Type 2 <br className="hidden sm:block" /> Diabetes
@@ -849,7 +849,7 @@ const ReverseDiabetes = () => {
         <div className="container mx-auto px-6 max-w-5xl text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-teal-900 mb-12 flex items-center justify-center gap-3">
             <Leaf className="w-6 h-6 md:w-8 md:h-8 flex-shrink-0 text-inherit" />
-            Why Choose Tigris Valley Wellness Centre?
+            Why Choose Tigris Valley?
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto mb-20 text-left">

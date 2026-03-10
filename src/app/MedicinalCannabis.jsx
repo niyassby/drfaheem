@@ -234,7 +234,7 @@ const MedicinalCannabis = () => {
                 <h4 className="text-2xl font-bold text-white mb-6 relative z-10">The Tigris Valley Approach</h4>
 
                 <p className="text-emerald-100/90 leading-relaxed font-medium relative z-10">
-                  At Tigris Valley Wellness Centre, medicinal cannabis is delivered under strict medical supervision with standardized safety protocols and continuous follow-ups.
+                  At Tigris Valley, medicinal cannabis is delivered under strict medical supervision with standardized safety protocols and continuous follow-ups.
                 </p>
 
                 <div className="mt-8 pt-8 border-t border-emerald-800/50 relative z-10">

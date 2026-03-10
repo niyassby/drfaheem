@@ -276,7 +276,7 @@ const FirSaunaTherapy = () => {
                 </h4>
 
                 <p className="text-amber-100/90 leading-relaxed font-medium relative z-10">
-                  At Tigris Valley Wellness Centre, FIR sauna therapy is delivered under strict medical supervision with standardized safety protocols.
+                  At Tigris Valley, FIR sauna therapy is delivered under strict medical supervision with standardized safety protocols.
                 </p>
 
                 <div className="mt-8 pt-8 border-t border-amber-800/50 relative z-10">

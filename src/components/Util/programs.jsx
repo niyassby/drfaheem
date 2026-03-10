@@ -178,7 +178,7 @@ export const ozone_therapy_page = {
           carefully controlled methods such as major autohemotherapy, rectal
           insufflation, limb bagging, or targeted local applications.
           <br />
-          <br /> At Tigris Valley Wellness Centre, ozone therapy is delivered
+          <br /> At Tigris Valley, ozone therapy is delivered
           under strict medical supervision with standardized safety protocols.
           The therapy is increasingly sought by individuals looking for
           integrative support in areas such as immune modulation, chronic wound
@@ -850,7 +850,7 @@ export const heart_health_solutions = {
       type: "paragraph",
       content: (
         <p>
-          <strong>Chelation Therapy & EECP at Tigris Valley Wellness Centre</strong>
+          <strong>Chelation Therapy & EECP </strong>
           <br /><br />
           At Tigris Valley, we provide comprehensive, non-surgical heart care solutions for patients who continue to experience symptoms despite medications, stents, or bypass surgery — as well as for those seeking preventive cardiovascular support.
           <br /><br />

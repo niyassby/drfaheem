@@ -62,7 +62,7 @@ const AntiAging = () => {
               Age With Strength, Clarity & Confidence.
             </h1>
             <p className="max-w-3xl mx-auto text-lg md:text-2xl text-blue-100 mb-10 leading-relaxed font-light">
-              At Tigris Valley Wellness Centre, ageing is not treated as an inevitability — it is approached as a modifiable biological process.
+              At Tigris Valley, ageing is not treated as an inevitability — it is approached as a modifiable biological process.
             </p>
           </motion.div>
         </div>
@@ -456,7 +456,7 @@ const AntiAging = () => {
         <div className="container mx-auto px-6 max-w-7xl">
           <motion.div {...fadeIn} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">A Fully Personalized Longevity Protocol</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">At Tigris Valley Wellness Centre, no two anti-ageing plans are identical.</p>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">At Tigris Valley, no two anti-ageing plans are identical.</p>
           </motion.div>
 
           <div className="flex flex-col lg:flex-row gap-12 items-center">
@@ -675,7 +675,7 @@ const AntiAging = () => {
                 <h3 className="text-3xl lg:text-5xl font-extrabold mb-8">Begin Your Longevity Transformation</h3>
                 <p className="text-xl text-blue-100 mb-12 italic">
                   Book your personalised Anti-Ageing & Longevity Consultation at <br />
-                  <span className="text-white font-bold not-italic font-sans">Tigris Valley Wellness Centre</span>
+                  <span className="text-white font-bold not-italic font-sans">Tigris Valley</span>
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-6 text-xl tracking-tighter sm:tracking-[0.3em] font-bold uppercase">
                   <span className="text-blue-300">Age intelligently.</span>

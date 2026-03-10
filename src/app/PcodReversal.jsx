@@ -645,7 +645,7 @@ const PcodReversal = () => {
       <section className="py-20 md:py-28 bg-slate-50 border-t border-slate-200">
         <div className="container mx-auto px-6 max-w-6xl text-center">
           <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-16">
-            Why Choose Tigris Valley Wellness Centre?
+            Why Choose Tigris Valley?
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left">

@@ -9,7 +9,7 @@ export default function DrJibinAnnChacko() {
                     Dr. Jibin Ann Chacko, BNYS, MSc (DFSM), CNCC, PGDC
                 </h3>
                 <p className="leading-relaxed">
-                    <strong>Dr. Jibin Ann Chacko</strong> is a Naturopathy Physician (BNYS) with a strong commitment to holistic healing that integrates natural medicine, therapeutic nutrition, and philosophical counselling. 
+                    <strong>Dr. Jibin Ann Chacko</strong> is a Naturopathy Physician (BNYS) with a strong commitment to holistic healing that integrates natural medicine, therapeutic nutrition, and philosophical counselling.
                 </p>
                 <p className="leading-relaxed">
                     She holds a <em>Master’s degree in Dietetics and Food Service Management (MSc DFSM)</em> and a <em>Certificate in Child Nutrition and Child Care (CNCC)</em>, equipping her with specialized expertise in clinical nutrition and child health. She also completed a <em>Post Graduate Diploma in Philosophical Counselling (PGDC)</em> from Kerala University, securing <strong>First Rank</strong>, reflecting her deep interest in the psychological and philosophical dimensions of well-being.
@@ -32,7 +32,7 @@ export default function DrJibinAnnChacko() {
                     Current Practice:
                 </h3>
                 <p className="leading-relaxed">
-                    Dr. Jibin currently practices at <strong>Tigris Valley Wellness Centre, Markaz Knowledge City</strong>, where she contributes to integrative wellness care through naturopathy, personalized diet therapy, child nutrition guidance, and philosophical counselling.
+                    Dr. Jibin currently practices at <strong>Tigris Valley, Markaz Knowledge City</strong>, where she contributes to integrative wellness care through naturopathy, personalized diet therapy, child nutrition guidance, and philosophical counselling.
                 </p>
             </section>
 

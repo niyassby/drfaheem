@@ -209,7 +209,7 @@ const JointPainManagement = () => {
                         transition={{ duration: 0.8 }}
                     >
                         <span className="inline-block py-2 px-4 mb-6 text-sm font-bold tracking-widest text-blue-200 uppercase bg-blue-950/40 rounded-full border border-blue-500/30">
-                            At Tigris Valley Wellness Centre
+                            At Tigris Valley
                         </span>
                         <h1 className="text-4xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
                             🦴 Reverse Joint Pain <br /> Naturally
@@ -242,7 +242,7 @@ const JointPainManagement = () => {
                                 ))}
                             </div>
                             <p className="text-xl text-blue-900 font-bold leading-relaxed border-l-4 border-blue-600 pl-6">
-                                At Tigris Valley Wellness Centre, we combine Functional Medicine, Regenerative Therapies, and Structured Physiotherapy to address the root cause — not just suppress symptoms.
+                                At Tigris Valley, we combine Functional Medicine, Regenerative Therapies, and Structured Physiotherapy to address the root cause — not just suppress symptoms.
                             </p>
                         </div>
                         <div className="lg:w-1/2 w-full">
@@ -444,7 +444,7 @@ const JointPainManagement = () => {
             {/* Why Tigris? */}
             <section className="py-24 bg-white border-t border-gray-100 text-center">
                 <div className="container mx-auto px-6">
-                    <h2 className="text-4xl font-extrabold text-blue-950 mb-16 underline decoration-blue-500 decoration-4 underline-offset-8">🏥 Why Tigris Valley Wellness Centre?</h2>
+                    <h2 className="text-4xl font-extrabold text-blue-950 mb-16 underline decoration-blue-500 decoration-4 underline-offset-8">🏥 Why Tigris Valley?</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
                         {[
                             "Root-cause functional medicine",
@@ -517,7 +517,7 @@ const JointPainManagement = () => {
                 </div>
             </section>
 
-            
+
 
             <Footer />
         </div>

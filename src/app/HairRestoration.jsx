@@ -77,7 +77,7 @@ const HairRestoration = () => {
                 <div className="container mx-auto px-6">
                     <motion.div {...fadeIn} className="max-w-4xl mx-auto text-center mb-16">
                         <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8">
-                            At Tigris Valley Wellness Centre, we approach hair restoration through:
+                            At Tigris Valley, we approach hair restoration through:
                         </h2>
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                             {[

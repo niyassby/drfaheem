@@ -75,7 +75,7 @@ const GutRestoration = () => {
                 <GiStomach className="w-9 h-9 text-blue-600" />
               </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 leading-[1.2] tracking-tight">
-                At Tigris Valley Wellness Centre, gut healing is approached as a{" "}
+                At Tigris Valley, gut healing is approached as a{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
                   structured biological restoration process
                 </span>{" "}
@@ -509,7 +509,7 @@ const GutRestoration = () => {
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-4">
-               PHASE 3: Rebuild & Resilience
+              PHASE 3: Rebuild & Resilience
             </h2>
             <p className="text-xl text-blue-600 font-bold uppercase tracking-widest">
               (Weeks 8–16)
@@ -757,7 +757,7 @@ const GutRestoration = () => {
           <div className="h-px w-24 bg-blue-200 mb-8"></div>
 
           <p className="text-xl md:text-2xl font-medium text-slate-700 leading-relaxed max-w-3xl mx-auto italic">
-            At Tigris Valley Wellness Centre, we rebuild your internal ecosystem
+            At Tigris Valley, we rebuild your internal ecosystem
             — structurally, metabolically, and immunologically.
           </p>
         </div>

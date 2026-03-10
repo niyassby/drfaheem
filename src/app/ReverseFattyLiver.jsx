@@ -224,7 +224,7 @@
 //             {/* Why Tigris? */}
 //             <section className="py-24 bg-gray-50 border-t border-gray-100">
 //                 <div className="container mx-auto px-6 text-center">
-//                     <h2 className="text-4xl font-extrabold text-gray-900 mb-16">Why Choose Tigris Valley Wellness Centre?</h2>
+//                     <h2 className="text-4xl font-extrabold text-gray-900 mb-16">Why Choose Tigris Valley?</h2>
 //                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
 //                         {[
 //                             "Root-cause functional medicine approach",
@@ -322,8 +322,7 @@ const LiverRestoration = () => {
             </h1>
 
             <p className="max-w-2xl mx-auto text-lg md:text-xl text-emerald-50 mb-0 leading-relaxed font-medium">
-              Advanced Functional Liver Restoration Program at Tigris Valley
-              Wellness Centre.
+              Advanced Functional Liver Restoration Program at Tigris Valley.
             </p>
           </motion.div>
         </div>
@@ -1022,7 +1021,7 @@ const LiverRestoration = () => {
       <section className="py-10 md:py-18 bg-slate-50 border-t border-slate-200">
         <div className="container mx-auto px-6 max-w-6xl text-center">
           <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-16">
-            Why Choose Tigris Valley Wellness Centre?
+            Why Choose Tigris Valley?
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
@@ -1068,7 +1067,7 @@ const LiverRestoration = () => {
 
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight">
                 <span className="block text-slate-800 mb-4 md:mb-6 leading-tight">
-                 Your Liver Can Regenerate.
+                  Your Liver Can Regenerate.
                 </span>
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600 leading-tight pb-2">
                   The Right Environment Makes the Difference.

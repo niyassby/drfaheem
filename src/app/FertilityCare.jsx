@@ -86,7 +86,7 @@ const FertilityRestoration = () => {
             >
               <div className="bg-white/10  border border-white/20 text-white px-6 md:px-10 py-4 rounded-full max-w-4xl w-full md:w-auto shadow-lg">
                 <p className="text-sm md:text-base font-medium leading-relaxed">
-                  At Tigris Valley Wellness Centre, we focus on restoring the
+                  At Tigris Valley, we focus on restoring the
                   internal environment required for healthy ovulation, sperm
                   quality, implantation, and pregnancy.
                 </p>
@@ -988,7 +988,7 @@ const FertilityRestoration = () => {
                 <Flower2 className="w-8 h-8 text-rose-500" />
               </div>
               <h2 className="text-3xl md:text-4xl font-black mb-12 leading-tight">
-                Why Choose Tigris Valley Wellness Centre?
+                Why Choose Tigris Valley?
               </h2>
 
               <ul className="space-y-6 flex-grow">
@@ -1115,7 +1115,7 @@ const FertilityRestoration = () => {
 
               <div className="w-full lg:w-auto flex flex-col gap-4">
                 <button
-                  onClick={() => {}}
+                  onClick={() => { }}
                   className="inline-flex items-center justify-center gap-3 bg-white text-emerald-900 px-8 py-4 rounded-xl font-bold text-base shadow-lg hover:bg-emerald-50 transition-all duration-200 hover:-translate-y-0.5 w-full lg:w-auto whitespace-nowrap"
                 >
                   <Phone className="w-5 h-5" />

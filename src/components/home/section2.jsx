@@ -116,7 +116,7 @@ function Section2() {
                 serves as the{" "}
                 <strong>
                   Medical Director and Head of Functional and Integrative
-                  Medicine at Tigris Valley Wellness Centre
+                  Medicine at Tigris Valley
                 </strong>
               </em>
               , where he focuses on personalized, science-based approaches to

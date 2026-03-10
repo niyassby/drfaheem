@@ -100,7 +100,7 @@ const ImmunoOptimization = () => {
                 <div className="container mx-auto px-6">
                     <motion.div {...fadeIn} className="max-w-4xl mx-auto text-center mb-16">
                         <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-8 leading-relaxed">
-                            At Tigris Valley Wellness Centre, immune optimization is not about “boosting” immunity temporarily — it is about restoring immune intelligence, balance, and resilience.
+                            At Tigris Valley, immune optimization is not about “boosting” immunity temporarily — it is about restoring immune intelligence, balance, and resilience.
                         </h2>
                         <div className="flex flex-col md:flex-row items-center justify-center gap-8 mt-12">
                             <div className="p-8 bg-blue-50 rounded-3xl border border-blue-100 flex-1">
