@@ -562,7 +562,7 @@ const ImmunoOptimization = () => {
                                         <div className="w-12 h-12 bg-white text-blue-600 rounded-2xl flex items-center justify-center font-bold text-xl shrink-0">
                                             {i + 1}
                                         </div>
-                                        <span className="text-xl font-bold uppercase tracking-wide">OR <br /> {track}</span>
+                                        <span className="text-xl font-bold uppercase tracking-wide"> {track}</span>
                                     </div>
                                 ))}
                             </div>
