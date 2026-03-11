@@ -241,11 +241,9 @@ const MindBodyBalance = () => {
               </h2>
             </div>
             <div className="lg:w-1/2">
-              <div className="bg-gray-50 p-6 md:p-8 rounded-[2rem] border border-gray-100">
+              <div className="bg-gray-100 p-6 md:p-8 rounded-[1.5rem] border border-gray-400">
                 <p className="text-lg text-gray-700 font-medium leading-relaxed">
-                  Spiritual healing is deeply personal. Our protocols are
-                  adapted based entirely on patient identity and comfort,
-                  ensuring an inclusive environment.
+                 Healing is deeply personal.Our protocols are adapted based entirely on religious/spiritual identity and comfort, ensuring an inclusive and supportive environment.
                 </p>
               </div>
             </div>
