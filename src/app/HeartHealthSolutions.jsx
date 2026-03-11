@@ -493,30 +493,33 @@ const HeartHealthSolutions = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <div className="aspect-video w-full rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white">
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/Tk63bhR-_rs?si=vm3zXw49HKBMwB4k"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <div className="aspect-video w-full rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/mRERX2mbYmY"
-                title="Heart Health Video 2"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
-            </div>
-          </div>
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+  <div className="aspect-video w-full rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white">
+    <iframe
+      className="w-full h-full"
+      src="https://www.youtube.com/embed/Tk63bhR-_rs?si=vm3zXw49HKBMwB4k"
+      title="YouTube video player"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowFullScreen
+    ></iframe>
+  </div>
+
+  <div className="aspect-video w-full rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white">
+    <iframe
+      className="w-full h-full"
+      src="https://www.youtube.com/embed/mRERX2mbYmY"
+      title="Heart Health Video 2"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowFullScreen
+    ></iframe>
+  </div>
+</div>
+
+{/* Malayalam text below videos */}
+<p className="text-right mr-15 text-slate-600 mt-6 text-sm md:text-base font-medium">
+( in Malayalam )</p>
         </div>
       </section>
 

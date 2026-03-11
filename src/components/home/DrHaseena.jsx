@@ -5,7 +5,7 @@ export default function DrHaseenaBio() {
         <div className="text-center space-y-4">
           <h1 className="text-4xl font-bold text-gray-900">Dr. Haseena Chokkiyil</h1>
           <p className="text-xl text-gray-600 font-medium">
-            Holistic Wellness Advocate & Functional Medicine Practitioner
+            Consultant Functional Nutrition and Lifestyle Medicine 
           </p>
           <div className="w-24 h-1 bg-blue-600 mx-auto rounded"></div>
         </div>

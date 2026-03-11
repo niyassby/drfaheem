@@ -55,6 +55,10 @@ export const spProgramsTitle = [
     titel: "Elder care & assisted living",
     link: "/ElderCarePage",
   },
+  {
+    titel: "Long COVID Recovery & Cellular Detox",
+    link: "/long-covid-recovery",
+  },
 ];
 
 export const welnessSolutions = [
@@ -90,12 +94,8 @@ export const welnessSolutions = [
 
 export const otherLinks = [
   {
-    titel: "Blogs",
-    link: "/blogs",
-  },
-  {
-    titel: "Gallery",
-    link: "/gallery",
+    titel: "Academics",
+    link: "/academics",
   },
   {
     titel: "Panel",

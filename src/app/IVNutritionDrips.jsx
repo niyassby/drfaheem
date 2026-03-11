@@ -14,7 +14,9 @@ import {
   DialogHeader,
 } from '@/components/ui/dialog';
 import { ContactInput } from '../components/home/ContactInput';
-
+import iv1 from '../assets/iv1.jpg';
+import iv2 from '../assets/iv2.jpeg';
+import iv3 from '../assets/iv3.jpg'
 /* ─────────────────────── DATA ─────────────────────── */
 const categories = [
   {
@@ -261,7 +263,6 @@ const IVNutritionDrips = () => {
 
         <div className="container mx-auto px-6 max-w-7xl relative z-10">
           <div className="flex flex-col lg:flex-row gap-14 items-center">
-
             {/* Left */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -279,7 +280,9 @@ const IVNutritionDrips = () => {
                 </span>
               </h1>
               <p className="text-xl text-slate-600 leading-relaxed mb-10 max-w-lg font-medium">
-                IV Nutrition Drips are one of the fastest ways to restore nutritional balance — delivering 100% absorption directly into the bloodstream, bypassing the digestive tract entirely.
+                IV Nutrition Drips are one of the fastest ways to restore
+                nutritional balance — delivering 100% absorption directly into
+                the bloodstream, bypassing the digestive tract entirely.
               </p>
               <div className="flex flex-wrap gap-4">
                 <button
@@ -289,7 +292,7 @@ const IVNutritionDrips = () => {
                   Book a Consultation
                 </button>
                 <button
-                  onClick={() => scrollTo('categories')}
+                  onClick={() => scrollTo("categories")}
                   className="bg-slate-100 border border-slate-200 text-slate-700 px-8 py-4 rounded-full font-bold hover:bg-slate-200 transition-all duration-300"
                 >
                   Explore Drips
@@ -304,8 +307,12 @@ const IVNutritionDrips = () => {
                   { val: "30–60", label: "Min per Session" },
                 ].map((s) => (
                   <div key={s.label}>
-                    <p className="text-3xl font-extrabold text-slate-900">{s.val}</p>
-                    <p className="text-sm font-medium text-slate-500">{s.label}</p>
+                    <p className="text-3xl font-extrabold text-slate-900">
+                      {s.val}
+                    </p>
+                    <p className="text-sm font-medium text-slate-500">
+                      {s.label}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -319,13 +326,21 @@ const IVNutritionDrips = () => {
               className="lg:w-1/2 grid grid-cols-12 grid-rows-2 gap-4 h-[420px]"
             >
               <div className="col-span-7 row-span-2 rounded-[2rem] overflow-hidden border-4 border-white shadow-xl">
-                <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=800" alt="IV therapy" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                <img src={iv1} className='w-full h-full object-cover hover:scale-105 transition-transform duration-700' />{" "}
               </div>
               <div className="col-span-5 row-span-1 rounded-[1.5rem] overflow-hidden border-4 border-white shadow-md">
-                <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&q=80&w=500" alt="Immune boost" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                <img
+                  src={iv2}
+                  alt="Immune boost"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                />
               </div>
               <div className="col-span-5 row-span-1 rounded-[1.5rem] overflow-hidden border-4 border-white shadow-md">
-                <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&q=80&w=500" alt="Beauty drip" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                <img
+                  src={iv3}
+                  alt="Beauty drip"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                />
               </div>
             </motion.div>
           </div>
@@ -345,13 +360,24 @@ const IVNutritionDrips = () => {
             >
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-1 h-8 bg-indigo-500 rounded-full"></div>
-                <span className="text-indigo-600 text-sm font-bold uppercase tracking-widest">Introduction</span>
+                <span className="text-indigo-600 text-sm font-bold uppercase tracking-widest">
+                  Introduction
+                </span>
               </div>
               <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 mb-5 leading-tight">
                 Restoring Nutritional Balance from Within
               </h2>
               <p className="text-slate-600 leading-relaxed">
-                IV Nutrition Drips are one of the fastest ways to restore nutritional balance in the body. In today's lifestyle, poor diet, stress, and impaired gut absorption often lead to micronutrient deficiencies that cannot be corrected through oral supplementation alone. Tigris Valley, acknowledged as a <strong className="text-slate-800">best functional medicine centre in Thrissur and Kochi</strong>, provides customized IV nutrition drips designed to restore energy, enhance immunity, and support long-term health.
+                IV Nutrition Drips are one of the fastest ways to restore
+                nutritional balance in the body. In today's lifestyle, poor
+                diet, stress, and impaired gut absorption often lead to
+                micronutrient deficiencies that cannot be corrected through oral
+                supplementation alone. Tigris Valley, acknowledged as a{" "}
+                <strong className="text-slate-800">
+                  best functional medicine centre in Thrissur and Kochi
+                </strong>
+                , provides customized IV nutrition drips designed to restore
+                energy, enhance immunity, and support long-term health.
               </p>
             </motion.div>
 
@@ -364,13 +390,24 @@ const IVNutritionDrips = () => {
             >
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-1 h-8 bg-violet-500 rounded-full"></div>
-                <span className="text-violet-600 text-sm font-bold uppercase tracking-widest">Treatment Information</span>
+                <span className="text-violet-600 text-sm font-bold uppercase tracking-widest">
+                  Treatment Information
+                </span>
               </div>
               <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 mb-5 leading-tight">
                 Tailored Protocols for Every Need
               </h2>
               <p className="text-slate-600 leading-relaxed">
-                Tigris Valley's IV drips are formulated based on individual needs after a complete health assessment. The most common protocol is the <strong className="text-slate-800">Myers Cocktail</strong>, which combines Vitamin C, Magnesium, Calcium, and B Complex vitamins. Other drips may include trace minerals, amino acids, or glutathione depending on patient goals. Infusions last 30–60 minutes, delivering <strong className="text-slate-800">100% absorption</strong> and rapid results.
+                Tigris Valley's IV drips are formulated based on individual
+                needs after a complete health assessment. The most common
+                protocol is the{" "}
+                <strong className="text-slate-800">Myers Cocktail</strong>,
+                which combines Vitamin C, Magnesium, Calcium, and B Complex
+                vitamins. Other drips may include trace minerals, amino acids,
+                or glutathione depending on patient goals. Infusions last 30–60
+                minutes, delivering{" "}
+                <strong className="text-slate-800">100% absorption</strong> and
+                rapid results.
               </p>
             </motion.div>
           </div>
@@ -378,7 +415,10 @@ const IVNutritionDrips = () => {
       </section>
 
       {/* ── Sticky Tab Nav ── */}
-      <div id="categories" className="py-5 bg-white border-y border-slate-100 sticky top-16 z-30 shadow-sm">
+      <div
+        id="categories"
+        className="py-5 bg-white border-y border-slate-100 sticky top-16 z-30 shadow-sm"
+      >
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="flex gap-2 overflow-x-auto pb-1">
             {categories.map((cat) => (
@@ -388,10 +428,11 @@ const IVNutritionDrips = () => {
                   setActiveTab(cat.id);
                   setTimeout(() => scrollTo(cat.id), 50);
                 }}
-                className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold whitespace-nowrap transition-all duration-200 border ${activeTab === cat.id
+                className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold whitespace-nowrap transition-all duration-200 border ${
+                  activeTab === cat.id
                     ? `${cat.palette.pill} text-white border-transparent shadow-md`
-                    : 'bg-slate-100 text-slate-600 border-slate-200 hover:bg-slate-200'
-                  }`}
+                    : "bg-slate-100 text-slate-600 border-slate-200 hover:bg-slate-200"
+                }`}
               >
                 {React.cloneElement(cat.icon, { className: "w-4 h-4" })}
                 {cat.label}
@@ -419,21 +460,36 @@ const IVNutritionDrips = () => {
               >
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className={`w-10 h-10 rounded-xl ${cat.palette.badge} flex items-center justify-center border`}>
+                    <div
+                      className={`w-10 h-10 rounded-xl ${cat.palette.badge} flex items-center justify-center border`}
+                    >
                       {React.cloneElement(cat.icon, { className: "w-5 h-5" })}
                     </div>
-                    <span className={`text-sm font-bold uppercase tracking-widest ${cat.palette.tag}`}>{cat.label}</span>
+                    <span
+                      className={`text-sm font-bold uppercase tracking-widest ${cat.palette.tag}`}
+                    >
+                      {cat.label}
+                    </span>
                   </div>
-                  <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight">{cat.label}</h2>
+                  <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight">
+                    {cat.label}
+                  </h2>
                 </div>
                 <p className="text-slate-500 font-medium max-w-xs md:text-right text-[15px]">
-                  {cat.drips.length} specialized IV protocols — each tailored for targeted results.
+                  {cat.drips.length} specialized IV protocols — each tailored
+                  for targeted results.
                 </p>
               </motion.div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {cat.drips.map((drip, i) => (
-                  <DripCard key={drip.title} drip={drip} palette={cat.palette} idx={i} onBook={openModal} />
+                  <DripCard
+                    key={drip.title}
+                    drip={drip}
+                    palette={cat.palette}
+                    idx={i}
+                    onBook={openModal}
+                  />
                 ))}
               </div>
             </div>
@@ -456,7 +512,8 @@ const IVNutritionDrips = () => {
             viewport={{ once: true }}
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm font-bold uppercase tracking-widest text-white/80 mb-8">
-              <CheckCircle className="w-4 h-4 text-emerald-400" /> Medical Supervision
+              <CheckCircle className="w-4 h-4 text-emerald-400" /> Medical
+              Supervision
             </div>
             <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
               Ready to Restore{" "}
@@ -465,7 +522,9 @@ const IVNutritionDrips = () => {
               </span>
             </h2>
             <p className="text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Speak to our medical team at Tigris Valley. Every IV drip protocol is customized to your health profile for maximum safety and results.
+              Speak to our medical team at Tigris Valley. Every IV drip protocol
+              is customized to your health profile for maximum safety and
+              results.
             </p>
             <button
               onClick={() => openModal()}

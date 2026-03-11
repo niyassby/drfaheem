@@ -139,14 +139,14 @@ const MedicinalCannabis = () => {
                 Medicinal Cannabis has emerged as one of the most researched and effective complementary therapies for a wide range of chronic conditions.
               </motion.p>
 
-              <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-start sm:items-center gap-8">
+              {/* <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-start sm:items-center gap-8">
                 <button className="bg-emerald-600 text-white px-8 py-4 rounded-full font-bold shadow-[0_8px_30px_rgb(16,185,129,0.3)] hover:shadow-[0_8px_30px_rgb(16,185,129,0.5)] hover:bg-emerald-700 transition-all duration-300 transform hover:-translate-y-1">
                   Book a Consultation
                 </button>
                 <div className="text-sm font-bold text-slate-500 leading-tight">
                   Trusted by<br />patients worldwide
                 </div>
-              </motion.div>
+              </motion.div> */}
             </motion.div>
 
             {/* Right: Image */}
@@ -165,7 +165,7 @@ const MedicinalCannabis = () => {
                 />
               </div>
 
-              <motion.div
+              {/* <motion.div
                 variants={floatVariants}
                 animate="animate"
                 className="absolute -bottom-6 -left-4 md:-bottom-8 md:-left-8 bg-white p-5 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.08)] border border-slate-100 flex items-center gap-4 z-20"
@@ -177,7 +177,7 @@ const MedicinalCannabis = () => {
                   <p className="text-sm font-bold text-slate-900 leading-tight">Medically Supervised</p>
                   <p className="text-xs text-slate-500 font-medium mt-0.5">Legal & Standardized</p>
                 </div>
-              </motion.div>
+              </motion.div> */}
             </motion.div>
           </div>
         </div>

@@ -12,7 +12,7 @@ export default function DrAPShahulHameed() {
                     <strong>Dr. A.P. Shahul Hameed</strong> is a renowned Unani physician and dermatology specialist with over 18 years of clinical experience. He currently serves as Professor of Dermatology at Markaz Unani Medical College and is a Member of the Board of Studies at Kerala University of Health Sciences.
                 </p>
                 <p className="leading-relaxed">
-                    As the co-founder and Executive Director of Tigris Valley Wellness Hospital in Markaz Knowledge City, Calicut, Dr. Shahul deliverers personalized treatment and wellness solutions to patients from around the world. His approach integrates modern dermatology with holistic, evidence-based therapies, making Tigris Valley a trusted destination for preventive healthcare and advanced wellness programs.
+                    As the co-founder and Executive Director of Tigris Valley in Markaz Knowledge City, Calicut, Dr. Shahul delivers personalized treatment and wellness solutions to patients from around the world. His approach integrates modern dermatology with holistic, evidence-based therapies, making Tigris Valley a trusted destination for preventive healthcare and advanced wellness programs.
                 </p>
             </section>
 

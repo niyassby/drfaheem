@@ -39,6 +39,9 @@ import FirSaunaTherapy from './app/FirSaunaTherapy'
 import MedicinalCannabis from './app/MedicinalCannabis'
 import CoffeeEnema from './app/CoffeeEnema'
 import IVNutritionDrips from './app/IVNutritionDrips'
+import LongCovidRecovery from './app/LongCovidRecovery'
+import PeptideTherapy from './app/PeptideTherapy'
+import Academics from './components/academics/Academics'
 
 function App() {
   return (
@@ -53,30 +56,16 @@ function App() {
           path="/explore-3"
           element={<ExploreMore data={iv_vitamin_c_page} />}
         />
-        <Route
-          path="/explore-4"
-          element={<IVNutritionDrips />}
-        />
-        <Route
-          path="/explore-5"
-          element={<EecpTherapy />}
-        />
-        <Route
-          path="/explore-6"
-          element={<FirSaunaTherapy />}
-        />
+        <Route path="/explore-4" element={<IVNutritionDrips />} />
+        <Route path="/explore-5" element={<EecpTherapy />} />
+        <Route path="/explore-6" element={<FirSaunaTherapy />} />
         <Route
           path="/explore-7"
           element={<ExploreMore data={iv_glutathione_page} />}
         />
-        <Route
-          path="/explore-8"
-          element={<CoffeeEnema />}
-        />
-        <Route
-          path="/explore-9"
-          element={<MedicinalCannabis />}
-        />
+        <Route path="/explore-8" element={<CoffeeEnema />} />
+        <Route path="/explore-9" element={<MedicinalCannabis />} />
+        <Route path="/explore-10" element={<PeptideTherapy />} />
 
         <Route path="/heart-health" element={<HeartHealthSolutions />} />
         <Route path="/reverse-diabetes" element={<ReverseDiabetes />} />
@@ -100,9 +89,11 @@ function App() {
         <Route path="/gutRestoration" element={<GutRestoration />} />
         <Route path="/MindBodyBalance" element={<MindBodyBalance />} />
         <Route path="/ElderCarePage" element={<ElderCarePage />} />
+        <Route path="/long-covid-recovery" element={<LongCovidRecovery />} />
 
         <Route path="/about" element={<About />} />
         <Route path="/panel" element={<Team />} />
+        <Route path='/academics' element={<Academics />} />
       </Routes>
     </HashRouter>
   );

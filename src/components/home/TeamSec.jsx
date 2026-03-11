@@ -40,22 +40,28 @@ const team = [
     description: <DrLenny />,
   },
   {
+    name: "Anna Verwaal",
+    designation: "Designation",
+    image: team2,
+    description: <Annaverwall />,
+  },
+  {
+    name: "Dr. Muhammed Shareef",
+    designation: "Founder & Managing Director",
+    image: team13,
+    description: <DrMuhammedShareef />,
+  },
+  {
     name: "Dr. Sooraj Sankar",
     designation: "",
     image: team5,
     description: <DrSoorajSankar />,
   },
   {
-    name: "Dr. OKM Abdurahman",
-    designation: "Lifestyle Physician & Unani Consultant",
-    image: team4,
-    description: <DrOKMAbdurahman />,
-  },
-  {
-    name: "Dr. Abdul Gafoor",
-    designation: "",
-    image: team6,
-    description: <DrAbdulgafoor />,
+    name: "Dr. A.P. Shahul Hameed",
+    designation: "BUMS",
+    image: team11,
+    description: <DrAPShahulHameed />,
   },
   {
     name: "Dr. Haseena Chokkiyil",
@@ -64,17 +70,36 @@ const team = [
     description: <DrHaseenaBio />,
   },
   {
+    name: "Dr. Abdul Gafoor",
+    designation: "",
+    image: team6,
+    description: <DrAbdulgafoor />,
+  },
+  {
+    name: "Dr. OKM Abdurahman",
+    designation: "Lifestyle Physician & Unani Consultant",
+    image: team4,
+    description: <DrOKMAbdurahman />,
+  },
+  {
+    name: "Dr. Fahad Basheer",
+    designation: "MBBS, MD (Physiology), PG Dip Diabetes, RCGP Accredited",
+    image: team10,
+    description: <DrFahadBasheer />,
+  },
+  {
+    name: "Dr. Sara Shareef",
+    designation: "BUMS",
+    image: team9,
+    description: <DrSaraShareef />,
+  },
+  {
     name: "Dr. Azibunnisha",
     designation: "",
     image: team8,
     description: <DrAzibunnisha />,
   },
-  {
-    name: "Anna Verwaal",
-    designation: "Designation",
-    image: team2,
-    description: <Annaverwall />,
-  },
+
   {
     name: "Zulekha Shakoor Rajani    ",
     designation: "Counselling & Spiritual Psychologist",
@@ -86,30 +111,6 @@ const team = [
     designation: "BNYS, MSc (DFSM), CNCC, PGDC",
     image: team12,
     description: <DrJibinAnnChacko />,
-  },
-  {
-    name: "Dr. Fahad Basheer",
-    designation: "Chronomedicine consultant and Circadian sleep coach",
-    image: team10,
-    description: <DrFahadBasheer />,
-  },
-  {
-    name: "Dr. Sara Shareef",
-    designation: "BUMS",
-    image: team9,
-    description: <DrSaraShareef />,
-  },
-  {
-    name: "Dr. A.P. Shahul Hameed",
-    designation: "BUMS",
-    image: team11,
-    description: <DrAPShahulHameed />,
-  },
-  {
-    name: "Dr. Muhammed Shareef",
-    designation: "Founder & Managing Director",
-    image: team13,
-    description: <DrMuhammedShareef />,
   },
 ];
 

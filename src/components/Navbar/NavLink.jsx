@@ -108,13 +108,10 @@ export default function NavLinks() {
               </NavigationMenu>
 
               {[
+ 
                 {
-                  titel: "Blogs",
-                  link: "/blogs",
-                },
-                {
-                  titel: "Gallery",
-                  link: "/gallery",
+                  titel: "Academics",
+                  link: "/academics",
                 },
                 {
                   titel: "Panel",

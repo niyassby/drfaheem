@@ -18,12 +18,12 @@ import {
   Leaf,
   UserCheck,
 } from "lucide-react";
-
+// import chelation from 
 export const EDTA_Chelation_Therapy = {
   banner: {
     title: "EDTA Chelation Therapy",
     image:
-      "https://burickcenter.com/wp-content/uploads/2023/05/iv-infusion-therapy-chelation.jpg",
+      "https://static.vecteezy.com/system/resources/thumbnails/023/571/075/small_2x/nurse-hands-is-adjusting-the-syringe-to-draw-blood-from-the-blood-bag-for-blood-transfusion-to-sick-newborn-baby-in-a-hospital-photo.jpg",
   },
   sections: [
     {
@@ -228,7 +228,7 @@ const ChelationTherapy = () => {
               </div>
 
               {/* Trust Badge */}
-              <div className="absolute -bottom-6 -left-6 bg-white p-4 pr-6 rounded-2xl shadow-md border border-slate-100 hidden md:flex items-center gap-3 z-20">
+              {/* <div className="absolute -bottom-6 -left-6 bg-white p-4 pr-6 rounded-2xl shadow-md border border-slate-100 hidden md:flex items-center gap-3 z-20">
                 <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center border border-blue-100">
                   <ShieldCheck className="w-6 h-6 text-blue-600" />
                 </div>
@@ -240,7 +240,7 @@ const ChelationTherapy = () => {
                     Integrative Care Protocol
                   </p>
                 </div>
-              </div>
+              </div> */}
             </motion.div>
           </div>
         </div>

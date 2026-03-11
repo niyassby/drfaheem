@@ -55,7 +55,9 @@ const MindBodyBalance = () => {
               Advanced Mind–Body <br /> Balance Program
             </h1>
             <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-200 mb-10">
-              At Tigris Valley, mind–body balance is approached through a personalized neuro-psycho-spiritual framework that respects all belief systems.
+              At Tigris Valley, mind–body balance is approached through a
+              personalized neuro-psycho-spiritual framework that respects all
+              belief systems.
             </p>
           </motion.div>
         </div>
@@ -226,24 +228,25 @@ const MindBodyBalance = () => {
       </section>
 
       {/* --- MODULE 4 (Faith-Sensitive Integration - The Core Differentiator) --- */}
-      {/* --- MODULE 4 (Faith-Sensitive Integration - The Core Differentiator) --- */}
-      <section className="py-20 bg-white border-t border-gray-100">
+      <section className="py-20 bg-gray-900 border-t border-gray-800">
         <div className="container mx-auto px-6 max-w-7xl">
           {/* Section Header */}
-          <div className="flex flex-col lg:flex-row gap-8 items-center justify-between mb-16 lg:mb-20 border-b border-gray-100 pb-10">
+          <div className="flex flex-col lg:flex-row gap-8 items-center justify-between mb-16 lg:mb-20 border-b border-gray-800 pb-10">
             <div className="lg:w-1/2 text-center lg:text-left">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-50 border border-indigo-100 rounded-2xl mb-6 shadow-sm">
-                <Globe className="w-8 h-8 text-indigo-600" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-900/30 border border-indigo-800/50 rounded-2xl mb-6 shadow-sm">
+                <Globe className="w-8 h-8 text-indigo-400" />
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight leading-tight text-gray-900">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight leading-tight text-white">
                 Faith-Sensitive <br className="hidden md:block" /> Spiritual
                 Integration
               </h2>
             </div>
             <div className="lg:w-1/2">
-              <div className="bg-gray-100 p-6 md:p-8 rounded-[1.5rem] border border-gray-400">
-                <p className="text-lg text-gray-700 font-medium leading-relaxed">
-                 Healing is deeply personal.Our protocols are adapted based entirely on religious/spiritual identity and comfort, ensuring an inclusive and supportive environment.
+              <div className="bg-indigo-900/40 p-6 md:p-8 rounded-[2rem] border border-indigo-800/50">
+                <p className="text-lg md:text-xl text-indigo-100 font-medium leading-relaxed">
+                  Healing is deeply personal. Our protocols are adapted based
+                  entirely on religious/spiritual identity and comfort, ensuring
+                  an inclusive and supportive environment.
                 </p>
               </div>
             </div>
@@ -252,19 +255,19 @@ const MindBodyBalance = () => {
           {/* Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-stretch">
             {/* Muslim Patients */}
-            <div className="group bg-green-50/30 p-8 md:p-10 rounded-[2rem] border border-green-100/50 shadow-sm hover:shadow-lg hover:border-green-200 transition-all duration-300 flex flex-col h-full relative overflow-hidden">
+            <div className="group bg-green-900/10 p-8 md:p-10 rounded-[2rem] border border-green-800/30 shadow-sm hover:shadow-lg hover:border-green-600/50 transition-all duration-300 flex flex-col h-full relative overflow-hidden">
               <div className="flex items-center gap-4 mb-8 relative z-10">
-                <div className="p-3 bg-green-100 rounded-xl text-green-700">
+                <div className="p-3 bg-green-900/40 rounded-xl text-green-400">
                   <Moon className="w-6 h-6" />
                 </div>
-                <h4 className="text-2xl font-bold text-gray-900">
+                <h4 className="text-2xl font-bold text-white">
                   For Muslim Patients
                 </h4>
               </div>
 
               <div className="space-y-8 flex-grow relative z-10">
                 <div>
-                  <p className="font-bold text-green-800 mb-4 flex items-center gap-2 text-sm uppercase tracking-widest">
+                  <p className="font-bold text-green-400 mb-4 flex items-center gap-2 text-sm uppercase tracking-widest">
                     <BookOpen className="w-4 h-4" /> Islamic Psychology (Ilm
                     al-Nafs)
                   </p>
@@ -277,7 +280,7 @@ const MindBodyBalance = () => {
                     ].map((item, i) => (
                       <li
                         key={i}
-                        className="flex items-start gap-3 text-sm text-gray-700 font-medium"
+                        className="flex items-start gap-3 text-sm text-gray-300 font-medium"
                       >
                         <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-1.5 shrink-0"></div>
                         {item}
@@ -286,10 +289,10 @@ const MindBodyBalance = () => {
                   </ul>
                 </div>
 
-                <div className="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm">
-                  <p className="font-bold text-green-800 mb-4 flex items-center gap-2 text-sm uppercase tracking-widest">
+                <div className="bg-gray-800/40 p-5 rounded-2xl border border-gray-700/50 shadow-sm">
+                  <p className="font-bold text-green-400 mb-4 flex items-center gap-2 text-sm uppercase tracking-widest">
                     <Wind className="w-4 h-4" /> Sufism-Inspired{" "}
-                    <span className="text-[10px] text-gray-500 font-normal tracking-widest bg-gray-100 px-2 py-1 rounded ml-auto">
+                    <span className="text-[10px] text-gray-400 font-normal tracking-widest bg-gray-800 px-2 py-1 rounded ml-auto border border-gray-700">
                       (Optional)
                     </span>
                   </p>
@@ -301,9 +304,9 @@ const MindBodyBalance = () => {
                     ].map((item, i) => (
                       <li
                         key={i}
-                        className="flex items-start gap-3 text-sm text-gray-700 font-medium"
+                        className="flex items-start gap-3 text-sm text-gray-300 font-medium"
                       >
-                        <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-4 h-4 text-green-400 shrink-0 mt-0.5" />
                         {item}
                       </li>
                     ))}
@@ -313,19 +316,19 @@ const MindBodyBalance = () => {
             </div>
 
             {/* Hindu Patients */}
-            <div className="group bg-orange-50/30 p-8 md:p-10 rounded-[2rem] border border-orange-100/50 shadow-sm hover:shadow-lg hover:border-orange-200 transition-all duration-300 flex flex-col h-full relative overflow-hidden">
+            <div className="group bg-orange-900/10 p-8 md:p-10 rounded-[2rem] border border-orange-800/30 shadow-sm hover:shadow-lg hover:border-orange-600/50 transition-all duration-300 flex flex-col h-full relative overflow-hidden">
               <div className="flex items-center gap-4 mb-8 relative z-10">
-                <div className="p-3 bg-orange-100 rounded-xl text-orange-600">
+                <div className="p-3 bg-orange-900/40 rounded-xl text-orange-400">
                   <Sun className="w-6 h-6" />
                 </div>
-                <h4 className="text-2xl font-bold text-gray-900">
+                <h4 className="text-2xl font-bold text-white">
                   For Hindu Patients
                 </h4>
               </div>
 
               <div className="space-y-8 flex-grow relative z-10">
                 <div>
-                  <p className="font-bold text-orange-800 mb-4 flex items-center gap-2 text-sm uppercase tracking-widest">
+                  <p className="font-bold text-orange-400 mb-4 flex items-center gap-2 text-sm uppercase tracking-widest">
                     <Flower2 className="w-4 h-4" /> Yogic & Vedantic Integration
                   </p>
                   <ul className="space-y-3">
@@ -337,7 +340,7 @@ const MindBodyBalance = () => {
                     ].map((item, i) => (
                       <li
                         key={i}
-                        className="flex items-start gap-3 text-sm text-gray-700 font-medium"
+                        className="flex items-start gap-3 text-sm text-gray-300 font-medium"
                       >
                         <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mt-1.5 shrink-0"></div>
                         {item}
@@ -346,10 +349,10 @@ const MindBodyBalance = () => {
                   </ul>
                 </div>
 
-                <div className="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm">
-                  <p className="font-bold text-orange-800 mb-4 flex items-center gap-2 text-sm uppercase tracking-widest">
+                <div className="bg-gray-800/40 p-5 rounded-2xl border border-gray-700/50 shadow-sm">
+                  <p className="font-bold text-orange-400 mb-4 flex items-center gap-2 text-sm uppercase tracking-widest">
                     <Activity className="w-4 h-4" /> Mantra & Breath{" "}
-                    <span className="text-[10px] text-gray-500 font-normal tracking-widest bg-gray-100 px-2 py-1 rounded ml-auto">
+                    <span className="text-[10px] text-gray-400 font-normal tracking-widest bg-gray-800 px-2 py-1 rounded ml-auto border border-gray-700">
                       (Optional)
                     </span>
                   </p>
@@ -360,9 +363,9 @@ const MindBodyBalance = () => {
                     ].map((item, i) => (
                       <li
                         key={i}
-                        className="flex items-start gap-3 text-sm text-gray-700 font-medium"
+                        className="flex items-start gap-3 text-sm text-gray-300 font-medium"
                       >
-                        <CheckCircle2 className="w-4 h-4 text-orange-500 shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" />
                         {item}
                       </li>
                     ))}
@@ -372,19 +375,19 @@ const MindBodyBalance = () => {
             </div>
 
             {/* Christian Patients */}
-            <div className="group bg-blue-50/30 p-8 md:p-10 rounded-[2rem] border border-blue-100/50 shadow-sm hover:shadow-lg hover:border-blue-200 transition-all duration-300 flex flex-col h-full relative overflow-hidden">
+            <div className="group bg-blue-900/10 p-8 md:p-10 rounded-[2rem] border border-blue-800/30 shadow-sm hover:shadow-lg hover:border-blue-600/50 transition-all duration-300 flex flex-col h-full relative overflow-hidden">
               <div className="flex items-center gap-4 mb-8 relative z-10">
-                <div className="p-3 bg-blue-100 rounded-xl text-blue-600">
+                <div className="p-3 bg-blue-900/40 rounded-xl text-blue-400">
                   <Heart className="w-6 h-6" />
                 </div>
-                <h4 className="text-2xl font-bold text-gray-900">
+                <h4 className="text-2xl font-bold text-white">
                   For Christian Patients
                 </h4>
               </div>
 
               <div className="space-y-8 flex-grow relative z-10">
                 <div>
-                  <p className="font-bold text-blue-800 mb-4 flex items-center gap-2 text-sm uppercase tracking-widest">
+                  <p className="font-bold text-blue-400 mb-4 flex items-center gap-2 text-sm uppercase tracking-widest">
                     <BookOpen className="w-4 h-4" /> Contemplative Psychology
                   </p>
                   <ul className="space-y-3">
@@ -396,7 +399,7 @@ const MindBodyBalance = () => {
                     ].map((item, i) => (
                       <li
                         key={i}
-                        className="flex items-start gap-3 text-sm text-gray-700 font-medium"
+                        className="flex items-start gap-3 text-sm text-gray-300 font-medium"
                       >
                         <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-1.5 shrink-0"></div>
                         {item}
@@ -405,8 +408,8 @@ const MindBodyBalance = () => {
                   </ul>
                 </div>
 
-                <div className="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm">
-                  <p className="font-bold text-blue-800 mb-4 flex items-center gap-2 text-sm uppercase tracking-widest">
+                <div className="bg-gray-800/40 p-5 rounded-2xl border border-gray-700/50 shadow-sm">
+                  <p className="font-bold text-blue-400 mb-4 flex items-center gap-2 text-sm uppercase tracking-widest">
                     <Sparkles className="w-4 h-4" /> Silent Contemplation
                   </p>
                   <ul className="space-y-3">
@@ -417,9 +420,9 @@ const MindBodyBalance = () => {
                     ].map((item, i) => (
                       <li
                         key={i}
-                        className="flex items-start gap-3 text-sm text-gray-700 font-medium"
+                        className="flex items-start gap-3 text-sm text-gray-300 font-medium"
                       >
-                        <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
                         {item}
                       </li>
                     ))}
@@ -429,19 +432,19 @@ const MindBodyBalance = () => {
             </div>
 
             {/* Atheist / Secular Patients */}
-            <div className="group bg-indigo-50/30 p-8 md:p-10 rounded-[2rem] border border-indigo-100/50 shadow-sm hover:shadow-lg hover:border-indigo-200 transition-all duration-300 flex flex-col h-full relative overflow-hidden">
+            <div className="group bg-indigo-900/10 p-8 md:p-10 rounded-[2rem] border border-indigo-800/30 shadow-sm hover:shadow-lg hover:border-indigo-600/50 transition-all duration-300 flex flex-col h-full relative overflow-hidden">
               <div className="flex items-center gap-4 mb-8 relative z-10">
-                <div className="p-3 bg-indigo-100 rounded-xl text-indigo-600">
+                <div className="p-3 bg-indigo-900/40 rounded-xl text-indigo-400">
                   <Leaf className="w-6 h-6" />
                 </div>
-                <h4 className="text-2xl font-bold text-gray-900">
+                <h4 className="text-2xl font-bold text-white">
                   For Atheist / Secular
                 </h4>
               </div>
 
               <div className="space-y-8 flex-grow relative z-10">
                 <div>
-                  <p className="font-bold text-indigo-800 mb-4 flex items-center gap-2 text-sm uppercase tracking-widest">
+                  <p className="font-bold text-indigo-400 mb-4 flex items-center gap-2 text-sm uppercase tracking-widest">
                     <Compass className="w-4 h-4" /> Existential & Meaning
                   </p>
                   <ul className="space-y-3">
@@ -452,7 +455,7 @@ const MindBodyBalance = () => {
                     ].map((item, i) => (
                       <li
                         key={i}
-                        className="flex items-start gap-3 text-sm text-gray-700 font-medium"
+                        className="flex items-start gap-3 text-sm text-gray-300 font-medium"
                       >
                         <div className="w-1.5 h-1.5 bg-indigo-500 rounded-full mt-1.5 shrink-0"></div>
                         {item}
@@ -461,8 +464,8 @@ const MindBodyBalance = () => {
                   </ul>
                 </div>
 
-                <div className="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm">
-                  <p className="font-bold text-indigo-800 mb-4 flex items-center gap-2 text-sm uppercase tracking-widest">
+                <div className="bg-gray-800/40 p-5 rounded-2xl border border-gray-700/50 shadow-sm">
+                  <p className="font-bold text-indigo-400 mb-4 flex items-center gap-2 text-sm uppercase tracking-widest">
                     <Brain className="w-4 h-4" /> Secular Mindfulness
                   </p>
                   <ul className="space-y-3">
@@ -474,9 +477,9 @@ const MindBodyBalance = () => {
                     ].map((item, i) => (
                       <li
                         key={i}
-                        className="flex items-start gap-3 text-sm text-gray-700 font-medium"
+                        className="flex items-start gap-3 text-sm text-gray-300 font-medium"
                       >
-                        <CheckCircle2 className="w-4 h-4 text-indigo-500 shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
                         {item}
                       </li>
                     ))}
@@ -484,8 +487,8 @@ const MindBodyBalance = () => {
                 </div>
               </div>
 
-              <div className="mt-8 bg-gray-50 p-4 rounded-xl border border-gray-200 text-center relative z-10">
-                <p className="text-xs font-bold text-gray-600 uppercase tracking-widest">
+              <div className="mt-8 bg-gray-800/60 p-4 rounded-xl border border-gray-700 text-center relative z-10">
+                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">
                   No religious language is used unless requested.
                 </p>
               </div>
@@ -562,9 +565,7 @@ const MindBodyBalance = () => {
                     key={i}
                     className="flex items-start gap-3 text-gray-700 font-medium"
                   >
-                    <div className="mt-0.5 shrink-0">
-                      {item.icon}
-                    </div>
+                    <div className="mt-0.5 shrink-0">{item.icon}</div>
                     <span>{item.text}</span>
                   </li>
                 ))}

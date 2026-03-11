@@ -10,11 +10,7 @@ function Team() {
   return (
     <div>
       <AboutHeader />
-      {/* <div>
-        <div className="max-w-[65rem] aspect-video mx-auto  rounded-2xl border overflow-hidden">
-            <img src={team} className="w-full h-full object-cover hover:scale-105 transition-all duration-500" alt="" />
-        </div>
-      </div> */}
+
       <TeamSec />
       <Footer />
     </div>

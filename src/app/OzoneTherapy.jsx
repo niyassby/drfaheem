@@ -16,7 +16,7 @@ import {
   Sparkles,
   Droplets
 } from 'lucide-react';
-
+import ozone from '../assets/ozone.png';
 const OzoneTherapy = () => {
   const treatmentSteps = [
     { title: "Detailed Medical History", icon: <ClipboardCheck /> },
@@ -162,17 +162,17 @@ const OzoneTherapy = () => {
                 variants={itemVariants}
                 className="flex flex-col sm:flex-row items-start sm:items-center gap-8"
               >
-                <button className="bg-indigo-600 text-white px-8 py-4 rounded-full font-bold shadow-[0_8px_30px_rgb(79,70,229,0.3)] hover:shadow-[0_8px_30px_rgb(79,70,229,0.5)] hover:bg-indigo-700 transition-all duration-300 transform hover:-translate-y-1">
+                {/* <button className="bg-indigo-600 text-white px-8 py-4 rounded-full font-bold shadow-[0_8px_30px_rgb(79,70,229,0.3)] hover:shadow-[0_8px_30px_rgb(79,70,229,0.5)] hover:bg-indigo-700 transition-all duration-300 transform hover:-translate-y-1">
                   Consult a Specialist
-                </button>
+                </button> */}
 
-                <div className="flex items-center gap-4">
+                {/* <div className="flex items-center gap-4">
                   <div className="text-sm font-bold text-slate-500 leading-tight">
                     Trusted by
                     <br />
                     patients worldwide
                   </div>
-                </div>
+                </div> */}
               </motion.div>
             </motion.div>
 
@@ -187,30 +187,12 @@ const OzoneTherapy = () => {
               <div className="relative rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(8,_112,_184,_0.07)] border-[6px] border-white group">
                 <div className="absolute inset-0 bg-indigo-900/10 mix-blend-multiply z-10 group-hover:bg-transparent transition-colors duration-500" />
                 <img
-                  src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=1200&h=1400"
+                  src={ozone}
                   className="w-full h-[450px] lg:h-[600px] object-cover transform transition-transform duration-700 ease-out group-hover:scale-105"
                   alt="Ozone Therapy Healing"
                 />
               </div>
 
-              {/* Floating Badge - Now actually floating! */}
-              <motion.div
-                variants={floatVariants}
-                animate="animate"
-                className="absolute -bottom-6 -left-4 md:-bottom-8 md:-left-8 bg-white p-5 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.08)] border border-slate-100 flex items-center gap-4 z-20"
-              >
-                <div className="w-12 h-12 bg-indigo-50 rounded-full flex items-center justify-center text-indigo-600 shrink-0 shadow-inner">
-                  <ShieldCheck className="w-6 h-6" />
-                </div>
-                <div>
-                  <p className="text-sm font-bold text-slate-900 leading-tight">
-                    Medical-Grade
-                  </p>
-                  <p className="text-xs text-slate-500 font-medium mt-0.5">
-                    Standardized Protocols
-                  </p>
-                </div>
-              </motion.div>
             </motion.div>
           </div>
         </div>

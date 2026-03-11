@@ -174,7 +174,7 @@ const EecpTherapy = () => {
                 Enhanced External Counterpulsation (EECP) is an FDA-approved, non-surgical therapy designed to improve blood flow to the heart and relieve symptoms of coronary artery disease.
               </motion.p>
 
-              <motion.div
+              {/* <motion.div
                 variants={itemVariants}
                 className="flex flex-col sm:flex-row items-start sm:items-center gap-8"
               >
@@ -189,7 +189,7 @@ const EecpTherapy = () => {
                     patients worldwide
                   </div>
                 </div>
-              </motion.div>
+              </motion.div> */}
             </motion.div>
 
             {/* Right Column: Image */}
@@ -208,7 +208,7 @@ const EecpTherapy = () => {
                 />
               </div>
 
-              <motion.div
+              {/* <motion.div
                 variants={floatVariants}
                 animate="animate"
                 className="absolute -bottom-6 -left-4 md:-bottom-8 md:-left-8 bg-white p-5 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.08)] border border-slate-100 flex items-center gap-4 z-20"
@@ -224,7 +224,7 @@ const EecpTherapy = () => {
                     Safe & Effective
                   </p>
                 </div>
-              </motion.div>
+              </motion.div> */}
             </motion.div>
           </div>
         </div>

@@ -1155,12 +1155,17 @@ export const programsTitle = [
   {
     titel: "EDTA Chelation Therapy",
     icon: FirstAidKitIcon,
-    link: '/explore-1',
+    link: "/explore-1",
+  },
+  {
+    titel: "EECP Treatment",
+    icon: MedicalFileIcon,
+    link: "/explore-5",
   },
   {
     titel: "Ozone Therapy",
     icon: Medicine01Icon,
-    link: '/explore-2',
+    link: "/explore-2",
   },
   // {
   //   titel: "IV Vitamin C",
@@ -1170,17 +1175,7 @@ export const programsTitle = [
   {
     titel: "IV Nutrition Drips",
     icon: Dna01Icon,
-    link: '/explore-4',
-  },
-  {
-    titel: "EECP Treatment",
-    icon: MedicalFileIcon,
-    link: '/explore-5'
-  },
-  {
-    titel: "Far Infrared Sauna Treatment",
-    icon: Disability01Icon,
-    link: '/explore-6'
+    link: "/explore-4",
   },
   // {
   //   titel: "IV Glutathione",
@@ -1190,12 +1185,21 @@ export const programsTitle = [
   {
     titel: "Colon Hydrotherapy",
     icon: CoffeeBeansIcon,
-    link: '/explore-8',
+    link: "/explore-8",
   },
   {
     titel: "Medicinal Cannabis Treatment",
     icon: Leaf01Icon,
-    link: '/explore-9',
+    link: "/explore-9",
   },
-
+  {
+    titel: "Far Infrared Sauna Treatment",
+    icon: Disability01Icon,
+    link: "/explore-6",
+  },
+  {
+    titel: "Peptide Therapy",
+    icon: BloodIcon,
+    link: "/explore-10",
+  },
 ];
