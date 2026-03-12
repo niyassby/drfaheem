@@ -474,7 +474,10 @@ const HangoverRecovery = () => {
                 </div>
             </section>
 
+
             <Footer />
+
+
         </div>
     );
 };

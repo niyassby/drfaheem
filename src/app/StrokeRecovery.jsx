@@ -373,7 +373,7 @@ const StrokeRecovery = () => {
                                 Post-stroke depression and anxiety are common. We address:
                             </p>
                             <div className="grid grid-cols-2 gap-4">
-                                {["Sleep regulation", "Stress reduction", "Mind-body therapy", "Caregiver counseling", "Gradual confidence rebuilding", 'Prevention of Recurrent Stroke'].map((item, i) => (
+                                {["Sleep regulation", "Stress reduction", "Mind-body therapy", "Caregiver counselling", "Gradual confidence rebuilding", 'Prevention of Recurrent Stroke'].map((item, i) => (
                                     <div key={i} className="flex items-center gap-2 text-slate-800 font-semibold p-3 bg-white rounded-xl shadow-sm border border-slate-100">
                                         <CheckCircle2 className="text-indigo-600 w-4 h-4 shrink-0" /> {item}
                                     </div>

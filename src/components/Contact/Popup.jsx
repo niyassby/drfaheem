@@ -11,11 +11,15 @@ import React from 'react'
 import { ContactInput } from "../home/ContactInput"
 import { Button } from "../ui/button"
 
-function Popup() {
+function Popup({ children }) {
   return (
     <Dialog>
-      <DialogTrigger>
-        <Button className='bg-primary-700 text-white hover:bg-primary-800 cursor-pointer'>Appointment</Button>
+      <DialogTrigger asChild>
+        {children || (
+          <Button className='bg-primary-700 text-white hover:bg-primary-800 cursor-pointer'>
+            Book Consultation
+          </Button>
+        )}
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>

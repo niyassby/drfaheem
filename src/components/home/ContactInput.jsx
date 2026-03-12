@@ -64,6 +64,7 @@ export function ContactInput() {
       );
 
       if (response.status === 200) {
+        console.log(response.data);
         toast.success("Thank you for your message. We'll get back to you soon.");
         
         // Reset form

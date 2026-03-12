@@ -638,7 +638,7 @@ const Academics = () => {
               {[
                 'Functional medicine consultations',
                 'Integrative oncology supportive care clinics',
-                'Clinical nutrition counseling',
+                'Clinical nutrition counselling',
                 'Acupuncture demonstrations',
                 'Case discussions with faculty',
                 'Multidisciplinary treatment planning workshops',

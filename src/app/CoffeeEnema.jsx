@@ -175,7 +175,7 @@ const CoffeeEnema = () => {
                 </p>
               </motion.div>
 
-              <motion.div
+              {/* <motion.div
                 variants={itemVariants}
                 className="flex flex-col sm:flex-row items-start sm:items-center gap-8"
               >
@@ -185,7 +185,7 @@ const CoffeeEnema = () => {
                 >
                   Begin Your Gut Restoration Journey
                 </button>
-              </motion.div>
+              </motion.div> */}
             </motion.div>
 
             {/* Right: Image */}

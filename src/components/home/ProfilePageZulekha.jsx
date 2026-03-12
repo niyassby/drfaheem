@@ -81,7 +81,7 @@ export default function ProfilePage() {
               <CardContent className="p-6 text-center">
                 <Users className="w-12 h-12 text-primary-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-3 text-card-foreground">Marital & Premarital Therapy</h3>
-                <p className="text-muted-foreground">Specialized counseling for couples and relationship guidance</p>
+                <p className="text-muted-foreground">Specialized counselling for couples and relationship guidance</p>
               </CardContent>
             </Card>
 

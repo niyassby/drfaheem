@@ -18,7 +18,7 @@ export default function DrHaseenaBio() {
             Homoeopathic physician. Profound personal and professional experiences compelled her to look beyond
             conventional medicine, leading her to explore a multidimensional approach to healing and disease reversal.
             Over the years, she has mastered an array of healing modalities, including mind-body tools, psychological,
-            lifestyle and wellness counseling, hypnotherapy, clinical nutrition, functional medicine, and yoga, offering a
+            lifestyle and wellness counselling, hypnotherapy, clinical nutrition, functional medicine, and yoga, offering a
             deeply integrative path to health.
           </p>
           <p className="text-gray-700 leading-relaxed">
@@ -74,7 +74,7 @@ export default function DrHaseenaBio() {
             </div>
             <div className="flex items-start space-x-2">
               <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-              <span className="text-gray-700">Harvard Medical School Executive Education Programme</span>
+              <span className="text-gray-700">Lifestyle and Wellness Coach, Harvard Medical School</span>
             </div>
             <div className="flex items-start space-x-2">
               <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
@@ -116,7 +116,7 @@ export default function DrHaseenaBio() {
             </div>
             <div className="bg-blue-50 p-4 rounded-lg md:col-span-2">
               <h3 className="font-semibold text-blue-900 mb-2">Therapeutic Interventions</h3>
-              <p className="text-sm text-blue-700">Across diverse medical and counseling systems and nutrigenomics</p>
+              <p className="text-sm text-blue-700">Across diverse medical and counselling systems and nutrigenomics</p>
             </div>
           </div>
         </section>

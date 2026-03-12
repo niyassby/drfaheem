@@ -17,6 +17,19 @@ import { ContactInput } from '../components/home/ContactInput';
 import iv1 from '../assets/iv1.jpg';
 import iv2 from '../assets/iv2.jpeg';
 import iv3 from '../assets/iv3.jpg'
+import ivimg1 from '../assets/ivimg1.webp'
+import bone from "../assets/iv/bone.jpeg"
+import pain from "../assets/iv/pain.jpeg"
+import nad from "../assets/iv/nad.jpeg"
+import stress from "../assets/iv/stress.jpeg"
+import metabolism from "../assets/iv/metabolism.jpeg"
+import allinone from "../assets/iv/allinone.jpeg"
+import cocktail from "../assets/iv/cocktail.jpeg"
+import immune from "../assets/iv/immune.jpeg"
+import energy from "../assets/iv/energy.jpeg"
+import skin from "../assets/iv/skin.jpeg"
+import liver from "../assets/iv/liver.jpeg"
+import collagen from "../assets/iv/collagen.jpeg"
 /* ─────────────────────── DATA ─────────────────────── */
 const categories = [
   {
@@ -37,7 +50,7 @@ const categories = [
         title: "Liver Detox",
         tagline: "Detox for Balance & Vitality",
         description: "Feel lighter, fresher, and more energized as this powerful detox flushes out toxins, revives your liver, and resets your body from the inside out",
-        image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800&h=500",
+        image: liver,
         points: ["Helps cleanse the body of accumulated toxins", "Supports liver regeneration and repair", "Boosts metabolism and digestion", "Improves overall energy and vitality"],
         icon: <Droplet />,
       },
@@ -45,7 +58,7 @@ const categories = [
         title: "Collagen Booster",
         tagline: "Look Younger, Feel Radiant",
         description: "Stimulates collagen production to smooth fine lines, improve skin firmness, and support stronger hair and nails for a youthful glow",
-        image: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&q=80&w=800&h=500",
+        image: collagen,
         points: ["Reduces fine lines and wrinkles", "Improves skin elasticity", "Supports hair and nail strength", "Promotes youthful, supple appearance"],
         icon: <Sparkles />,
       },
@@ -53,7 +66,7 @@ const categories = [
         title: "Skin Glow & Hydration",
         tagline: "Radiate From Within",
         description: "Nourishes your skin from within, boosting hydration and brightness for a naturally radiant, youthful-looking complexion",
-        image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80&w=800&h=500",
+        image: skin,
         points: ["Improves hydration and elasticity", "Reduces dullness and uneven tone", "Promotes natural skin repair", "Gives a healthy, luminous glow"],
         icon: <Star />,
       },
@@ -77,7 +90,7 @@ const categories = [
         title: "Immune Booster",
         tagline: "Defend. Protect. Thrive.",
         description: "Strengthens your immune system to help fight off infections, recover faster, and stay resilient against everyday illnesses",
-        image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&q=80&w=800&h=500",
+        image: immune,
         points: ["Enhances white blood cell activity", "Reduces frequency of colds and infections", "Supports faster recovery from illness", "Increases overall immune resilience"],
         icon: <ShieldCheck />,
       },
@@ -85,7 +98,7 @@ const categories = [
         title: "Energy Booster",
         tagline: "Recharge Your Vitality",
         description: "Recharges your body by boosting cellular energy, sharpening focus, and giving you lasting vitality throughout the day",
-        image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=800&h=500",
+        image: energy,
         points: ["Combats chronic fatigue", "Improves mental focus and alertness", "Boosts cellular energy production", "Supports overall performance and stamina"],
         icon: <Zap />,
       },
@@ -93,7 +106,7 @@ const categories = [
         title: "Metabolism Booster",
         tagline: "Ignite Your Inner Engine",
         description: "Revs up your metabolism by supporting energy production, fat breakdown, and overall vitality to help you feel lighter and more active",
-        image: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&q=80&w=800&h=500",
+        image: metabolism,
         points: ["Enhances fat and carbohydrate breakdown", "Supports thyroid and energy production", "Reduces fatigue and sluggishness", "Aids in weight management efforts"],
         icon: <Flame />,
       },
@@ -117,7 +130,7 @@ const categories = [
         title: "Myers Cocktail",
         tagline: "All-in-One Nutrient Infusion",
         description: "A powerful all-in-one nutrient infusion designed to restore energy, enhance immunity, and improve overall physical and mental performance",
-        image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=800&h=500",
+        image: cocktail,
         points: ["Revitalizes energy at the cellular level", "Delivers rapid wellness benefits in a single session", "Enhances cellular repair and regeneration", "Promotes youthful energy and skin vitality"],
         icon: <Heart />,
       },
@@ -125,7 +138,7 @@ const categories = [
         title: "Ultimate All In One",
         tagline: "Total Body Rejuvenation",
         description: "Recharges your body by boosting cellular energy, sharpening focus, and giving you lasting vitality throughout the day",
-        image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=800&h=500",
+        image: allinone,
         points: ["Restores hydration and balance for total body rejuvenation", "Reduces inflammation, stress, and oxidative damage", "Activates deep cellular repair and anti-aging pathways", "Promotes long-term wellness and vitality"],
         icon: <Sparkles />,
       },
@@ -133,7 +146,7 @@ const categories = [
         title: "NAD+",
         tagline: "Turn Back Time on a Cellular Level",
         description: "Turn back time on a cellular level with NAD+ — a powerful coenzyme infusion that restores youthful energy, repairs DNA, and revitalizes your mind and body for peak longevity",
-        image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&q=80&w=800&h=500",
+        image: nad,
         points: ["Activates deep cellular repair to slow aging", "Boosts natural energy by optimizing mitochondrial function", "Enhances cognitive performance and emotional balance", "Supports detoxification, resilience, and longevity"],
         icon: <Clock />,
       },
@@ -157,7 +170,7 @@ const categories = [
         title: "Pain Management",
         tagline: "Heal from Within",
         description: "Combats inflammation and supports natural healing, helping reduce chronic aches, muscle soreness, and joint discomfort",
-        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800&h=500",
+        image:pain,
         points: ["Helps relieve muscle and joint pain", "Reduces oxidative stress and inflammation", "Speeds up recovery from injuries", "Supports nerve and tissue health"],
         icon: <Zap />,
       },
@@ -165,7 +178,7 @@ const categories = [
         title: "Bone Health",
         tagline: "Strengthen Your Foundation",
         description: "Delivers essential nutrients that strengthen bones, protect against osteoporosis, and keep your joints and muscles functioning at their best",
-        image: "https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?auto=format&fit=crop&q=80&w=800&h=500",
+        image: bone,
         points: ["Provides essential nutrients to strengthen bones and joints", "Aids bone density and strength", "Reduces risk of osteoporosis", "Supports joint and muscle function"],
         icon: <Bone />,
       },
@@ -173,7 +186,7 @@ const categories = [
         title: "Stress Relief",
         tagline: "Calm Your Mind, Restore Your Body",
         description: "Helps calm the mind and body by reducing tension, balancing stress hormones, and promoting relaxation for better mood and sleep",
-        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&q=80&w=800&h=500",
+        image: stress,
         points: ["Calms the nervous system naturally", "Balances cortisol and stress hormones", "Promotes deeper, more restful sleep", "Gives a sense of calm and clarity"],
         icon: <Wind />,
       },
@@ -189,20 +202,20 @@ const DripCard = ({ drip, palette, idx, onBook }) => (
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.35, delay: idx * 0.07 }}
     viewport={{ once: true, margin: "-40px" }}
-    className={`bg-white rounded-[1.75rem] border ${palette.border} overflow-hidden flex flex-col group hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 shadow-md`}
+    className={`bg-white rounded-[1rem] border ${palette.border} overflow-hidden flex flex-col group hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 shadow-md`}
   >
     {/* Image */}
-    <div className="relative h-48 overflow-hidden shrink-0">
+    <div className="relative h-120 overflow-hidden shrink-0 p-10">
       <img
         src={drip.image}
         alt={drip.title}
         className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent"></div>
-      <span className={`absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full border text-xs font-bold uppercase tracking-wide ${palette.badge}`}>
+      {/* <span className={`absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full border text-xs font-bold uppercase tracking-wide ${palette.badge}`}>
         {React.cloneElement(drip.icon, { className: "w-3 h-3" })}
         {drip.title}
-      </span>
+      </span> */}
     </div>
 
     {/* Content */}
@@ -224,7 +237,7 @@ const DripCard = ({ drip, palette, idx, onBook }) => (
         className={`inline-flex items-center justify-center gap-2 text-sm font-bold text-white py-3 px-6 rounded-xl ${palette.btn} transition-all duration-200 group/btn w-full`}
       >
         Schedule a Consultation
-        <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+        {/* <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" /> */}
       </button>
     </div>
   </motion.div>
@@ -284,7 +297,7 @@ const IVNutritionDrips = () => {
                 nutritional balance — delivering 100% absorption directly into
                 the bloodstream, bypassing the digestive tract entirely.
               </p>
-              <div className="flex flex-wrap gap-4">
+              {/* <div className="flex flex-wrap gap-4">
                 <button
                   onClick={() => openModal()}
                   className="bg-indigo-600 text-white px-8 py-4 rounded-full font-bold shadow-[0_8px_30px_rgba(99,102,241,0.35)] hover:bg-indigo-700 hover:shadow-[0_8px_30px_rgba(99,102,241,0.5)] transition-all duration-300 hover:-translate-y-1"
@@ -297,7 +310,7 @@ const IVNutritionDrips = () => {
                 >
                   Explore Drips
                 </button>
-              </div>
+              </div> */}
 
               {/* Stats */}
               <div className="flex flex-wrap gap-8 mt-12">
@@ -428,11 +441,10 @@ const IVNutritionDrips = () => {
                   setActiveTab(cat.id);
                   setTimeout(() => scrollTo(cat.id), 50);
                 }}
-                className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold whitespace-nowrap transition-all duration-200 border ${
-                  activeTab === cat.id
+                className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold whitespace-nowrap transition-all duration-200 border ${activeTab === cat.id
                     ? `${cat.palette.pill} text-white border-transparent shadow-md`
                     : "bg-slate-100 text-slate-600 border-slate-200 hover:bg-slate-200"
-                }`}
+                  }`}
               >
                 {React.cloneElement(cat.icon, { className: "w-4 h-4" })}
                 {cat.label}
@@ -531,7 +543,7 @@ const IVNutritionDrips = () => {
               className="inline-flex items-center gap-3 bg-gradient-to-r from-indigo-600 to-violet-600 text-white px-10 py-5 rounded-full font-bold text-lg shadow-[0_10px_40px_rgba(99,102,241,0.4)] hover:shadow-[0_10px_40px_rgba(99,102,241,0.6)] transition-all duration-300 hover:-translate-y-1"
             >
               Schedule a Consultation
-              <ArrowRight className="w-5 h-5" />
+              {/* <ArrowRight className="w-5 h-5" /> */}
             </button>
           </motion.div>
         </div>

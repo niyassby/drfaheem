@@ -87,6 +87,14 @@ export const welnessSolutions = [
     link: "/hangover-recovery",
   },
   {
+    titel: "Bride and Groom Wellness Program ",
+    link: "/wedding-wellness-iv",
+  },
+  {
+    titel: "Corporate Wellness Detox Program",
+    link: "/corporate-wellness-detox",
+  },
+  {
     titel: "Spirit-Mind-Body Balance",
     link: "/MindBodyBalance",
   },

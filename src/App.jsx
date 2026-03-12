@@ -42,6 +42,10 @@ import IVNutritionDrips from './app/IVNutritionDrips'
 import LongCovidRecovery from './app/LongCovidRecovery'
 import PeptideTherapy from './app/PeptideTherapy'
 import Academics from './components/academics/Academics'
+import WeddingWellnessIV from './app/WeddingWellnessIV'
+import CorporateWellnessDetox from './app/CorporateWellnessDetox'
+import HydrogenTherapy from './app/HydrogenTherapy'
+
 
 function App() {
   return (
@@ -90,6 +94,10 @@ function App() {
         <Route path="/MindBodyBalance" element={<MindBodyBalance />} />
         <Route path="/ElderCarePage" element={<ElderCarePage />} />
         <Route path="/long-covid-recovery" element={<LongCovidRecovery />} />
+        <Route path="/wedding-wellness-iv" element={<WeddingWellnessIV />} />
+        <Route path="/corporate-wellness-detox" element={<CorporateWellnessDetox />} />
+        <Route path="/hydrogen-therapy" element={<HydrogenTherapy />} />
+
 
         <Route path="/about" element={<About />} />
         <Route path="/panel" element={<Team />} />

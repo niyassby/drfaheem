@@ -8,7 +8,7 @@ export default function DrLenny() {
         <p className="leading-relaxed">
           <strong>Dr. Lenny Da Costa</strong> is a Consultant Geriatrician,
           Preventive Cardiologist, and an Anti-Aging specialist. He completed
-          his basic MBBS from The Goa Medical College and his specialization in
+          his MBBS from The Goa Medical College and his specialization in
           Geriatric Medicine from the M.S. Ramaiah Medical College, Bangalore.
         </p>
         <p className="leading-relaxed">

@@ -19,7 +19,7 @@ export default function DrSoorajSankar() {
                 <ul className="list-disc pl-5 space-y-2">
                     <li>Expert in Pulse Diagnosis (Nadi Pariksha)</li>
                     <li>Qualified Clinical Acupuncturist (IRIIM, West Bengal)</li>
-                    <li>Smrithi Meditation Counseling & Healing Expert (Kottakkal, Kerala)</li>
+                    <li>Smrithi Meditation Counselling & Healing Expert (Kottakkal, Kerala)</li>
                     <li>Traditional Marma-Spine Aligner</li>
                 </ul>
             </section>

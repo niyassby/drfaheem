@@ -58,7 +58,7 @@ const Hero2 = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background "></div>
         <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background "></div>
 
-        <section className="w-full relative z-10 grid grid-cols-1 max-md:grid-rows-[3fr_2fr] md:grid-cols-2 h-full">
+        <section className="w-full relative z-10 grid grid-cols-1 max-md:-mb-25 max-md:grid-rows-[3fr_2fr] md:grid-cols-2 h-full">
           <div className="w-full h-full row-span-1 col-span-1 flex flex-col items-start md:justify-center order-2 md:order-1 md:pl-6 xl:pl-28 2xl:pl-40 p-6 pt-8 md:pt-6">
             <h2 className="animate-text font-bold text-primary-500 text-2xl md:text-7xl main-font">
               {content.title}
@@ -86,8 +86,8 @@ const Hero2 = () => {
               </a>
             </div>
           </div>
-          <div className="w-full h-full overflow-hidden col-span-1 relative order-1 md:order-2 z-20">
-            <img src={img} className="object-cover w-full h-full object-center max-md:object-top md:mt-16" alt="" />
+          <div className="w-full h-full max-md:h-[600px] overflow-hidden col-span-1 relative order-1 md:order-2 z-20">
+            <img src={img} className="object-cover w-full h-full object-top max-md:object-top " alt="" />
           </div>
         </section>
 

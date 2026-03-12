@@ -109,7 +109,7 @@ export default function () {
               },
               {
                 icon: <HeadphonesIcon className="w-6 h-6 text-indigo-600" />,
-                title: "Genetic Counseling",
+                title: "Genetic Counselling",
                 description:
                   "Expert support to help you interpret your results and implement lasting lifestyle changes.",
               },

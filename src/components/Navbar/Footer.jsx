@@ -156,7 +156,11 @@ import {
   Mail,
   Phone,
   ChevronRight,
+  LinkedinIcon,
+  FacebookIcon,
+  Linkedin,
 } from "lucide-react";
+import { Linkedin02Icon } from "hugeicons-react";
 
 const Footer = () => {
   return (
@@ -165,7 +169,7 @@ const Footer = () => {
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary-900/40 rounded-full blur-[100px] -z-10 translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
 
       <div className="max-w-[90rem] mx-auto px-6 lg:px-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
+        <div className="flex justify-between max-md:flex-col  items-center gap-12 lg:gap-8 mb-16">
           {/* Brand Column */}
           <div className="lg:col-span-4 flex flex-col items-start">
             <Link
@@ -179,13 +183,11 @@ const Footer = () => {
               />
             </Link>
             <p className="text-slate-400 leading-relaxed mb-8 max-w-sm">
-              Pioneering advanced clinical treatments and holistic wellness
-              solutions. Elevating your health journey through integrative,
-              luxury medical care.
+             Guiding You Towards Optimal Health
             </p>
 
             {/* Social Links */}
-            <div className="flex items-center gap-3">
+            {/* <div className="flex items-center gap-3">
               <a
                 href="https://www.instagram.com/wahd_karak_tea_blend?igsh=cXZ5NXV4NHpxYzA2&utm_source=qr"
                 target="_blank"
@@ -195,75 +197,57 @@ const Footer = () => {
                 <Instagram size={18} />
               </a>
               <a
-                href="https://wa.me/971544335584"
+                href="https://www.instagram.com/wahd_karak_tea_blend?igsh=cXZ5NXV4NHpxYzA2&utm_source=qr"
                 target="_blank"
                 rel="noreferrer"
-                className="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-800 text-slate-300 hover:bg-emerald-500 hover:text-white transition-all duration-300 hover-lift"
+                className="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-800 text-slate-300 hover:bg-primary-500 hover:text-white transition-all duration-300 hover-lift"
               >
-                <MessageCircle size={18} />
+                <Linkedin size={18} />
               </a>
+              <a
+                href="https://www.instagram.com/wahd_karak_tea_blend?igsh=cXZ5NXV4NHpxYzA2&utm_source=qr"
+                target="_blank"
+                rel="noreferrer"
+                className="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-800 text-slate-300 hover:bg-primary-500 hover:text-white transition-all duration-300 hover-lift"
+              >
+                <FacebookIcon size={18} />
+              </a>
+
+            </div> */}
+          </div>
+          <div>
+                        <div className="flex items-center gap-3">
+              <a
+                href="https://www.instagram.com/wahd_karak_tea_blend?igsh=cXZ5NXV4NHpxYzA2&utm_source=qr"
+                target="_blank"
+                rel="noreferrer"
+                className="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-800 text-slate-300 hover:bg-primary-500 hover:text-white transition-all duration-300 hover-lift"
+              >
+                <Instagram size={18} />
+              </a>
+              <a
+                href="https://www.instagram.com/wahd_karak_tea_blend?igsh=cXZ5NXV4NHpxYzA2&utm_source=qr"
+                target="_blank"
+                rel="noreferrer"
+                className="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-800 text-slate-300 hover:bg-primary-500 hover:text-white transition-all duration-300 hover-lift"
+              >
+                <Linkedin size={18} />
+              </a>
+              <a
+                href="https://www.instagram.com/wahd_karak_tea_blend?igsh=cXZ5NXV4NHpxYzA2&utm_source=qr"
+                target="_blank"
+                rel="noreferrer"
+                className="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-800 text-slate-300 hover:bg-primary-500 hover:text-white transition-all duration-300 hover-lift"
+              >
+                <FacebookIcon size={18} />
+              </a>
+
             </div>
           </div>
-
-          {/* Quick Links */}
-          <div className="lg:col-span-2 lg:col-start-6">
-            <h3 className="text-white font-heading font-semibold tracking-tight text-lg mb-6">
-              Explore
-            </h3>
-            <ul className="space-y-4">
-              {["Home", "About", "Team", "Gallery"].map((item) => (
-                <li key={item}>
-                  <Link
-                    to={`/${
-                      item === "Home"
-                        ? ""
-                        : item === "Team"
-                          ? "panel"
-                          : item.toLowerCase()
-                    }`}
-                    className="group flex items-center text-sm font-medium text-slate-400 hover:text-white transition-colors duration-200 w-fit"
-                  >
-                    <ChevronRight
-                      size={14}
-                      className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-primary-400 mr-1"
-                    />
-                    <span>{item}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Legal/Support Links */}
-          <div className="lg:col-span-2">
-            <h3 className="text-white font-heading font-semibold tracking-tight text-lg mb-6">
-              Support
-            </h3>
-            <ul className="space-y-4">
-              {[
-                { name: "Customer Support", path: "/support" },
-                { name: "Delivery Details", path: "/delivery" },
-                { name: "Privacy Policy", path: "/privacy" },
-                { name: "Terms & Conditions", path: "/terms" },
-              ].map((item) => (
-                <li key={item.name}>
-                  <Link
-                    to={item.path}
-                    className="group flex items-center text-sm font-medium text-slate-400 hover:text-white transition-colors duration-200 w-fit"
-                  >
-                    <ChevronRight
-                      size={14}
-                      className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-primary-400 mr-1"
-                    />
-                    <span>{item.name}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+ 
 
           {/* Contact Info Bento Box */}
-          <div className="lg:col-span-3">
+          <div className="max-w-[350px]">
             <div className="bg-slate-800/50 backdrop-blur-md border border-slate-700/50 rounded-3xl p-6 h-full flex flex-col justify-center">
               <h3 className="text-white font-heading font-semibold tracking-tight text-lg mb-6">
                 Get in Touch

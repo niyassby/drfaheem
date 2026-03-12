@@ -84,6 +84,19 @@ function Section2() {
                 </div>
               </div>
             </motion.div>
+            
+            <motion.p
+              variants={itemVariants}
+              className="font-bold text-slate-900 bg-indigo-50/50 p-6 rounded-2xl border-1 border-indigo-600"
+            >
+              Dr. Faheem’s approach goes beyond symptom management. He focuses
+              on{" "}
+              <em className="text-indigo-800">
+                restoring physiological balance, enhancing recovery, and
+                improving long-term health outcomes
+              </em>{" "}
+              through personalized, integrative, and patient-centered care.
+            </motion.p>
           </div>
 
           {/* --- RIGHT COLUMN: Biographical Content --- */}
@@ -111,7 +124,7 @@ function Section2() {
                 Dr. Faheem Najeeb, after having many years of experience in{" "}
                 <strong>Emergency Medicine</strong>, transitioned into{" "}
                 <strong>Functional and Integrative Medicine</strong>, with
-                special interests in <strong>Nutritional Oncology</strong>,
+                special interest in <strong>Nutritional Oncology</strong>,
                 Advanced Palliative Care, and Metal Toxicology. He currently
                 serves as the{" "}
                 <strong>
@@ -200,7 +213,7 @@ function Section2() {
                 ))}
               </ul>
             </motion.div>
-
+{/* 
             <motion.p
               variants={itemVariants}
               className="font-bold text-slate-900 bg-indigo-50/50 p-6 rounded-2xl border-1 border-indigo-600"
@@ -212,7 +225,7 @@ function Section2() {
                 improving long-term health outcomes
               </em>{" "}
               through personalized, integrative, and patient-centered care.
-            </motion.p>
+            </motion.p> */}
           </motion.div>
         </div>
       </div>

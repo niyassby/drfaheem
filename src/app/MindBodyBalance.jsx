@@ -212,7 +212,7 @@ const MindBodyBalance = () => {
                   "Trauma-informed therapy",
                   "Emotional regulation training",
                   "Burnout recovery coaching",
-                  "Meaning-centered counseling",
+                  "Meaning-centered counselling",
                 ].map((item, i) => (
                   <li
                     key={i}

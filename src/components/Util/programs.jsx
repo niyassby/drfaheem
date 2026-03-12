@@ -1202,4 +1202,9 @@ export const programsTitle = [
     icon: BloodIcon,
     link: "/explore-10",
   },
+  {
+    titel: "Hydrogen Therapy",
+    icon: Medicine01Icon,
+    link: "/hydrogen-therapy",
+  },
 ];
