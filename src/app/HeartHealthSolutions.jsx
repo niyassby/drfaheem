@@ -8,7 +8,7 @@ import { ContactInput } from '../components/home/ContactInput';
 import ChelationImg from "../assets/Images/Chelarion-Therapy.jpeg";
 import EECP1Img from "../assets/Images/EECP-1.jpeg";
 import EECP2Img from "../assets/Images/EECP-2.jpeg";
-
+import heart from "../assets/hearthealth.jpg"
 const HeartHealthSolutions = () => {
   const [ctaOpen, setCtaOpen] = useState(false);
   const treatments = [
@@ -53,11 +53,11 @@ const HeartHealthSolutions = () => {
       <section className="relative h-[75vh] md:h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?q=80&w=2070&auto=format&fit=crop"
+            src={heart}
             alt="Heart Health"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-black/30"></div>
         </div>
 
         <div className="container mx-auto px-6 relative z-10 text-center">

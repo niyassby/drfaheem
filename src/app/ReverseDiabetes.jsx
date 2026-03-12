@@ -41,7 +41,7 @@ const ReverseDiabetes = () => {
             alt="Wellness and Nature"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/90 via-teal-900/80 to-blue-900/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/60 via-teal-900/60 to-blue-900/60"></div>
         </div>
 
         <div className="container mx-auto px-6 relative z-10 text-center flex flex-col items-center justify-center mt-12">

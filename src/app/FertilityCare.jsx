@@ -33,6 +33,7 @@ import {
 import { FaFemale, FaMale, FaVenusMars } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { GiLiver } from "react-icons/gi";
+import Popup from "../components/Contact/Popup";
 const FertilityRestoration = () => {
   return (
     <div className="bg-slate-50 font-sans text-gray-900 w-full overflow-x-hidden selection:bg-rose-200 selection:text-rose-900">
@@ -1114,15 +1115,15 @@ const FertilityRestoration = () => {
               </div>
 
               <div className="w-full lg:w-auto flex flex-col gap-4">
-                <button
-                  onClick={() => { }}
-                  className="inline-flex items-center justify-center gap-3 bg-white text-emerald-900 px-8 py-4 rounded-xl font-bold text-base shadow-lg hover:bg-emerald-50 transition-all duration-200 hover:-translate-y-0.5 w-full lg:w-auto whitespace-nowrap"
-                >
-                  <Phone className="w-5 h-5" />
-                  Request a Fertility Case Review
-                </button>
+                <Popup>
+                  <button className="group relative inline-flex items-center justify-center gap-3 bg-white text-emerald-900 px-10 py-5 rounded-2xl font-black text-lg shadow-[0_15px_40px_rgba(0,0,0,0.2)] hover:bg-emerald-50 transition-all duration-300 hover:-translate-y-1 w-full lg:w-auto overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-emerald-50 to-white opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <Phone className="w-5 h-5 relative z-10 text-emerald-600 group-hover:rotate-12 transition-transform" />
+                    <span className="relative z-10">Request a Fertility Case Review</span>
+                  </button>
+                </Popup>
 
-                <p className="text-emerald-300 text-xs font-medium text-center">
+                <p className="text-emerald-300 text-xs font-bold uppercase tracking-widest text-center opacity-80">
                   Physician-supervised · Natural conception & IVF support
                 </p>
               </div>

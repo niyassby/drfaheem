@@ -500,7 +500,7 @@ const AntiAging = () => {
 
         <div className="container mx-auto px-6 relative z-10 max-w-7xl">
           <motion.div {...fadeIn} className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Designed for Busy Professionals & Executives</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">This Program is also Designed for Busy Professionals & Executives</h2>
             <p className="text-xl text-slate-400 max-w-3xl mx-auto">
               We understand many of our patients travel frequently and manage businesses. Your longevity protocol can therefore be strategically modified.
             </p>

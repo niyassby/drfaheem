@@ -6,7 +6,7 @@ import {
   Activity, ShieldCheck, HeartPulse, Stethoscope, ClipboardCheck, AlertTriangle, CheckCircle2,
   Wind, Zap, Heart, Flame, Leaf, Pill
 } from 'lucide-react';
-
+import eecp from '../assets/eecp.jpeg';
 const EecpTherapy = () => {
   const benefitsList = [
     {
@@ -202,7 +202,7 @@ const EecpTherapy = () => {
               <div className="relative rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(225,29,72,0.07)] border-[6px] border-white group">
                 <div className="absolute inset-0 bg-rose-900/10 mix-blend-multiply z-10 group-hover:bg-transparent transition-colors duration-500" />
                 <img
-                  src="https://www.saaoldelhi.com/wp-content/uploads/2024/12/Does-EECP-Therapy-help.jpg"
+                  src={eecp}
                   className="w-full h-[450px] lg:h-[600px] object-cover transform transition-transform duration-700 ease-out group-hover:scale-105"
                   alt="EECP Therapy"
                 />
@@ -380,22 +380,19 @@ const EecpTherapy = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="lg:col-span-2 relative rounded-[2.5rem] overflow-hidden group min-h-[520px] shadow-xl border-4 border-white"
+              className="lg:col-span-2 relative rounded-[2.5rem] overflow-hidden group shadow-xl border-4 border-white bg-slate-900 aspect-[9/16] lg:aspect-auto lg:h-full min-h-[520px]"
             >
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-rose-900/20 to-transparent z-10"></div>
-              <img
-                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=900"
-                alt="EECP Cardiovascular Care"
-                className="absolute inset-0 w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute bottom-0 left-0 right-0 p-8 z-20">
-                <div className="w-12 h-12 rounded-2xl bg-white/20 border border-white/30 flex items-center justify-center text-white mb-4">
-                  <Activity className="w-6 h-6" />
-                </div>
-                <h3 className="text-2xl font-extrabold text-white mb-2">Cardiovascular Health</h3>
-                <p className="text-rose-200 text-sm font-medium">Restoring Natural Vitality Through EECP</p>
-              </div>
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/jysfVHPx9Wk?si=PTLcB_mErO45jR2s"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
             </motion.div>
+            
 
             {/* Right: Compact Benefit Tiles */}
             <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-5">

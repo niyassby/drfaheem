@@ -17,6 +17,7 @@ import {
   Droplets
 } from 'lucide-react';
 import ozone from '../assets/ozone.png';
+import ozone2 from '../assets/ozone2.jpg';
 const OzoneTherapy = () => {
   const treatmentSteps = [
     { title: "Detailed Medical History", icon: <ClipboardCheck /> },
@@ -418,7 +419,7 @@ const OzoneTherapy = () => {
             >
               <div className="absolute inset-0 bg-indigo-900/20 mix-blend-multiply z-10 group-hover:bg-indigo-900/10 transition-colors duration-500"></div>
               <img
-                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800&h=1000"
+                src={ozone2}
                 alt="Medical Wellness"
                 className="absolute inset-0 w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
               />

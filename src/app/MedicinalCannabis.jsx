@@ -7,7 +7,8 @@ import {
   CheckCircle2, AlertTriangle, ClipboardCheck, Wind,
   Stethoscope, Pill, FlaskConical, Sparkles
 } from 'lucide-react';
-
+import img1 from "../assets/medicalcannabis.webp"
+import img2 from "../assets/cannabis2.webp"
 const MedicinalCannabis = () => {
   const benefitsList = [
     {
@@ -159,7 +160,7 @@ const MedicinalCannabis = () => {
               <div className="relative rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(16,185,129,0.1)] border-[6px] border-white group">
                 <div className="absolute inset-0 bg-emerald-900/10 mix-blend-multiply z-10 group-hover:bg-transparent transition-colors duration-500" />
                 <img
-                  src="https://keysboroughsuperclinic.au/wp-content/uploads/2023/03/Medical-Cannabis-Treatment.png"
+                  src={img1}
                   className="w-full h-[450px] lg:h-[600px] object-cover transform transition-transform duration-700 ease-out group-hover:scale-105"
                   alt="Medicinal Cannabis Treatment"
                 />
@@ -332,7 +333,7 @@ const MedicinalCannabis = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-emerald-900/20 to-transparent z-10"></div>
               <img
-                src="https://keysboroughsuperclinic.au/wp-content/uploads/2023/03/Medical-Cannabis-Treatment.png"
+                src={img2}
                 alt="Medicinal Cannabis"
                 className="absolute inset-0 w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
               />

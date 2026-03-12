@@ -10,6 +10,8 @@ import { HiMiniBars3CenterLeft, HiXMark } from "react-icons/hi2";
 import { NavLink } from "react-router-dom";
 import { tabs, spProgramsTitle, welnessSolutions, otherLinks } from "../Util/navData";
 import { programsTitle } from "../Util/programs";
+import Popup from "../Contact/Popup";
+import { Button } from "../ui/button";
 
 export function SideOpen() {
   const [isOpen, setOpen] = useState(false);
@@ -116,14 +118,26 @@ export function SideOpen() {
       </button>
 
       <div
-        className={`fixed inset-0 bg-foreground z-[90] transition-all duration-500 overflow-y-auto pt-24 pb-12 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
+        className={`fixed inset-0 bg-foreground z-[90] transition-all duration-500 flex flex-col ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
       >
-        <div ref={navRef} className="container mx-auto">
-          <NavGroup title="Explore" items={tabs} />
-          <NavGroup title="Specialities" items={spProgramsTitle} />
-          <NavGroup title="Wellness Solutions" items={welnessSolutions} />
-          <NavGroup title="Treatments" items={programsTitle} />
-          <NavGroup title="More" items={otherLinks} />
+        {/* Scrollable Content Area */}
+        <div ref={navRef} className="flex-grow overflow-y-auto pt-24 pb-6">
+          <div className="container mx-auto">
+            <NavGroup title="Explore" items={tabs} />
+            <NavGroup title="Specialities" items={spProgramsTitle} />
+            <NavGroup title="Wellness Solutions" items={welnessSolutions} />
+            <NavGroup title="Treatments" items={programsTitle} />
+            <NavGroup title="More" items={otherLinks} />
+          </div>
+        </div>
+
+        {/* Fixed Footer Area */}
+        <div className="p-6 pb-12 border-t border-white/10 bg-foreground/95 backdrop-blur-md">
+          <Popup>
+            <Button className="w-full bg-primary-700 text-white hover:bg-primary-800 cursor-pointer h-14 rounded-2xl font-black text-lg">
+              Book Consultation
+            </Button>
+          </Popup>
         </div>
       </div>
     </div>

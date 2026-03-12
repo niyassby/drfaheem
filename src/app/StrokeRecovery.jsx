@@ -178,7 +178,7 @@ const StrokeRecovery = () => {
                         alt="Neuro Rehabilitation"
                         className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 to-blue-900/60"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-slate-900/60 to-blue-900/40"></div>
                 </div>
 
                 <div className="container mx-auto px-6 relative z-10 text-center">

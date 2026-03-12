@@ -370,7 +370,7 @@ const MetabolicSyndrome = () => {
             alt="Metabolic Health and Obesity Reversal"
             className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-indigo-950/95 via-blue-900/90 to-teal-900/90" />
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-950/65 via-gray-700/60 to-gray-900/60" />
         </div>
 
         {/* Content */}

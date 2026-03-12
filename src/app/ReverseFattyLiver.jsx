@@ -302,7 +302,7 @@ const LiverRestoration = () => {
             alt="Liver Health and Wellness"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/80 to-slate-900/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/60 to-slate-900/40"></div>
         </div>
 
         <div className="container mx-auto px-6 relative z-10 h-full flex flex-col items-center justify-center text-center">

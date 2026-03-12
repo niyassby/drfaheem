@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Footer from "../components/Navbar/Footer";
 import Navbar from "../components/Navbar/Navbar";
 import { CheckCircle2, Activity, Zap, ArrowRight, ShieldCheck, Microscope, Apple, Droplets, Thermometer, UserCheck, Heart, Sparkles, Globe, Brain, ListChecks, Stethoscope, Briefcase, Pill, Waves, Wind } from 'lucide-react';
+import Popup from '../components/Contact/Popup';
 
 const AutoImmuneCare = () => {
   const conditions = [
@@ -133,7 +134,7 @@ const AutoImmuneCare = () => {
             alt="Immune Research"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-indigo-900/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/60 to-indigo-900/40"></div>
         </div>
 
         <div className="container mx-auto px-6 relative z-10 text-center">
@@ -146,7 +147,7 @@ const AutoImmuneCare = () => {
               At Tigris Valley
             </span>
             <h1 className="text-4xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
-              🌿 Integrative <br /> Autoimmune Care
+               Integrative <br /> Autoimmune Care
             </h1>
             <p className="max-w-3xl mx-auto text-lg md:text-2xl text-blue-50 mb-10 leading-relaxed font-medium">
               A 21–28 Day Intensive Immune Reset in Kerala, India <br />
@@ -563,9 +564,12 @@ const AutoImmuneCare = () => {
                   </div>
                 ))}
               </div>
-              <button className="w-full bg-blue-600 text-white py-6 rounded-full font-black text-xl hover:bg-blue-700 transition transform hover:scale-[1.02] shadow-xl">
-                Request Program Details
-              </button>
+              <Popup>
+                <button className="group w-full bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-6 rounded-full font-black text-xl hover:from-blue-700 hover:to-indigo-800 transition-all duration-300 transform hover:scale-[1.01] active:scale-95 shadow-[0_20px_50px_rgba(37,99,235,0.3)] flex items-center justify-center gap-4">
+                  <span>Request Program Details</span>
+   
+                </button>
+              </Popup>
             </div>
 
             <div className="mt-20 text-center">

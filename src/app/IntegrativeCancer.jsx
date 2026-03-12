@@ -24,7 +24,11 @@ import {
   Dna,
   Shield,
   Gem,
-  Phone
+  Phone,
+  Leaf,
+  FlaskConical,
+  Flame,
+  Scale
 } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader } from '@/components/ui/dialog';
 import { ContactInput } from '../components/home/ContactInput';
@@ -83,7 +87,7 @@ const IntegrativeCancer = () => {
             alt="Cancer Care"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-indigo-950/90 to-indigo-900/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-950/60 to-gray-900/20"></div>
         </div>
 
         <div className="container mx-auto px-6 relative z-10 text-center">
@@ -92,8 +96,8 @@ const IntegrativeCancer = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="inline-block py-1 px-4 mb-6 text-sm font-semibold tracking-widest text-indigo-200 uppercase bg-indigo-900/40 rounded-full border border-indigo-500/30">
-              🌍 Advanced Integrative Cancer & Cellular Immunotherapy Program
+            <span className="inline-flex items-center gap-2 py-1 px-4 mb-6 text-sm font-semibold tracking-widest text-indigo-200 uppercase bg-indigo-900/40 rounded-full border border-indigo-500/30">
+              <Globe className="w-4 h-4" /> Advanced Integrative Cancer & Cellular Immunotherapy Program
             </span>
             <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
               Comprehensive Supportive Oncology <br /> & Palliative Care
@@ -150,8 +154,8 @@ const IntegrativeCancer = () => {
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-col lg:flex-row gap-16 items-center mb-20">
               <div className="lg:w-1/2">
-                <h2 className="text-3xl md:text-5xl font-bold mb-8 text-indigo-950 leading-tight">
-                  🧬 A Whole-Person Cancer Support Model
+                <h2 className="text-3xl md:text-5xl font-bold mb-8 text-indigo-950 leading-tight flex items-center gap-4">
+                  <Dna className="w-8 h-8 text-indigo-600" /> A Whole-Person Cancer Support Model
                 </h2>
                 <p className="text-xl text-gray-900 leading-relaxed mb-6">
                   Our program{" "}
@@ -175,8 +179,8 @@ const IntegrativeCancer = () => {
                       {focus.icon}
                     </div>
                     <div>
-                      <h4 className="font-bold text-indigo-900 group-hover:text-indigo-600 transition-colors">
-                        ✔ {focus.area}
+                      <h4 className="font-bold text-indigo-900 group-hover:text-indigo-600 transition-colors flex items-center gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-indigo-600" /> {focus.area}
                       </h4>
                       <p className="text-xs text-gray-600 font-medium">
                         {focus.desc}
@@ -189,8 +193,8 @@ const IntegrativeCancer = () => {
 
             {/* Who This Program Is For */}
             <div className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center">
-              <h2 className="text-3xl font-bold mb-12">
-                🌿 Who This Program Is For
+              <h2 className="text-3xl font-bold mb-12 flex items-center justify-center gap-4">
+                <Leaf className="w-8 h-8 text-white" /> Who This Program Is For
               </h2>
               <div className="flex flex-wrap justify-center gap-4">
                 {targetPatients.map((item, i) => (
@@ -216,8 +220,8 @@ const IntegrativeCancer = () => {
                 <span className="text-indigo-600 font-bold uppercase tracking-widest text-sm mb-4 block">
                   Assessment Phase
                 </span>
-                <h2 className="text-3xl md:text-5xl font-bold mb-8 text-indigo-950 leading-tight">
-                  🔬 Step 1: Comprehensive Oncology & Metabolic Assessment
+                <h2 className="text-3xl md:text-5xl font-bold mb-8 text-indigo-950 leading-tight flex items-center gap-4">
+                  <Microscope className="w-8 h-8 text-indigo-600" /> Step 1: Comprehensive Oncology & Metabolic Assessment
                 </h2>
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   Before beginning, we conduct a structured review to ensure
@@ -263,8 +267,8 @@ const IntegrativeCancer = () => {
             <span className="text-emerald-600 font-bold uppercase tracking-widest text-sm mb-4 block">
               Nutrition Phase
             </span>
-            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-indigo-950 leading-tight font-serif italic">
-              🥗 Step 2: Metabolic & Nutritional Oncology Support
+            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-indigo-950 leading-tight font-serif italic flex items-center justify-center gap-4">
+              <Apple className="w-8 h-8 text-emerald-600" /> Step 2: Metabolic & Nutritional Oncology Support
             </h2>
             <p className="text-xl text-gray-700 leading-relaxed mb-2">
               Cancer is influenced by{" "}
@@ -308,8 +312,8 @@ const IntegrativeCancer = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* IV Therapies */}
             <div className="bg-white p-10 md:p-12 rounded-[3.5rem] shadow-xl border border-indigo-50">
-              <h2 className="text-3xl font-bold mb-8 text-indigo-950">
-                💉 Step 3: Advanced IV Integrative Therapies
+              <h2 className="text-3xl font-bold mb-8 text-indigo-950 flex items-center gap-4">
+                <Droplets className="w-8 h-8 text-indigo-600" /> Step 3: Advanced IV Integrative Therapies
               </h2>
               <p className="text-gray-600 mb-8 italic font-medium uppercase tracking-tight">
                 All therapies are physician-supervised and individualized.
@@ -382,8 +386,8 @@ const IntegrativeCancer = () => {
 
             {/* FIR Therapy */}
             <div className="bg-white p-10 md:p-12 rounded-[3.5rem] shadow-xl border border-orange-50">
-              <h2 className="text-3xl font-bold mb-8 text-orange-950">
-                🔥 Step 4: Far Infrared (FIR) Therapy
+              <h2 className="text-3xl font-bold mb-8 text-orange-950 flex items-center gap-4">
+                <Flame className="w-8 h-8 text-orange-600" /> Step 4: Far Infrared (FIR) Therapy
               </h2>
               <p className="text-orange-900/60 mb-8 font-medium italic">
                 FIR therapy provides gentle thermal support that may:
@@ -441,8 +445,8 @@ const IntegrativeCancer = () => {
             <span className="inline-block px-4 py-1 bg-indigo-500 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
               Advanced Research & Clinical Support
             </span>
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 italic font-serif uppercase tracking-widest leading-tight">
-              🧬 Step 5: Advanced Cellular Immunotherapy Options
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 italic font-serif uppercase tracking-widest leading-tight flex items-center justify-center gap-4">
+              <Dna className="w-8 h-8 text-white" /> Step 5: Advanced Cellular Immunotherapy Options
             </h2>
             <p className="text-indigo-200 text-xl max-w-3xl mx-auto">
               For eligible patients, we coordinate advanced immune-based
@@ -452,10 +456,10 @@ const IntegrativeCancer = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Dendritic Cell Therapy */}
-            <div className="bg-white/5 backdrop-blur-md p-10 rounded-[3rem] border border-white/10 flex flex-col justify-between">
+            <div className="bg-white/5  p-10 rounded-[3rem] border border-white/10 flex flex-col justify-between">
               <div>
                 <h3 className="text-3xl font-bold mb-6 flex items-center gap-4">
-                  <Microscope className="w-10 h-10 text-indigo-400" /> 🧪
+                  <FlaskConical className="w-10 h-10 text-indigo-400" />
                   Dendritic Cell Therapy
                 </h3>
                 <p className="text-indigo-100 text-lg mb-8 leading-relaxed italic first-line:uppercase font-bold tracking-tight">
@@ -504,10 +508,10 @@ const IntegrativeCancer = () => {
             </div>
 
             {/* NK Cell Therapy */}
-            <div className="bg-white/5 backdrop-blur-md p-10 rounded-[3rem] border border-white/10 flex flex-col justify-between">
+            <div className="bg-white/5  p-10 rounded-[3rem] border border-white/10 flex flex-col justify-between">
               <div>
                 <h3 className="text-3xl font-bold mb-6 flex items-center gap-4">
-                  <Activity className="w-10 h-10 text-emerald-400" /> 🛡
+                  <Shield className="w-10 h-10 text-emerald-400" />
                   Natural Killer (NK) Cell Therapy
                 </h3>
                 <p className="text-emerald-100 text-lg mb-8 leading-relaxed italic first-line:uppercase font-bold tracking-tight">
@@ -571,8 +575,8 @@ const IntegrativeCancer = () => {
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             {/* Palliative Care */}
             <div className="lg:w-1/2">
-              <h2 className="text-3xl md:text-5xl font-bold mb-8 text-indigo-950 leading-tight">
-                💙 Advanced Palliative & Symptom Support
+              <h2 className="text-3xl md:text-5xl font-bold mb-8 text-indigo-950 leading-tight flex items-center gap-4">
+                <Heart className="w-8 h-8 text-indigo-600" /> Advanced Palliative & Symptom Support
               </h2>
               <p className="text-xl text-gray-700 mb-10 leading-relaxed italic font-medium">
                 When disease is advanced or progressive, our focus shifts
@@ -627,8 +631,8 @@ const IntegrativeCancer = () => {
 
             {/* Muscle Preservation */}
             <div className="lg:w-1/2 bg-gray-50 p-10 md:p-12 rounded-[3.5rem] shadow-xl border border-gray-100">
-              <h2 className="text-3xl font-bold mb-8 text-indigo-950 leading-tight">
-                🏃 Muscle Preservation & Functional Recovery
+              <h2 className="text-3xl font-bold mb-8 text-indigo-950 leading-tight flex items-center gap-4">
+                <Activity className="w-8 h-8 text-indigo-600" /> Muscle Preservation & Functional Recovery
               </h2>
               <p className="text-gray-600 mb-10 italic font-bold">
                 Cancer-related muscle loss worsens outcomes. Our structured
@@ -680,11 +684,11 @@ const IntegrativeCancer = () => {
         </div>
 
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-7xl mx-auto bg-white/5 backdrop-blur-xl p-10 md:p-20 rounded-[4rem] border border-white/10">
+          <div className="max-w-7xl mx-auto bg-white/5  p-10 md:p-20 rounded-[4rem] border border-white/10">
             <div className="flex flex-col lg:flex-row gap-16 items-center mb-16">
               <div className="lg:w-1/2">
-                <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-8  font-serif uppercase  leading-tight">
-                  🌍 Personalized for Clients Across the Globe
+                <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-8 font-serif uppercase leading-tight flex items-center gap-4">
+                  <Globe className="w-8 h-8 text-white" /> Personalized for Clients Across the Globe
                 </h2>
                 <p className="text-indigo-100 text-xl italic leading-tight font-medium tracking-tight">
                   Kerala offers a calm, healing environment ideal for recovery
@@ -715,8 +719,7 @@ const IntegrativeCancer = () => {
             {/* Ethical Integrity Block */}
             <div className="bg-white/10 p-10 rounded-[2.5rem] border border-white/20">
               <h3 className="text-2xl text-white font-bold mb-8 text-center uppercase tracking-widest flex items-center justify-center gap-4">
-                <ShieldCheck className="w-8 h-8" /> ⚖ Ethical & Medical
-                Integrity
+                <Scale className="w-8 h-8 text-white" /> Ethical & Medical Integrity
               </h3>
               <div className="flex flex-wrap justify-center gap-6 mb-8 text-indigo-100">
                 {[
@@ -744,8 +747,8 @@ const IntegrativeCancer = () => {
       <section className="py-24 bg-white border-t border-gray-100">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-bold text-indigo-950 mb-8 italic">
-              🌿 Why Choose Tigris Valley?
+            <h2 className="text-3xl md:text-5xl font-bold text-indigo-950 mb-8 italic flex items-center justify-center gap-4">
+              <Leaf className="w-8 h-8 text-indigo-600" /> Why Choose Tigris Valley?
             </h2>
             <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
               {[

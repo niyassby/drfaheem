@@ -28,6 +28,7 @@ import {
   PhoneCall,
   Calendar
 } from 'lucide-react';
+import Popup from '../components/Contact/Popup';
 
 const ElderCarePage = () => {
 
@@ -869,9 +870,12 @@ const ElderCarePage = () => {
                   loved one's health, safety, and dignity.
                 </p>
 
-                <button className="w-full bg-amber-500 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-amber-400 transition transform hover:-translate-y-1 uppercase tracking-wider shadow-lg flex items-center justify-center gap-3 mb-4">
-                  Contact Tigris Valley Today
-                </button>
+                <Popup>
+                  <button className="group w-full bg-gradient-to-r from-amber-500 to-orange-600 text-slate-900 px-8 py-5 rounded-2xl font-black text-lg hover:from-amber-400 hover:to-orange-500 transition-all duration-300 transform hover:-translate-y-1 uppercase tracking-wider shadow-[0_20px_40px_rgba(245,158,11,0.2)] flex items-center justify-center gap-3 mb-4">
+                    <PhoneCall className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                    <span>Contact Tigris Valley Today</span>
+                  </button>
+                </Popup>
 
                 <p className="text-center text-xs text-indigo-200 font-medium mb-8">
                   ...to learn more about our Elder Care Programs.

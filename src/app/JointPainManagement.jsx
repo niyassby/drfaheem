@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Footer from "../components/Navbar/Footer";
 import Navbar from "../components/Navbar/Navbar";
 import { CheckCircle2, Activity, Zap, ArrowRight, ShieldCheck, Microscope, Apple, Droplets, Thermometer, UserCheck, Heart, Sparkles, Globe, Brain, ListChecks, Stethoscope, Briefcase, Pill, Waves, Accessibility, Move, Dumbbell, Wind } from 'lucide-react';
+import Popup from '../components/Contact/Popup';
 
 const JointPainManagement = () => {
     const conditions = [
@@ -509,9 +510,11 @@ const JointPainManagement = () => {
                                     </div>
                                 ))}
                             </div>
-                            <button className="w-full bg-blue-600 text-white py-6 rounded-full font-black text-xl hover:bg-blue-700 transition transform hover:scale-[1.02] shadow-xl">
-                                Book Your Joint & Pain Assessment
-                            </button>
+                            <Popup>
+                                <button className="w-full bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-6 rounded-full font-black text-xl hover:from-blue-700 hover:to-indigo-800 transition-all duration-300 transform hover:scale-[1.01] active:scale-95 shadow-[0_20px_50px_rgba(37,99,235,0.3)] flex items-center justify-center gap-4">
+                                    <span>Book Your Joint & Pain Assessment</span>
+                                </button>
+                            </Popup>
                         </div>
                     </div>
                 </div>

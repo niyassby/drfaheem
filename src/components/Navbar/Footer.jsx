@@ -218,7 +218,7 @@ const Footer = () => {
           <div>
                         <div className="flex items-center gap-3">
               <a
-                href="https://www.instagram.com/wahd_karak_tea_blend?igsh=cXZ5NXV4NHpxYzA2&utm_source=qr"
+                href="https://www.instagram.com/dr.faheem_najeeb?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                 target="_blank"
                 rel="noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-800 text-slate-300 hover:bg-primary-500 hover:text-white transition-all duration-300 hover-lift"
@@ -226,15 +226,15 @@ const Footer = () => {
                 <Instagram size={18} />
               </a>
               <a
-                href="https://www.instagram.com/wahd_karak_tea_blend?igsh=cXZ5NXV4NHpxYzA2&utm_source=qr"
+                href="https://www.linkedin.com/in/dr-faheem-najeeb-829872b4/"
                 target="_blank"
-                rel="noreferrer"
+                rel=""
                 className="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-800 text-slate-300 hover:bg-primary-500 hover:text-white transition-all duration-300 hover-lift"
               >
                 <Linkedin size={18} />
               </a>
               <a
-                href="https://www.instagram.com/wahd_karak_tea_blend?igsh=cXZ5NXV4NHpxYzA2&utm_source=qr"
+                href="https://www.facebook.com/"
                 target="_blank"
                 rel="noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-800 text-slate-300 hover:bg-primary-500 hover:text-white transition-all duration-300 hover-lift"
@@ -258,8 +258,8 @@ const Footer = () => {
                     <MapPin size={14} />
                   </div>
                   <p className="text-sm text-slate-400 leading-relaxed">
-                    Tigris Valley, Markaz Knowledge City, Kaithapoyil, Kozhikode
-                    Pin : 673586
+                    Tigris Valley, Markaz Knowledge City, Kaithapoyil, Kozhikode, Kerala, India
+                   <br/> Pin : 673586
                   </p>
                 </div>
                 <div className="flex items-center gap-4">
@@ -267,7 +267,7 @@ const Footer = () => {
                     <Phone size={14} />
                   </div>
                   <a
-                    href="tel:+971544335584"
+                    href="tel:+919072661149"
                     className="text-sm text-slate-400 hover:text-white transition-colors hover:underline decoration-blue-500/30 underline-offset-4"
                   >
                     +91 9072 66 11 49
