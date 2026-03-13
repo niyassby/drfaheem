@@ -276,7 +276,7 @@ const FirSaunaTherapy = () => {
                   saunas penetrate <strong>3–5 cm into tissues</strong>,
                   stimulating detoxification, circulation, and deep relaxation
                   at lower, more tolerable temperatures. At Tigris Valley, Far
-                  Infrared sauna treatment in Kochi is offered as part of a
+                  Infrared sauna treatment is offered as part of a
                   holistic wellness and detox program.
                 </p>
               </div>

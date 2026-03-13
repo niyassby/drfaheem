@@ -213,7 +213,7 @@ const MedicinalCannabis = () => {
 
               <div className="bg-emerald-50/50 border border-emerald-100 p-6 rounded-2xl">
                 <p className="text-slate-600 leading-relaxed">
-                  At Tigris Valley, we integrate medicinal cannabis treatment into our holistic care protocols, especially for those seeking alternative treatment for cancer, chronic pain, neurological conditions, or mental health concerns. Our clinic, known as one of the <strong>best functional medicine centres in Kerala</strong>, combines evidence-based natural medicine with advanced therapies, giving patients from Kochi, Thrissur, and across the state access to safe and effective integrative care. Medicinal cannabis here is not a standalone solution but a well-supervised component of comprehensive healing.
+                  At Tigris Valley, we integrate medicinal cannabis treatment into our holistic care protocols, especially for those seeking alternative treatment for cancer, chronic pain, neurological conditions, or mental health concerns. Our treatment protocol combines evidence-based natural medicine with advanced therapies, giving patients effective integrative care. Medicinal cannabis here is not a standalone solution but a well-supervised component of comprehensive healing.
                 </p>
               </div>
             </motion.div>

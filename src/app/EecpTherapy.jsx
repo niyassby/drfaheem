@@ -59,7 +59,7 @@ const EecpTherapy = () => {
     "Patients with heart failure, ischemic heart disease, or poor heart pumping function.",
     "Individuals unfit for open-heart surgery due to age or health conditions.",
     "Type 2 diabetic patients with cardiovascular complications looking for safe, integrative solutions.",
-    "Anyone searching for advanced heart care at a trusted EECP treatment centre in Kochi, Thrissur, or Kerala.",
+    "Anyone searching for advanced heart care at a trusted EECP treatment centre .",
   ];
 
   const whoCantTake = [
@@ -283,7 +283,7 @@ const EecpTherapy = () => {
                 </h4>
 
                 <p className="text-rose-100/90 leading-relaxed font-medium relative z-10">
-                  With increasing lifestyle disorders, diabetes, and cardiovascular issues, Tigris Valley has become a trusted hub for EECP treatment in Kochi and Thrissur.
+                  With increasing lifestyle disorders, diabetes, and cardiovascular issues, Tigris Valley has become a trusted hub for EECP treatment.
                 </p>
 
                 <div className="mt-8 pt-8 border-t border-rose-800/50 relative z-10">
