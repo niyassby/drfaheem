@@ -87,7 +87,7 @@ const Hero2 = () => {
             </div>
           </div>
           <div className="w-full h-full max-md:h-[600px] overflow-hidden col-span-1 relative order-1 md:order-2 z-20">
-            <img src={img} className="object-cover w-full h-full object-top max-md:object-top scale-95" alt="" />
+            <img src={img} className="object-cover w-full h-full object-center max-md:object-top" alt="" />
           </div>
         </section>
 
