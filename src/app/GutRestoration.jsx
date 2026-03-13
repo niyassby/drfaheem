@@ -32,7 +32,7 @@ const GutRestoration = () => {
       <Navbar />
 
       {/* --- Hero Section (Strictly Title & Subtitle with Bottom-to-Up Motion) --- */}
-      <section className="relative h-[75vh] md:h-[85vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[85vh] md:h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1505575967455-40e256f73376?q=80&w=2070&auto=format&fit=crop"
@@ -49,7 +49,7 @@ const GutRestoration = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="max-w-5xl mx-auto flex flex-col items-center"
           >
-            <h1 className="text-4xl sm:text-5xl mt-20 md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[1.1] tracking-tight">
+            <h1 className="text-4xl sm:text-5xl mt-20 md:text-6xl lg:text-6xl font-black text-white mb-6 leading-[1.1] tracking-tight">
               Advanced Gut Restoration & <br className="hidden lg:block" />{" "}
               Microbiome Optimization Program
             </h1>

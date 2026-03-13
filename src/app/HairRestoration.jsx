@@ -49,7 +49,7 @@ const HairRestoration = () => {
                     <div className="absolute inset-0 bg-gradient-to-br from-slate-950/90 via-slate-900/80 to-emerald-900/90"></div>
                 </div>
 
-                <div className="container mx-auto px-6 relative z-10 text-center flex flex-col items-center justify-center mt-12">
+                <div className="container mx-auto px-6 mt-20 relative z-10 text-center flex flex-col items-center justify-center mt-12">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -59,7 +59,7 @@ const HairRestoration = () => {
                         <span className="inline-block py-1.5 px-4 mb-6 text-xs sm:text-sm font-bold tracking-[0.2em] text-emerald-300 uppercase bg-emerald-900/40 backdrop-blur-md rounded-full border border-emerald-500/30">
                             Advanced Functional & Integrative Hair Restoration
                         </span>
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-8 leading-tight tracking-tight">
+                        <h1 className="text-4xl sm:text-5xl md:text-5xl font-extrabold text-white mb-8 leading-tight tracking-tight">
                             Restore Follicular Intelligence. <br />
                             Reactivate Growth. <br />
                             Reverse Root Causes.

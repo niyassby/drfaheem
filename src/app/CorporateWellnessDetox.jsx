@@ -36,7 +36,7 @@ const CorporateWellnessDetox = () => {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="relative h-[80vh] md:h-[90vh] flex items-center justify-center overflow-hidden">
+            <section className="relative h-[85vh] md:h-[95vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img
                         src={img1}
@@ -59,7 +59,7 @@ const CorporateWellnessDetox = () => {
                         <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white mb-8 leading-tight tracking-tight shadow-sm">
                             Corporate Wellness Detox Program
                         </h1>
-                        <p className="max-w-4xl mx-auto text-lg md:text-2xl text-slate-200 mb-10 leading-relaxed font-light">
+                        <p className="max-w-4xl mx-auto text-lg md:text-xl text-slate-200 mb-10 leading-relaxed font-light">
                             Modern corporate life places enormous pressure on professionals. Long working hours, chronic stress, irregular meals, poor sleep, and environmental exposure can gradually affect energy, focus, immunity, and overall productivity.
                         </p>
                         <div className="p-6 bg-white/10 backdrop-blur-md rounded-3xl border border-white/20 inline-block shadow-2xl">

@@ -117,7 +117,7 @@ export function ContactInput() {
                 name="firstName"
                 value={formData.firstName}
                 onChange={handleChange}
-                placeholder="John"
+                placeholder="first name"
                 className="border-border focus:ring-2 focus:ring-primary focus:border-transparent"
                 disabled={isSubmitting}
                 required
@@ -133,7 +133,7 @@ export function ContactInput() {
                 name="lastName"
                 value={formData.lastName}
                 onChange={handleChange}
-                placeholder="Doe"
+                placeholder="last name"
                 className="border-border focus:ring-2 focus:ring-primary focus:border-transparent"
                 disabled={isSubmitting}
                 required
@@ -151,7 +151,7 @@ export function ContactInput() {
               type="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="john.doe@example.com"
+              placeholder="email@example.com"
               className="border-border focus:ring-2 focus:ring-primary focus:border-transparent"
               disabled={isSubmitting}
               required
@@ -167,7 +167,7 @@ export function ContactInput() {
               name="subject"
               value={formData.subject}
               onChange={handleChange}
-              placeholder="How can we help you?"
+              placeholder="How you can help us"
               className="border-border focus:ring-2 focus:ring-primary focus:border-transparent"
               disabled={isSubmitting}
               required

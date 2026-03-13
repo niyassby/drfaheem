@@ -49,7 +49,7 @@ const WeddingWellnessIV = () => {
                     <div className="absolute inset-0 bg-gradient-to-br from-rose-950/60 via-slate-900/60 to-blue-900/60"></div>
                 </div>
 
-                <div className="container mx-auto px-6 relative z-10 text-center flex flex-col items-center justify-center mt-12">
+                <div className="container mx-auto px-6 relative mt-20 z-10 text-center flex flex-col items-center justify-center mt-12">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -57,12 +57,12 @@ const WeddingWellnessIV = () => {
                         className="w-full max-w-5xl"
                     >
                         <span className="inline-block py-1.5 px-4 mb-6 text-xs sm:text-sm font-bold tracking-[0.2em] text-rose-300 uppercase bg-rose-900/40 backdrop-blur-md rounded-full border border-rose-500/30">
-                            Celebrate Beautifully. Recover Effortlessly. 💧✨
+                            Celebrate Beautifully. Recover Effortlessly. 
                         </span>
-                        <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white mb-8 leading-tight tracking-tight shadow-sm">
+                        <h1 className="text-3xl sm:text-5xl md:text-5xl font-extrabold text-white mb-8 leading-tight tracking-tight shadow-sm">
                             Bride and Groom Wellness IV Program
                         </h1>
-                        <p className="max-w-4xl mx-auto text-lg md:text-2xl text-blue-100 mb-10 leading-relaxed font-light">
+                        <p className="max-w-4xl mx-auto text-lg md:text-xl text-blue-100 mb-10 leading-relaxed font-light">
                             Weddings are joyful celebrations filled with laughter, late nights, and memorable toasts. Our Wedding Wellness IV Therapy Program is designed to keep the bride, groom, and guests energized, hydrated, and glowing throughout the festivities.
                         </p>
                         <div className="p-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 inline-block">

@@ -164,7 +164,7 @@ const ElderCarePage = () => {
             alt="Elder Care"
             className="w-full h-full object-cover object-top"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-indigo-950/90 to-indigo-900/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-indigo-950/30 to-indigo-900/10"></div>
         </div>
 
         <div className="container mx-auto px-6 relative z-10 text-center">
@@ -326,7 +326,7 @@ const ElderCarePage = () => {
                   Our Integrated Medical Approach to Healthy Ageing
                 </span>
                 <h2 className="text-3xl md:text-5xl font-bold mb-8 text-indigo-950 leading-tight">
-                  🩺 Specialized Geriatric Medical Care
+                   Specialized Geriatric Medical Care
                 </h2>
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   At Tigris Valley, elder care goes beyond disease management.
@@ -375,7 +375,7 @@ const ElderCarePage = () => {
               Holistic Support
             </span>
             <h2 className="text-3xl md:text-5xl font-bold mb-8 text-indigo-950 leading-tight font-serif italic">
-              🥗 Further Health Strategies & Optimization
+               Further Health Strategies & Optimization
             </h2>
             <p className="text-xl text-gray-700 leading-relaxed mb-12">
               We integrate rehabilitation and nutritional science to promote a

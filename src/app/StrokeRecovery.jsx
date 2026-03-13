@@ -181,7 +181,7 @@ const StrokeRecovery = () => {
                     <div className="absolute inset-0 bg-gradient-to-r from-slate-900/60 to-blue-900/40"></div>
                 </div>
 
-                <div className="container mx-auto px-6 relative z-10 text-center">
+                <div className="container mx-auto mt-20 px-6 relative z-10 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -190,7 +190,7 @@ const StrokeRecovery = () => {
                         <span className="inline-block py-1 px-3 mb-6 text-sm font-semibold tracking-widest text-blue-200 uppercase bg-blue-900/30 rounded-full border border-blue-500/30">
                             At Tigris Valley
                         </span>
-                        <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
                             Advanced Stroke Recovery & <br /> Neuro-Rehabilitation Program
                         </h1>
                         <p className="max-w-3xl mx-auto text-lg md:text-xl text-blue-50 mb-10 leading-relaxed font-medium">

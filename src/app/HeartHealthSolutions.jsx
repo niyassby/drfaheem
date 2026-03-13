@@ -60,7 +60,7 @@ const HeartHealthSolutions = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-black/30"></div>
         </div>
 
-        <div className="container mx-auto px-6 relative z-10 text-center">
+        <div className="container mt-20 mx-auto px-6 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

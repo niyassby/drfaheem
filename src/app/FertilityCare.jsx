@@ -61,7 +61,7 @@ const FertilityRestoration = () => {
           >
             <div className="max-w-4xl mx-auto text-center">
               {/* Main Heading */}
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.1] tracking-tight mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] tracking-tight mb-6">
                 Integrative Fertility Restoration Program
               </h1>
 

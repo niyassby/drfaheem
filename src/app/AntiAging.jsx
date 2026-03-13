@@ -46,7 +46,7 @@ const AntiAging = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-indigo-950/90 via-slate-900/80 to-blue-900/90"></div>
         </div>
 
-        <div className="container mx-auto px-6 relative z-10 text-center flex flex-col items-center justify-center mt-12">
+        <div className="container mx-auto px-6  mt-20 relative z-10 text-center flex flex-col items-center justify-center mt-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -56,7 +56,7 @@ const AntiAging = () => {
             <span className="inline-block py-1.5 px-4 mb-6 text-xs sm:text-sm font-bold tracking-[0.2em] text-blue-300 uppercase bg-blue-900/40 backdrop-blur-md rounded-full border border-blue-500/30">
               Advanced Regeneration & Longevity
             </span>
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white mb-8 leading-tight tracking-tight">
+            <h1 className="text-3xl sm:text-5xl md:text-5xl  font-extrabold text-white mb-8 leading-tight tracking-tight">
               Reverse Biological Age. <br />
               Restore Cellular Intelligence. <br />
               Age With Strength, Clarity & Confidence.

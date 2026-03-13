@@ -151,10 +151,10 @@ const LongCovidRecovery = () => {
             alt="Long COVID Recovery"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-blue-900/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/50 to-blue-900/40"></div>
         </div>
 
-        <div className="container mx-auto px-6 relative z-10 text-center">
+        <div className="container mt-20 mx-auto px-6 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -163,7 +163,7 @@ const LongCovidRecovery = () => {
             <span className="inline-block py-2 px-4 mb-6 text-sm font-bold tracking-widest text-blue-200 uppercase bg-blue-950/40 rounded-full border border-blue-500/30">
               Speciality Care
             </span>
-            <h1 className="text-4xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
               Long COVID Recovery & <br /> Cellular Detox Program
             </h1>
             <p className="max-w-3xl mx-auto text-xl md:text-3xl text-blue-100 mb-10 leading-relaxed font-semibold tracking-wide">

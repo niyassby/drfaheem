@@ -137,7 +137,7 @@ const AutoImmuneCare = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/60 to-indigo-900/40"></div>
         </div>
 
-        <div className="container mx-auto px-6 relative z-10 text-center">
+        <div className="container mx-auto mt-20 px-6 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -146,7 +146,7 @@ const AutoImmuneCare = () => {
             <span className="inline-block py-2 px-4 mb-6 text-sm font-bold tracking-widest text-blue-200 uppercase bg-blue-950/40 rounded-full border border-blue-500/30">
               At Tigris Valley
             </span>
-            <h1 className="text-4xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
                Integrative <br /> Autoimmune Care
             </h1>
             <p className="max-w-3xl mx-auto text-lg md:text-2xl text-blue-50 mb-10 leading-relaxed font-medium">

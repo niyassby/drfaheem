@@ -43,7 +43,7 @@ const SkinRevitalization = () => {
 
           {/* Gradients */}
           {/* <div className="absolute inset-0 bg-gradient-to-r from-[#3a1f25]/60 via-[#6b2d3d]/60 to-transparent"></div> */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#3a1f25]/60 via-transparent to-[#6b2d3d]/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#3a1f25]/40 via-transparent to-[#6b2d3d]/20"></div>
         </div>
 
         <div className="container mx-auto px-6 relative z-10 flex items-center justify-center text-center">
@@ -54,7 +54,7 @@ const SkinRevitalization = () => {
             className="max-w-3xl"
           >
 
-            <h1 className="text-5xl md:text-6xl md:mt-20 mt-20 lg:text-7xl font-black text-white mb-6 leading-[1.1] tracking-tight">
+            <h1 className="text-5xl md:text-6xl md:mt-20 mt-20 lg:text-6xl font-black text-white mb-6 leading-[1.1] tracking-tight">
               {/* Skin Revitalization <br className="hidden md:block" /> Program */}
               Advanced Functional & Integrative Skin Revitalization Program
             </h1>
