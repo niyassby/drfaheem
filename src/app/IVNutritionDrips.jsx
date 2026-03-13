@@ -387,7 +387,7 @@ const IVNutritionDrips = () => {
                 micronutrient deficiencies that cannot be corrected through oral
                 supplementation alone. Tigris Valley, acknowledged as a{" "}
                 <strong className="text-slate-800">
-                  best functional medicine centre in Thrissur and Kochi
+                  best functional medicine centre
                 </strong>
                 , provides customized IV nutrition drips designed to restore
                 energy, enhance immunity, and support long-term health.
