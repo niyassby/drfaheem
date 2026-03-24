@@ -16,6 +16,7 @@ import team10 from "../../assets/team10.png"
 import team11 from "../../assets/shahul.jpg"
 import team12 from "../../assets/team13.png"
 import team13 from "../../assets/shareef.png"
+import team14 from "../../assets/biju.jpeg"
 import { AboutTeam } from "./AboutTeam";
 import DrHaseenaBio from "./DrHaseena";
 import ProfilePage from "./ProfilePageZulekha";
@@ -31,6 +32,7 @@ import DrFahadBasheer from "@/app/DrFahadBasheer";
 import DrSaraShareef from "@/app/DrSaraShareef";
 import DrAPShahulHameed from "@/app/DrAPShahulHameed";
 import DrMuhammedShareef from "@/app/DrMuhammedShareef";
+import DrBijuKS from "@/app/DrBijuKs";
 
 const team = [
   {
@@ -111,6 +113,12 @@ const team = [
     designation: "BNYS, MSc (DFSM), CNCC, PGDC",
     image: team12,
     description: <DrJibinAnnChacko />,
+  },
+  {
+    name: "Dr. Biju K S ",
+    designation: "MBA",
+    image: team14,
+    description: <DrBijuKS />,
   },
 ];
 
