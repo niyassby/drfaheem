@@ -1167,6 +1167,11 @@ export const programsTitle = [
     icon: Medicine01Icon,
     link: "/explore-2",
   },
+  {
+    titel: "EBOO with UV Irradiation (EBOO + UBI)",
+    icon: Medicine01Icon,
+    link: "/eboo-therapy",
+  },
   // {
   //   titel: "IV Vitamin C",
   //   icon: Cardiogram02Icon,

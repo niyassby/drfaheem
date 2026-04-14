@@ -45,7 +45,7 @@ import Academics from './components/academics/Academics'
 import WeddingWellnessIV from './app/WeddingWellnessIV'
 import CorporateWellnessDetox from './app/CorporateWellnessDetox'
 import HydrogenTherapy from './app/HydrogenTherapy'
-
+import EbooTherapy from './app/EbooTherapy'
 
 function App() {
   return (
@@ -56,6 +56,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/explore-1" element={<ChelationTherapyPage />} />
         <Route path="/explore-2" element={<OzoneTherapy />} />
+        <Route path="/eboo-therapy" element={<EbooTherapy />} />
         <Route
           path="/explore-3"
           element={<ExploreMore data={iv_vitamin_c_page} />}
