@@ -164,11 +164,11 @@ const EbooTherapy = () => {
               <div className="relative rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(8,_112,_184,_0.07)] border-[6px] border-white group">
                 <video
                   src={video11}
-                  className="w-full h-auto object-cover transform transition-transform duration-700 ease-out group-hover:scale-105"
+                  className="w-full h-auto object-cover transform transition-transform duration-700 ease-out "
                   autoPlay
                   loop
-                  muted
                   playsInline
+                  controls
                 />
               </div>
             </motion.div>
@@ -265,8 +265,8 @@ const EbooTherapy = () => {
                   className="w-full h-auto object-cover"
                   autoPlay
                   loop
-                  muted
                   playsInline
+                  controls
                 />
               </div>
             </motion.div>
