@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Navbar/Footer';
@@ -25,6 +25,32 @@ import video12 from '../assets/video/video12.mp4';
 import Popup from '../components/Contact/Popup';
 
 const EbooTherapy = () => {
+  const video1Ref = useRef(null);
+  const video2Ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.play().catch(() => {});
+        } else {
+          entry.target.pause();
+        }
+      });
+    }, { threshold: 0.5 });
+
+    const v1 = video1Ref.current;
+    const v2 = video2Ref.current;
+
+    if (v1) observer.observe(v1);
+    if (v2) observer.observe(v2);
+
+    return () => {
+      if (v1) observer.unobserve(v1);
+      if (v2) observer.unobserve(v2);
+    };
+  }, []);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -163,12 +189,12 @@ const EbooTherapy = () => {
             >
               <div className="relative rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(8,_112,_184,_0.07)] border-[6px] border-white group">
                 <video
+                  ref={video1Ref}
                   src={video11}
                   className="w-full h-auto object-cover transform transition-transform duration-700 ease-out "
-                  autoPlay
                   loop
+                  muted
                   playsInline
-                  controls
                 />
               </div>
             </motion.div>
@@ -261,10 +287,11 @@ const EbooTherapy = () => {
             >
               <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-[6px] border-slate-800">
                 <video
+                  ref={video2Ref}
                   src={video12}
                   className="w-full h-auto object-cover"
-                  autoPlay
                   loop
+                  muted
                   playsInline
                   controls
                 />

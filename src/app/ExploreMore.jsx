@@ -124,10 +124,33 @@
 import Footer from "@/components/Navbar/Footer";
 import Protect from "@/lib/Protect";
 import { ArrowRight } from "lucide-react";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 
 export default function ExploreMore({ data }) {
   const sectionRefs = useRef([]);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          videoRef.current?.play().catch(() => {});
+        } else {
+          videoRef.current?.pause();
+        }
+      });
+    }, { threshold: 0.5 });
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
+      }
+    };
+  }, []);
 
   const scrollToSection = (index) => {
     sectionRefs.current[index]?.scrollIntoView({
@@ -173,6 +196,7 @@ export default function ExploreMore({ data }) {
             {data?.videoSrc && (
               <div className="w-full bg-white p-2 md:p-3 rounded-2xl md:rounded-3xl border border-slate-200 shadow-xl">
                 <video
+                  ref={videoRef}
                   controls
                   className="w-full aspect-video rounded-xl md:rounded-2xl object-cover bg-slate-900 shadow-sm"
                 >

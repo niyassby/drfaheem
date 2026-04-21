@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Footer from "../components/Navbar/Footer";
 import Navbar from "../components/Navbar/Navbar";
@@ -32,9 +32,33 @@ import {
 } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader } from '@/components/ui/dialog';
 import { ContactInput } from '../components/home/ContactInput';
+import paliativeVideo from '../assets/video/paliative.mp4';
 
 const IntegrativeCancer = () => {
   const [ctaOpen, setCtaOpen] = useState(false);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          videoRef.current?.play().catch(() => {});
+        } else {
+          videoRef.current?.pause();
+        }
+      });
+    }, { threshold: 0.5 });
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
+      }
+    };
+  }, []);
 
   const focusAreas = [
     { area: "Immune Resilience", desc: "Strengthening the body's natural defenses.", icon: <ShieldCheck className="text-indigo-500" /> },
@@ -109,7 +133,6 @@ const IntegrativeCancer = () => {
         </div>
       </section>
 
-      {/* Three Questions Section */}
       {/* <section className="py-20 bg-indigo-900 text-white overflow-hidden relative">
           <div className="container mx-auto px-6 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
@@ -572,105 +595,109 @@ const IntegrativeCancer = () => {
       {/* Palliative Care & Muscle Preservation */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
-            {/* Palliative Care */}
-            <div className="lg:w-1/2">
-              <h2 className="text-3xl md:text-5xl font-bold mb-8 text-indigo-950 leading-tight flex items-center gap-4">
-                <Heart className="w-8 h-8 text-indigo-600" /> Advanced Palliative & Symptom Support
-              </h2>
-              <p className="text-xl text-gray-700 mb-10 leading-relaxed italic font-medium">
-                When disease is advanced or progressive, our focus shifts
-                toward:
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
-                {[
-                  {
-                    text: "Pain relief support",
-                    icon: <Activity className="text-indigo-600" />,
-                  },
-                  {
-                    text: "Fatigue management",
-                    icon: <Zap className="text-indigo-600" />,
-                  },
-                  {
-                    text: "Appetite improvement",
-                    icon: <Apple className="text-indigo-600" />,
-                  },
-                  {
-                    text: "Neuropathy care",
-                    icon: <Activity className="text-indigo-600" />,
-                  },
-                  {
-                    text: "Emotional and spiritual support",
-                    icon: <Heart className="text-indigo-600" />,
-                  },
-                  {
-                    text: "Comfort-focused IV nutritional drips",
-                    icon: <Droplets className="text-indigo-600" />,
-                  },
-                ].map((item, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-center gap-4 p-5 bg-indigo-50 rounded-2xl border border-indigo-100/50"
-                  >
-                    <div className="p-2 bg-white rounded-xl shadow-sm">
-                      {item.icon}
-                    </div>
-                    <span className="font-bold text-indigo-900 text-sm leading-tight">
-                      {item.text}
-                    </span>
-                  </div>
-                ))}
-              </div>
-              <div className="bg-indigo-900 text-white p-6 rounded-2xl text-center">
-                <p className="text-lg font-bold italic tracking-wider">
-                  We prioritize dignity, clarity, and comfort.
+          <div className="flex flex-col lg:flex-row gap-16 items-start lg:items-stretch">
+            {/* Left Column: Text Content */}
+            <div className="lg:w-1/2 flex flex-col gap-12">
+
+              {/* Palliative Care */}
+<div>
+      <h2 className="text-2xl md:text-4xl font-bold mb-4 text-indigo-950 leading-tight flex items-center gap-3">
+        <Heart className="w-6 h-6 md:w-8 md:h-8 text-indigo-600" /> 
+        Advanced Palliative & Symptom Support
+      </h2>
+      <p className="text-lg text-gray-700 mb-6 leading-relaxed italic font-medium">
+        When disease is advanced or progressive, our focus shifts toward:
+      </p>
+      
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+        {[
+          { text: "Pain relief support", icon: <Activity className="w-4 h-4 text-indigo-600" /> },
+          { text: "Fatigue management", icon: <Zap className="w-4 h-4 text-indigo-600" /> },
+          { text: "Appetite improvement", icon: <Apple className="w-4 h-4 text-indigo-600" /> },
+          { text: "Neuropathy care", icon: <Activity className="w-4 h-4 text-indigo-600" /> },
+          { text: "Emotional and spiritual support", icon: <Heart className="w-4 h-4 text-indigo-600" /> },
+          { text: "Comfort-focused IV drips", icon: <Droplets className="w-4 h-4 text-indigo-600" /> },
+        ].map((item, idx) => (
+          <div
+            key={idx}
+            className="flex items-center gap-3 p-3 bg-indigo-50 rounded-xl border border-indigo-100/50"
+          >
+            <div className="p-1.5 bg-white rounded-lg shadow-sm shrink-0">
+              {item.icon}
+            </div>
+            <span className="font-bold text-indigo-900 text-sm leading-tight">
+              {item.text}
+            </span>
+          </div>
+        ))}
+      </div>
+      
+      <div className="bg-indigo-900 text-white p-4 rounded-xl text-center">
+        <p className="text-base font-bold italic tracking-wide">
+          We prioritize dignity, clarity, and comfort.
+        </p>
+      </div>
+    </div>
+
+              {/* Muscle Preservation */}
+              <div className="bg-gray-50 p-10 md:p-12 rounded-[3.5rem] shadow-xl border border-gray-100 h-full">
+                <h2 className="text-3xl font-bold mb-8 text-indigo-950 leading-tight flex items-center gap-4">
+                  <Activity className="w-8 h-8 text-indigo-600" /> Muscle Preservation & Functional Recovery
+                </h2>
+                <p className="text-gray-600 mb-10 italic font-bold">
+                  Cancer-related muscle loss worsens outcomes. Our structured
+                  support includes:
                 </p>
+                <div className="space-y-6">
+                  {[
+                    {
+                      title: "Light supervised resistance exercises",
+                      desc: "Targeted to patient energy levels.",
+                    },
+                    {
+                      title: "Fatigue-adapted movement",
+                      desc: "Gentle physical support.",
+                    },
+                    {
+                      title: "Nutritional muscle preservation",
+                      desc: "Optimizing protein and caloric intake.",
+                    },
+                    {
+                      title: "Post-treatment rehabilitation support",
+                      desc: "Transitioning back to functional life.",
+                    },
+                  ].map((step, idx) => (
+                    <div key={idx} className="flex gap-6 group">
+                      <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shrink-0 shadow-sm text-indigo-600 font-bold group-hover:bg-indigo-600 group-hover:text-white transition-all">
+                        {idx + 1}
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-gray-900 group-hover:text-indigo-600 transition-colors uppercase tracking-tight">
+                          {step.title}
+                        </h4>
+                        <p className="text-sm text-gray-500 font-medium italic">
+                          {step.desc}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
+
             </div>
 
-            {/* Muscle Preservation */}
-            <div className="lg:w-1/2 bg-gray-50 p-10 md:p-12 rounded-[3.5rem] shadow-xl border border-gray-100">
-              <h2 className="text-3xl font-bold mb-8 text-indigo-950 leading-tight flex items-center gap-4">
-                <Activity className="w-8 h-8 text-indigo-600" /> Muscle Preservation & Functional Recovery
-              </h2>
-              <p className="text-gray-600 mb-10 italic font-bold">
-                Cancer-related muscle loss worsens outcomes. Our structured
-                support includes:
-              </p>
-              <div className="space-y-6">
-                {[
-                  {
-                    title: "Light supervised resistance exercises",
-                    desc: "Targeted to patient energy levels.",
-                  },
-                  {
-                    title: "Fatigue-adapted movement",
-                    desc: "Gentle physical support.",
-                  },
-                  {
-                    title: "Nutritional muscle preservation",
-                    desc: "Optimizing protein and caloric intake.",
-                  },
-                  {
-                    title: "Post-treatment rehabilitation support",
-                    desc: "Transitioning back to functional life.",
-                  },
-                ].map((step, idx) => (
-                  <div key={idx} className="flex gap-6 group">
-                    <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shrink-0 shadow-sm text-indigo-600 font-bold group-hover:bg-indigo-600 group-hover:text-white transition-all">
-                      {idx + 1}
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-gray-900 group-hover:text-indigo-600 transition-colors uppercase tracking-tight">
-                        {step.title}
-                      </h4>
-                      <p className="text-sm text-gray-500 font-medium italic">
-                        {step.desc}
-                      </p>
-                    </div>
-                  </div>
-                ))}
+            {/* Right Column: Video */}
+            <div className="lg:w-1/2  sticky top-24">
+              <div className="relative rounded-[2.5rem] overflow-hidden shadow-xl border-[6px] border-white group">
+                <video
+                  ref={videoRef}
+                  src={paliativeVideo}
+                  className="w-full h-auto object-cover"
+                  loop
+                  muted
+                  playsInline
+                  controls
+                />
               </div>
             </div>
           </div>
@@ -688,7 +715,7 @@ const IntegrativeCancer = () => {
             <div className="flex flex-col lg:flex-row gap-16 items-center mb-16">
               <div className="lg:w-1/2">
                 <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-8 font-serif uppercase leading-tight flex items-center gap-4">
-                  <Globe className="w-8 h-8 text-white" /> Personalized for Clients Across the Globe
+                  Personalized for Clients Across the Globe
                 </h2>
                 <p className="text-indigo-100 text-xl italic leading-tight font-medium tracking-tight">
                   Kerala offers a calm, healing environment ideal for recovery

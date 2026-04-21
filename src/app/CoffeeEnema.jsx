@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Navbar/Footer';
@@ -17,6 +17,30 @@ import video1 from '../assets/video/tigrisvideo2.mp4';
 import img1 from "../assets/colon.jpg"
 import img2 from "../assets/colon2.jpg"
 const CoffeeEnema = () => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          videoRef.current?.play().catch(() => {});
+        } else {
+          videoRef.current?.pause();
+        }
+      });
+    }, { threshold: 0.5 });
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
+      }
+    };
+  }, []);
+
   const [modalOpen, setModalOpen] = useState(false);
   const openModal = () => setModalOpen(true);
 
@@ -292,6 +316,7 @@ const CoffeeEnema = () => {
             >
               <div className="relative  rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white">
                 <video
+                  ref={videoRef}
                   className="w-full aspect-[9/16]  object-cover"
                   controls
                   preload="metadata"

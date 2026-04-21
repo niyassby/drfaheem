@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Navbar/Footer';
@@ -10,6 +10,30 @@ import {
 import fir from "../assets/fir.jpeg"
 import firVideo from "../assets/video/firvdo.mp4"
 const FirSaunaTherapy = () => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          videoRef.current?.play().catch(() => {});
+        } else {
+          videoRef.current?.pause();
+        }
+      });
+    }, { threshold: 0.5 });
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
+      }
+    };
+  }, []);
+
   const benefitsList = [
     {
       title: "Detoxification",
@@ -208,8 +232,8 @@ const FirSaunaTherapy = () => {
                   <div className="absolute top-3 left-1/2 -translate-x-1/2 w-20 h-5 bg-black rounded-full z-20" />
                   {/* Video */}
                   <video
+                    ref={videoRef}
                     src={firVideo}
-                    autoPlay
                     loop
                     muted
                     playsInline
