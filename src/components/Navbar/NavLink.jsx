@@ -116,7 +116,12 @@ export default function NavLinks() {
                 {
                   titel: "Panel",
                   link: "/panel",
-                }].map((tab, index) => (
+                },
+                {
+                  titel: "Blog",
+                  link: "/explore-blogs",
+                },
+].map((tab, index) => (
                   <Link to={tab.link} key={index} >
                     <div className={` `}>
                       <div className="py-1.5  px-3 text-sm hover:bg-accent rounded-md font-medium leading-5 whitespace-nowrap flex items-center justify-center h-full">

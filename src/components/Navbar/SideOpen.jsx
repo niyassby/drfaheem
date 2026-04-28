@@ -30,7 +30,6 @@ export function SideOpen() {
 
   const [isVisible, setIsVisible] = useState(false);
 
-  /* ---------------- RESTORE SAVED STATE ---------------- */
 
   useEffect(() => {
 
@@ -68,7 +67,6 @@ export function SideOpen() {
 
   }, [location.pathname]);
 
-  /* ---------------- SCROLL TO ACTIVE ITEM ---------------- */
 
   useEffect(() => {
 

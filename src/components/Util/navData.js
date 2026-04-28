@@ -108,5 +108,9 @@ export const otherLinks = [
   {
     titel: "Panel",
     link: "/panel",
+  },
+  {
+    titel: "Blog",
+    link: "/explore-blogs",
   }
 ];

@@ -291,9 +291,13 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 mt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-slate-500 font-medium">
-            © {new Date().getFullYear()} All Rights Reserved.
-          </p>
+          <div className="text-xs text-slate-500 font-medium flex items-center gap-2">
+            <span>© {new Date().getFullYear()} All Rights Reserved.</span>
+            <span className="text-slate-700">|</span>
+            <Link to="/admin" className="text-slate-700 hover:text-slate-400 transition-colors">
+              Manage Blog
+            </Link>
+          </div>
           <p className="text-xs text-slate-500 font-medium flex items-center gap-1">
             Designed for{" "}
             <span className="text-slate-300 hover:text-white transition-colors cursor-pointer">

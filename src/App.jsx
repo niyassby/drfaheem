@@ -47,9 +47,22 @@ import CorporateWellnessDetox from './app/CorporateWellnessDetox'
 import HydrogenTherapy from './app/HydrogenTherapy'
 import EbooTherapy from './app/EbooTherapy'
 
+import AdminBlogList from './app/admin/AdminBlogList'
+import PostEditor from './app/admin/PostEditor'
+import AdminAuthorList from './app/admin/AdminAuthorList'
+import AuthorEditor from './app/admin/AuthorEditor'
+import AdminLogin from './app/admin/AdminLogin'
+import ProtectedRoute from './components/admin/ProtectedRoute'
+import { AuthProvider } from './context/AuthContext'
+import BlogList from './app/blog/BlogList'
+import BlogPost from './app/blog/BlogPost'
+import { Toaster } from "@/components/ui/sonner"
+
 function App() {
   return (
-    <HashRouter>
+    <AuthProvider>
+      <HashRouter>
+      <Toaster position="bottom-right" />
       <ScrollToTop />
       <Navbar />
       <Routes>
@@ -103,8 +116,22 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/panel" element={<Team />} />
         <Route path='/academics' element={<Academics />} />
+        
+        {/* Blog CMS Setup */}
+        <Route path="/explore-blogs" element={<BlogList />} />
+        <Route path="/explore-blog/:slug" element={<BlogPost />} />
+        
+        {/* Admin Setup */}
+        <Route path="/admin" element={<AdminLogin />} />
+        <Route element={<ProtectedRoute />}>
+          <Route path="/admin/blog" element={<AdminBlogList />} />
+          <Route path="/admin/blog/edit/:id" element={<PostEditor />} />
+          <Route path="/admin/authors" element={<AdminAuthorList />} />
+          <Route path="/admin/authors/edit/:id" element={<AuthorEditor />} />
+        </Route>
       </Routes>
     </HashRouter>
+    </AuthProvider>
   );
 }
 
