@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { supabase } from '../../lib/supabaseClient'
 import { Instagram, Twitter, Facebook, Linkedin, CalendarCheck, ShieldCheck, Clock, Heart, Mail } from 'lucide-react'
 import Footer from '@/components/Navbar/Footer'
+import BlogLoader from '@/components/ui/BlogLoader'
 import drFaheemImg from '../../assets/drFaheem3.webp'
 
 export default function BlogList() {
@@ -90,7 +91,7 @@ export default function BlogList() {
       {/* Grid Layout for Minimalist Blog Cards */}
       <section className="max-w-7xl mx-auto px-6 lg:px-8 pb-20">
         {loading ? (
-          <div className="py-20 text-slate-400 font-medium text-lg">Loading insights...</div>
+          <BlogLoader inline={true} label="Loading ..." />
         ) : posts.length === 0 ? (
           <div className="py-20 text-slate-400 font-medium text-lg">No articles discovered.</div>
         ) : (
