@@ -114,12 +114,12 @@ export default function NavLinks() {
                   link: "/academics",
                 },
                 {
-                  titel: "Panel",
-                  link: "/panel",
-                },
-                {
                   titel: "Blog",
                   link: "/explore-blogs",
+                },
+                {
+                  titel: "Panel",
+                  link: "/panel",
                 },
 ].map((tab, index) => (
                   <Link to={tab.link} key={index} >

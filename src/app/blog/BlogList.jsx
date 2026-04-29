@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { supabase } from '../../lib/supabaseClient'
-import { Instagram, Twitter, Facebook, Linkedin, CalendarCheck, ShieldCheck, Clock, Heart, Mail } from 'lucide-react'
+import { Instagram, Twitter, Facebook, Linkedin, CalendarCheck, ShieldCheck, Clock, Heart, Mail, ArrowUpRight } from 'lucide-react'
 import Footer from '@/components/Navbar/Footer'
 import BlogLoader from '@/components/ui/BlogLoader'
-import drFaheemImg from '../../assets/drFaheem3.webp'
+
 
 export default function BlogList() {
   const [posts, setPosts] = useState([])
@@ -38,52 +38,22 @@ export default function BlogList() {
   return (
     <div className="min-h-screen bg-white font-sans text-slate-800">
       
-      {/* Premium Hero Section */}
-      <section className="pt-32 pb-20 max-w-7xl mx-auto px-6 lg:px-8">
-         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-            {/* Content Side */}
-            <div className="w-full lg:w-1/2 pr-0 lg:pr-10 z-10">
-               <h4 className="inline-block px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-xs font-bold tracking-[0.2em] uppercase mb-6 border border-amber-100">Official Clinical Blog</h4>
-               <h1 className="text-4xl lg:text-4xl font-bold text-slate-900 tracking-tight mb-8 font-serif leading-tight">
-                 Insights with <br/>
-                 <span className="text-[#2C4A4A] lg:text-6xl italic tracking-normal relative inline-block mt-2">
-                   Dr. Faheem 
-                   <svg className="absolute -bottom-2 relative z-[-1] w-full h-3 text-amber-200" viewBox="0 0 100 10" preserveAspectRatio="none">
-                     <path d="M0,5 Q50,0 100,5" stroke="currentColor" strokeWidth="8" fill="none" />
-                   </svg>
-                 </span>
-               </h1>
-               <p className="text-slate-600 text-[1.1rem] leading-relaxed mb-6 font-medium">
-                 Welcome to the official publication of Dr. Faheem. We are passionate about more than just medicine—we're dedicated to helping you actively design a lifestyle rooted in true integrative wellness.
-               </p>
-               <p className="text-slate-500 text-base leading-relaxed">
-                 Explore this space, carefully curated by Dr. Faheem and our expert clinical team, serving as your premiere resource for modern metabolic therapies, regenerative treatments, and practical advice to optimize your journey to total health.
-               </p>
-            </div>
-            
-            {/* Image Side */}
-            <div className="w-full lg:w-1/2 relative mt-10 lg:mt-0 flex justify-end">
-               {/* Decorative Background Element */}
-               <div className="absolute inset-0 bg-[#2C4A4A] opacity-5 rounded-tl-[100px] rounded-br-[100px] rounded-[2rem] transform translate-x-4 translate-y-4 -z-10"></div>
-               
-               {/* Main Hero Image */}
-               <div className="w-full max-w-lg aspect-[5/5] rounded-tl-[100px] rounded-br-[100px] rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white bg-slate-50 ml-auto">
-                  <img 
-                    src={drFaheemImg} 
-                    alt="Dr. Faheem Clinical Insights" 
-                    className="w-full h-full object-cover object-top transition-transform duration-1000 hover:scale-[1.03]"
-                  />
-               </div>
-            </div>
-         </div>
-      </section>
-
-      {/* Blogs Section Header */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-8 pb-8 pt-6">
-         <div className="border-b border-slate-200 pb-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 font-serif mb-3">Blogs</h2>
-            <p className="text-slate-500 text-lg max-w-2xl">
-              Explore our latest insights, clinical research, and practical advice to support your healing journey.
+      {/* Blog Listing Hero Section */}
+      <section className="pt-32 pb-16 max-w-4xl mx-auto px-6 lg:px-8 text-center">
+         <div className="pb-8">
+            <h4 className="inline-block px-4 py-1.5 bg-amber-50 text-amber-700 rounded-full text-xs font-bold tracking-[0.2em] uppercase mb-6 border border-amber-100 shadow-sm">
+              Insights & Discoveries 
+            </h4>
+            <h1 className="text-5xl md:text-6xl font-bold text-slate-900 font-serif mb-6 leading-tight">
+                Official <span className="text-[#2C4A4A] italic relative inline-block z-10">
+                Clinical Blog 
+                 <svg className="absolute -bottom-2 left-0 w-full h-3 text-amber-200 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
+                   <path d="M0,5 Q50,0 100,5" stroke="currentColor" strokeWidth="8" fill="none" />
+                 </svg>
+               </span>
+            </h1>
+            <p className="text-slate-500 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+              Explore our latest insights, clinical research, and practical advice curated by Dr. Faheem and our expert clinical team to support your journey to total health.
             </p>
          </div>
       </section>
@@ -140,16 +110,13 @@ export default function BlogList() {
               Receive Dr. Faheem's latest insights bridging modern oncology with time-tested holistic traditions. Subscribe for evidence-based wellness strategies delivered directly to your inbox.
             </p>
                  <div className="flex items-center gap-4">
-                    <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
+                    <a href="https://www.instagram.com/dr.faheem_najeeb" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
                       <Instagram size={18} className="text-emerald-50" />
                     </a>
-                    <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
-                      <Twitter size={18} className="text-emerald-50" />
-                    </a>
-                    <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
+                    <a href="" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
                       <Facebook size={18} className="text-emerald-50" />
                     </a>
-                    <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
+                    <a href="https://www.linkedin.com/in/dr-faheem-najeeb-829872b4/" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
                       <Linkedin size={18} className="text-emerald-50" />
                     </a>
                  </div>
@@ -167,15 +134,25 @@ export default function BlogList() {
 <p className="text-stone-600 leading-relaxed font-light mb-8 text-lg">
             Every journey through cancer is profoundly personal, yet universally inspiring. Have you experienced a breakthrough with integrative therapies? We would be honored to feature your story on Dr. Faheem's platform to give hope to others.
           </p>
-<div className="bg-white rounded-2xl p-6 border border-stone-100 shadow-sm mb-10 flex items-center gap-4 group cursor-pointer hover:border-amber-200 transition-colors">
-            <div className="w-12 h-12 rounded-full bg-amber-50 flex items-center justify-center flex-shrink-0 group-hover:bg-amber-100 transition-colors">
-              <Mail className="text-amber-600" size={24} />
+<a 
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=info@drfaheem.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-white rounded-2xl p-6 border border-stone-100 shadow-sm mb-10 flex items-center justify-between group cursor-pointer hover:border-amber-200 hover:shadow-md transition-all duration-300"
+          >
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-amber-50 flex items-center justify-center flex-shrink-0 group-hover:bg-amber-100 transition-colors">
+                <Mail className="text-amber-600" size={24} />
+              </div>
+              <div>
+                <p className="text-sm text-stone-500 font-medium mb-1">Submit your story & photos to:</p>
+                <p className="text-stone-900 font-semibold text-lg group-hover:text-amber-600 transition-colors">drfaheem@tigrisvalley.com</p>
+              </div>
             </div>
-            <div>
-              <p className="text-sm text-stone-500 font-medium mb-1">Submit your story & photos to:</p>
-              <p className="text-stone-900 font-semibold text-lg">stories@drfaheemnajeeb.com</p>
+            <div className="w-10 h-10 rounded-full bg-stone-50 flex items-center justify-center text-stone-400 group-hover:bg-amber-600 group-hover:text-white transition-all duration-300">
+              <ArrowUpRight size={20} />
             </div>
-          </div>
+          </a>
  <div className="mt-auto border-l-4 border-amber-400 pl-5 py-2">
             <p className="text-stone-600 leading-relaxed font-light text-sm max-w-sm">
               <strong className="text-stone-900 font-medium">Thank you</strong> for visiting our clinical blog. We are privileged to be part of your journey toward a balanced, informed, and holistic life.

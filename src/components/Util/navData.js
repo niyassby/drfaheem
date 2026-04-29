@@ -106,11 +106,11 @@ export const otherLinks = [
     link: "/academics",
   },
   {
-    titel: "Panel",
-    link: "/panel",
-  },
-  {
     titel: "Blog",
     link: "/explore-blogs",
+  },
+  {
+    titel: "Panel",
+    link: "/panel",
   }
 ];

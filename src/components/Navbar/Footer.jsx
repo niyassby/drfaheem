@@ -173,7 +173,7 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="lg:col-span-4 flex flex-col items-start">
             <Link
-              to="/"
+              to="/admin"
               className="mb-6 bg-white/5 p-4 rounded-2xl glass hover-lift inline-block text-white transition-colors border border-white/10"
             >
               <img
@@ -293,10 +293,6 @@ const Footer = () => {
         <div className="pt-8 mt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-xs text-slate-500 font-medium flex items-center gap-2">
             <span>© {new Date().getFullYear()} All Rights Reserved.</span>
-            <span className="text-slate-700">|</span>
-            <Link to="/admin" className="text-slate-700 hover:text-slate-400 transition-colors">
-              Manage Blog
-            </Link>
           </div>
           <p className="text-xs text-slate-500 font-medium flex items-center gap-1">
             Designed for{" "}
