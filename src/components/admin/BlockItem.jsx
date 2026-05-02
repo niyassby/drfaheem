@@ -33,6 +33,19 @@ export default function BlockItem({ block, onChange, onDelete, isActive, onClick
 
     try {
       setIsUploading(true)
+
+      if (block.content && typeof block.content === 'string' && block.content.includes('/blog-media/')) {
+        try {
+          const urlParts = block.content.split('/blog-media/');
+          if (urlParts.length > 1) {
+            const pathToDelete = urlParts[1];
+            await supabase.storage.from('blog-media').remove([pathToDelete]);
+          }
+        } catch (error) {
+          console.error('Error removing old image:', error);
+        }
+      }
+
       const fileExt = file.name.split('.').pop()
       const fileName = `${Math.random()}.${fileExt}`
       const filePath = `post-images/${fileName}`

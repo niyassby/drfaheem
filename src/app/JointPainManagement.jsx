@@ -1,11 +1,36 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Footer from "../components/Navbar/Footer";
 import Navbar from "../components/Navbar/Navbar";
 import { CheckCircle2, Activity, Zap, ArrowRight, ShieldCheck, Microscope, Apple, Droplets, Thermometer, UserCheck, Heart, Sparkles, Globe, Brain, ListChecks, Stethoscope, Briefcase, Pill, Waves, Accessibility, Move, Dumbbell, Wind } from 'lucide-react';
 import Popup from '../components/Contact/Popup';
+import joinPainVideo from '../assets/video/joinpain.mp4';
 
 const JointPainManagement = () => {
+    const videoRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.play().catch(() => {});
+                } else {
+                    entry.target.pause();
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const currentVideo = videoRef.current;
+        if (currentVideo) {
+            observer.observe(currentVideo);
+        }
+
+        return () => {
+            if (currentVideo) {
+                observer.unobserve(currentVideo);
+            }
+        };
+    }, []);
     const conditions = [
         "Osteoarthritis (Knee, Hip, Spine)",
         "Rheumatoid Arthritis",
@@ -277,8 +302,8 @@ const JointPainManagement = () => {
                         <div className="h-1.5 w-24 bg-blue-600 mx-auto rounded-full"></div>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                        {phases.map((phase, idx) => (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        {phases.slice(0, 4).map((phase, idx) => (
                             <motion.div
                                 key={idx}
                                 initial={{ opacity: 0, scale: 0.95 }}
@@ -360,6 +385,108 @@ const JointPainManagement = () => {
                                 )}
                             </motion.div>
                         ))}
+                    </div>
+                    
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-10">
+                        {phases.slice(4).map((phase, idx) => (
+                            <motion.div
+                                key={idx}
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: 0.4 }}
+                                className={`${phase.bgColor} p-10 rounded-[3rem] border border-gray-100 shadow-xl relative overflow-hidden group`}
+                            >
+                                <div className="absolute top-0 right-0 p-8 opacity-5">
+                                    <Activity className="w-32 h-32" />
+                                </div>
+                                <div className="mb-8 p-4 bg-white rounded-3xl w-fit shadow-md group-hover:scale-110 transition-transform">
+                                    {phase.icon}
+                                </div>
+                                <h3 className="text-2xl font-bold mb-4 text-gray-900">{phase.title}</h3>
+
+                                {phase.description && <p className="text-gray-800 font-semibold mb-6 text-sm leading-relaxed">{phase.description}</p>}
+
+                                {phase.items && (
+                                    <ul className="space-y-3 mb-8 text-sm">
+                                        {phase.items.map((item, i) => (
+                                            <li key={i} className="flex gap-3 text-gray-700 font-medium">
+                                                <div className="w-2 h-2 bg-blue-500 rounded-full mt-1.5 shrink-0"></div>
+                                                <span>{item}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+
+                                {phase.subSections && (
+                                    <div className="space-y-8">
+                                        {phase.subSections.map((sub, i) => (
+                                            <div key={i} className="pt-6 border-t border-gray-200/50">
+                                                <h4 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
+                                                    <div className="w-1.5 h-4 bg-blue-600 rounded-full"></div> {sub.title}
+                                                </h4>
+                                                {sub.description && <p className="text-xs text-gray-600 mb-3 italic">{sub.description}</p>}
+                                                {sub.items && (
+                                                    <ul className="space-y-2 mb-3">
+                                                        {sub.items.map((item, j) => (
+                                                            <li key={j} className="flex gap-2 text-xs text-gray-700 font-medium">
+                                                                <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0" />
+                                                                <span>{item}</span>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                )}
+                                                {sub.note && <p className="text-xs text-gray-500 italic mt-3 bg-white/50 p-2 rounded-lg">{sub.note}</p>}
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+
+                                {phase.goals && (
+                                    <div className="mt-8 pt-6 border-t border-gray-200/50">
+                                        <p className="text-xs font-bold text-blue-900 mb-3 uppercase tracking-widest">Expected Support:</p>
+                                        <ul className="grid grid-cols-1 gap-2">
+                                            {phase.goals.map((g, k) => (
+                                                <li key={k} className="text-xs font-bold text-gray-600 bg-white/50 px-3 py-2 rounded-xl flex items-center gap-2">
+                                                    <Sparkles className="w-3 h-3 text-blue-600" /> {g}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                )}
+
+                                {phase.goal && (
+                                    <div className="mt-8 pt-6 border-t border-gray-200/50">
+                                        <p className="text-sm font-bold text-blue-950 uppercase tracking-widest bg-white/60 px-4 py-2 rounded-xl inline-block shadow-sm">
+                                            Goal: <span className="font-medium text-gray-700">{phase.goal}</span>
+                                        </p>
+                                    </div>
+                                )}
+
+                                {phase.note && !phase.subSections && (
+                                    <p className="mt-8 text-sm font-bold text-blue-900 italic border-l-2 border-blue-600 pl-3">
+                                        {phase.note}
+                                    </p>
+                                )}
+                            </motion.div>
+                        ))}
+                        <motion.div 
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.5 }}
+                            className="p-4 bg-blue-50/50 rounded-lg border border-gray-100 shadow-xl relative overflow-hidden group flex flex-col justify-center items-center w-full h-[550px] sm:h-[600px] lg:h-full"
+                        >
+                            <video
+                                ref={videoRef}
+                                src={joinPainVideo}
+                                className="w-full h-full object-cover rounded absolute inset-0"
+                                loop
+                                muted
+                                playsInline
+                                controls
+                            />
+                        </motion.div>
                     </div>
                 </div>
             </section>

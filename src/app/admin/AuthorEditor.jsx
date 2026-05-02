@@ -54,6 +54,19 @@ export default function AuthorEditor() {
 
     try {
       setSaving(true)
+
+      if (author.image_url) {
+        try {
+          const urlParts = author.image_url.split('/blog-media/');
+          if (urlParts.length > 1) {
+            const pathToDelete = urlParts[1];
+            await supabase.storage.from('blog-media').remove([pathToDelete]);
+          }
+        } catch (error) {
+          console.error('Error removing old image:', error);
+        }
+      }
+
       const fileExt = file.name.split('.').pop()
       const fileName = `author-${Math.random()}.${fileExt}`
       const filePath = `post-images/${fileName}`

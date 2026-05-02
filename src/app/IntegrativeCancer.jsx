@@ -33,29 +33,40 @@ import {
 import { Dialog, DialogContent, DialogHeader } from '@/components/ui/dialog';
 import { ContactInput } from '../components/home/ContactInput';
 import paliativeVideo from '../assets/video/paliative.mp4';
+import paliativeVideo1 from '../assets/video/paliativevideo1.mp4';
 
 const IntegrativeCancer = () => {
   const [ctaOpen, setCtaOpen] = useState(false);
   const videoRef = useRef(null);
+  const videoRef1 = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          videoRef.current?.play().catch(() => {});
+          entry.target.play().catch(() => {});
         } else {
-          videoRef.current?.pause();
+          entry.target.pause();
         }
       });
     }, { threshold: 0.5 });
 
-    if (videoRef.current) {
-      observer.observe(videoRef.current);
+    const v1 = videoRef.current;
+    const v2 = videoRef1.current;
+
+    if (v1) {
+      observer.observe(v1);
+    }
+    if (v2) {
+      observer.observe(v2);
     }
 
     return () => {
-      if (videoRef.current) {
-        observer.unobserve(videoRef.current);
+      if (v1) {
+        observer.unobserve(v1);
+      }
+      if (v2) {
+        observer.unobserve(v2);
       }
     };
   }, []);
@@ -175,8 +186,8 @@ const IntegrativeCancer = () => {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
-            <div className="flex flex-col lg:flex-row gap-16 items-center mb-20">
-              <div className="lg:w-1/2">
+            <div className="flex flex-col lg:flex-row gap-16 items-start lg:items-stretch mb-20">
+              <div className="lg:w-1/2 flex flex-col">
                 <h2 className="text-3xl md:text-5xl font-bold mb-8 text-indigo-950 leading-tight flex items-center gap-4">
                   <Dna className="w-8 h-8 text-indigo-600" /> A Whole-Person Cancer Support Model
                 </h2>
@@ -188,29 +199,42 @@ const IntegrativeCancer = () => {
                   . It strengthens your body while you undergo — or after you
                   complete — conventional treatment.
                 </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
+                  <p className="col-span-full text-lg text-gray-800 font-medium">
+                    We focus on:
+                  </p>
+                  {focusAreas.map((focus, idx) => (
+                    <div
+                      key={idx}
+                      className="flex items-start gap-4 p-4 bg-indigo-50 rounded-2xl border border-indigo-100/50"
+                    >
+                      <div className="p-2 bg-white rounded-xl shadow-sm shrink-0">
+                        {focus.icon}
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-indigo-900 group-hover:text-indigo-600 transition-colors flex items-center gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-indigo-600 shrink-0" /> {focus.area}
+                        </h4>
+                        <p className="text-xs text-gray-600 font-medium mt-1">
+                          {focus.desc}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <p className="col-span-full text-lg text-gray-800 font-medium">
-                  We focus on:
-                </p>
-                {focusAreas.map((focus, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-start gap-4 p-4 bg-indigo-50 rounded-2xl border border-indigo-100/50"
-                  >
-                    <div className="p-2 bg-white rounded-xl shadow-sm">
-                      {focus.icon}
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-indigo-900 group-hover:text-indigo-600 transition-colors flex items-center gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-indigo-600" /> {focus.area}
-                      </h4>
-                      <p className="text-xs text-gray-600 font-medium">
-                        {focus.desc}
-                      </p>
-                    </div>
-                  </div>
-                ))}
+              <div className="lg:w-1/2 sticky top-24">
+                <div className="relative rounded-[2.5rem] overflow-hidden shadow-xl border-[6px] border-white group">
+                  <video
+                    ref={videoRef1}
+                    src={paliativeVideo1}
+                    className="w-full h-auto object-cover"
+                    loop
+                    muted
+                    playsInline
+                    controls
+                  />
+                </div>
               </div>
             </div>
 

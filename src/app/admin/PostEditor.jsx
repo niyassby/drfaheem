@@ -93,6 +93,19 @@ export default function PostEditor() {
 
     try {
       setSaving(true) // Reusing saving state for simplicity to show loading
+
+      if (post.cover_image_url) {
+        try {
+          const urlParts = post.cover_image_url.split('/blog-media/');
+          if (urlParts.length > 1) {
+            const pathToDelete = urlParts[1];
+            await supabase.storage.from('blog-media').remove([pathToDelete]);
+          }
+        } catch (error) {
+          console.error('Error removing old cover image:', error);
+        }
+      }
+
       const fileExt = file.name.split('.').pop()
       const fileName = `cover-${Math.random()}.${fileExt}`
       const filePath = `post-images/${fileName}`
